@@ -1,11 +1,92 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FeaturedProject from "../components/FeaturedProject.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Petty Rich Bey | Official Website">
+
+<section class="relative flex min-h-screen items-center overflow-hidden px-8">
+
+  <!-- Background Glow -->
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
+  ></div>
+
+  <div
+    class="relative mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-[3fr_2fr]"
+  >
+
+    <!-- Left Side -->
+
+    <div>
+
+      <p class="mb-6 uppercase tracking-[0.45em] text-yellow-400">
+        WELCOME TO
+      </p>
+
+      <h1 class="logo text-7xl md:text-8xl lg:text-9xl leading-none whitespace-nowrap">
+        Petty Rich Bey
+      </h1>
+
+      <p class="mt-8 text-2xl text-zinc-300">
+        Music • Stories • Conversations
+      </p>
+
+      <p class="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
+
+        Explore the music, books, podcast conversations, and stories that define the world of Petty Rich Bey.
+      </p>
+
+      <div class="mt-12 flex flex-wrap gap-6">
+
+        <a
+          href="/music"
+          class="rounded-xl bg-purple-700 px-8 py-4 font-semibold transition duration-300 hover:bg-purple-600"
+        >
+          Listen Now
+        </a>
+
+        <a
+          href="/about"
+          class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+        >
+          Explore
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="flex justify-center">
+
+      <div
+        class="flex h-[540px] w-[400px] flex-col items-center justify-center rounded-3xl border border-yellow-400/20 bg-zinc-900 shadow-2xl"
+      >
+
+        <p class="logo text-3xl text-yellow-400">
+          Petty Rich Bey
+        </p>
+
+        <p class="mt-4 uppercase tracking-[0.3em] text-zinc-500">
+          Featured Visual
+        </p>
+
+        <p class="mt-8 text-zinc-600">
+          Coming Soon
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<FeaturedProject />
+
+</BaseLayout>
