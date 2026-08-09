@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { albums } from "../../data/albums";
+
+export function getStaticPaths() {
+  return albums.map((album) => ({
+    params: {
+      slug: album.title.toLowerCase().replace(/\s+/g, "-"),
+    },
+    props: {
+      album,
+    },
+  }));
+}
+
+const { album } = Astro.props;
+---
+
+<BaseLayout title={`${album.title} | Petty Rich Bey`}>
+
+  <section class="min-h-screen px-8 py-24">
+
+    <div class="mx-auto max-w-7xl">
+
+      <div class="grid items-center gap-16 lg:grid-cols-2">
+
+        <!-- Album Artwork -->
+
+        <div
+          class="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-2xl"
+        >
+
+          <img
+            src={album.image}
+            alt={`${album.title} album cover`}
+            class="w-full object-cover"
+          />
+
+        </div>
+
+        <!-- Album Information -->
+
+        <div>
+
+          <p class="uppercase tracking-[0.4em] text-yellow-400">
+            {album.type}
+          </p>
+
+          <h1 class="logo mt-6 text-6xl md:text-7xl">
+            {album.title}
+          </h1>
+
+          <div class="mt-6 flex gap-6 text-zinc-500">
+            <span>{album.year}</span>
+            <span>•</span>
+            <span>{album.tracks} Tracks</span>
+          </div>
+
+          <p class="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
+            {album.description}
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-5">
+
+            <a
+              href="#"
+              class="rounded-xl bg-purple-700 px-8 py-4 font-semibold transition duration-300 hover:bg-purple-600"
+            >
+              Listen Now
+            </a>
+
+            <a
+              href="/music"
+              class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+            >
+              Back to Music
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Tracklist -->
+
+<div class="mt-24">
+
+  <div class="mb-10">
+
+    <p class="uppercase tracking-[0.4em] text-yellow-400">
+      Tracklist
+    </p>
+
+    <h2 class="logo mt-4 text-5xl">
+      The Soundtrack
+    </h2>
+
+  </div>
+
+  <div class="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
+
+    {album.tracklist?.map((track, index) => (
+
+      <div
+        class="flex items-center gap-6 border-b border-zinc-800 px-6 py-5 last:border-b-0 transition duration-300 hover:bg-zinc-800/60"
+      >
+
+        <span class="w-8 text-sm text-zinc-600">
+          {(index + 1).toString().padStart(2, "0")}
+        </span>
+
+        <div class="flex items-center gap-4">
+
+  <span class="text-lg text-zinc-200">
+    {track.title}
+  </span>
+
+  {track.type && (
+    <span class="text-xs uppercase tracking-[0.2em] text-zinc-600">
+      {track.type}
+    </span>
+  )}
+
+</div>
+        
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
+
+  </section>
+
+</BaseLayout>

@@ -7,13 +7,19 @@ const { album } = Astro.props;
   class="group block overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
 >
 
-  <!-- Album Cover -->
+  <!-- Album Artwork -->
 
-  <div class="flex h-72 items-center justify-center bg-zinc-800 text-zinc-500">
-    Album Cover
+  <div class="h-72 overflow-hidden bg-zinc-800">
+
+    <img
+      src={album.image}
+      alt={`${album.title} album cover`}
+      class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+    />
+
   </div>
 
-  <!-- Card Content -->
+  <!-- Album Information -->
 
   <div class="p-8">
 
@@ -30,19 +36,12 @@ const { album } = Astro.props;
     </p>
 
     <div class="mt-8 flex justify-between text-sm text-zinc-500">
+
       <span>{album.year}</span>
+
       <span>{album.tracks} Tracks</span>
+
     </div>
-
-    <div class="h-72 overflow-hidden bg-zinc-800">
-
-  <img
-    src={album.image}
-    alt={`${album.title} album cover`}
-    class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-  />
-
-</div>
 
     <div
       class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"

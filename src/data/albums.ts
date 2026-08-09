@@ -4,6 +4,80 @@ export const albums = [
     year: "2026",
     type: "Studio Album",
     tracks: 22,
+
+    tracklist: [
+  {
+    title: "Blurred Vision (Intro)",
+    type: "Intro",
+  },
+  {
+    title: "Daydreaming",
+  },
+  {
+    title: "Euphoria",
+  },
+  {
+    title: "Break Up to Make Up",
+  },
+  {
+    title: "Missed Calls (Interlude)",
+    type: "Interlude",
+  },
+  {
+    title: "3:09AM",
+  },
+  {
+    title: "I Can Make U Love Me",
+  },
+  {
+    title: "Crowded In Here",
+  },
+  {
+    title: "Black NOIR",
+  },
+  {
+    title: "Nights In Paris",
+  },
+  {
+    title: "Insomnia",
+  },
+  {
+    title: "Lucid Dreams",
+  },
+  {
+    title: "Intuitions",
+  },
+  {
+    title: "Night Cap",
+  },
+  {
+    title: "Digital World",
+  },
+  {
+    title: "Break Up To Make Up Part 2",
+  },
+  {
+    title: "Venus Heat",
+  },
+  {
+    title: "Purple Skies",
+  },
+  {
+    title: "Lucid Dreams Part 2",
+  },
+  {
+    title: "Daydreaming Remix",
+    type: "Remix",
+  },
+  {
+    title: "Wake Me Slowly",
+  },
+  {
+    title: "Black Noir (Femme Fatale Mix) (Outro)",
+    type: "Outro",
+  },
+],
+
     description:
       "A cinematic R&B journey through love, imagination, and late-night reflections.",
     image: "/Images/albums/daydreaming.png",
