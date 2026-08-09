@@ -34,6 +34,16 @@ const { album } = Astro.props;
       <span>{album.tracks} Tracks</span>
     </div>
 
+    <div class="h-72 overflow-hidden bg-zinc-800">
+
+  <img
+    src={album.image}
+    alt={`${album.title} album cover`}
+    class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+  />
+
+</div>
+
     <div
       class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"
     >
