@@ -1,0 +1,60 @@
+---
+const { tracks } = Astro.props;
+---
+
+<section class="mt-24">
+
+  <div class="mb-10">
+
+    <p class="uppercase tracking-[0.4em] text-yellow-400">
+      Tracklist
+    </p>
+
+  <h2 class="logo mt-4 text-5xl">
+  Pure Vibes. Check out the new album "Daydreaming".
+  <span class="block mt-3 text-2xl text-zinc-400">
+    Album in stores 10/12/26.
+  </span>
+</h2>
+
+  </div>
+
+  <div class="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
+
+    {tracks.map((track, index) => (
+
+      <div
+        class="flex items-center gap-6 border-b border-zinc-800 px-6 py-5 last:border-b-0 transition duration-300 hover:bg-zinc-800/60"
+      >
+
+        <span class="w-8 text-sm text-zinc-600">
+          {(index + 1).toString().padStart(2, "0")}
+        </span>
+
+        <div class="flex flex-1 items-center gap-4">
+
+          <span class="text-lg text-zinc-200">
+            {track.title}
+          </span>
+
+          {track.type && (
+            <span class="text-xs uppercase tracking-[0.2em] text-zinc-600">
+              {track.type}
+            </span>
+          )}
+
+        </div>
+
+        {track.duration && (
+          <span class="text-sm text-zinc-500">
+            {track.duration}
+          </span>
+        )}
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { albums } from "../../data/albums";
+import TrackList from "../../components/TrackList.astro";
 
 export function getStaticPaths() {
   return albums.map((album) => ({
@@ -15,7 +16,6 @@ export function getStaticPaths() {
 
 const { album } = Astro.props;
 ---
-
 <BaseLayout title={`${album.title} | Petty Rich Bey`}>
 
   <section class="min-h-screen px-8 py-24">
@@ -82,58 +82,11 @@ const { album } = Astro.props;
 
       </div>
 
+      <!-- Album Tracklist -->
+
+      <TrackList tracks={album.tracklist} />
+
     </div>
-
-    <!-- Tracklist -->
-
-<div class="mt-24">
-
-  <div class="mb-10">
-
-    <p class="uppercase tracking-[0.4em] text-yellow-400">
-      Tracklist
-    </p>
-
-    <h2 class="logo mt-4 text-5xl">
-      The Soundtrack
-    </h2>
-
-  </div>
-
-  <div class="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-
-    {album.tracklist?.map((track, index) => (
-
-      <div
-        class="flex items-center gap-6 border-b border-zinc-800 px-6 py-5 last:border-b-0 transition duration-300 hover:bg-zinc-800/60"
-      >
-
-        <span class="w-8 text-sm text-zinc-600">
-          {(index + 1).toString().padStart(2, "0")}
-        </span>
-
-        <div class="flex items-center gap-4">
-
-  <span class="text-lg text-zinc-200">
-    {track.title}
-  </span>
-
-  {track.type && (
-    <span class="text-xs uppercase tracking-[0.2em] text-zinc-600">
-      {track.type}
-    </span>
-  )}
-
-</div>
-        
-
-      </div>
-
-    ))}
-
-  </div>
-
-</div>
 
   </section>
 
