@@ -103,7 +103,7 @@ export const albums = [
     description:
       "A cinematic R&B journey through love, imagination, and late-night reflections.",
 
-    image: "/Images/albums/daydreaming.png",
+    image: "/images/albums/daydreaming.png",
 
     featured: true,
 
@@ -119,7 +119,7 @@ export const albums = [
     description:
       "Feel-good summer anthems, romance, cookouts, and late-night drives.",
 
-    image: "/Images/albums/heatwave.png",
+    image: "/images/albums/heatwave.png",
 
     featured: false,
 
@@ -135,7 +135,7 @@ export const albums = [
     description:
       "A colorful celebration of rhythm, emotion, and unforgettable moments.",
 
-    image: "/Images/albums/carnival.jpg",
+    image: "/images/albums/carnival.jpg",
 
     featured: false,
 

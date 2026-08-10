@@ -4,7 +4,7 @@ export const featuredProject = {
   description:
     "A cinematic R&B journey through love, imagination, and late-night reflections.",
   releaseDate: "October 12, 2026",
-  image: "/Images/albums/daydreaming.png",
+  image: "/images/albums/daydreaming.png",
   link: "/music/daydreaming",
   button: "Explore Daydreaming",
 };
