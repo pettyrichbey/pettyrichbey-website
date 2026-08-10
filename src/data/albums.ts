@@ -9,94 +9,94 @@ export const albums = [
       {
         title: "Blurred Vision (Intro)",
         type: "Intro",
-        audio: "/audio/daydreaming/blurredvision.wav",
+        audio: "/audio/daydreaming/blurredvision.mp3",
       },
       {
         title: "Daydreaming",
-        audio: "/audio/daydreaming/daydreaming.wav",
+        audio: "/audio/daydreaming/daydreaming.mp3",
       },
       {
         title: "Euphoria",
-        audio: "/audio/daydreaming/euphoria.wav",
+        audio: "/audio/daydreaming/euphoria.mp3",
       },
       {
         title: "Break Up to Make Up",
-        audio: "/audio/daydreaming/breakup.wav",
+        audio: "/audio/daydreaming/breakup.mp3",
       },
       {
         title: "Missed Calls (Interlude)",
         type: "Interlude",
-        audio: "/audio/daydreaming/missedcalls.wav",
+        audio: "/audio/daydreaming/missedcalls.mp3",
       },
       {
         title: "3:09AM",
-        audio: "/audio/daydreaming/am.wav",
+        audio: "/audio/daydreaming/am.mp3",
       },
       {
         title: "I Can Make U Love Me",
-        audio: "/audio/daydreaming/Icanmake.wav",
+        audio: "/audio/daydreaming/Icanmake.mp3",
       },
       {
         title: "Crowded In Here",
-        audio: "/audio/daydreaming/crowded.wav",
+        audio: "/audio/daydreaming/crowded.mp3",
       },
       {
         title: "Black NOIR",
-        audio: "/audio/daydreaming/blacknoir.wav",
+        audio: "/audio/daydreaming/blacknoir.mp3",
       },
       {
         title: "Nights In Paris",
-        audio: "/audio/daydreaming/nightsinparis.wav",
+        audio: "/audio/daydreaming/nightsinparis.mp3",
       },
       {
         title: "Insomnia",
-        audio: "/audio/daydreaming/insomnia.wav",
+        audio: "/audio/daydreaming/insomnia.mp3",
       },
       {
         title: "Lucid Dreams",
-        audio: "/audio/daydreaming/lucid.wav",
+        audio: "/audio/daydreaming/lucid.mp3",
       },
       {
         title: "Intuitions",
-        audio: "/audio/daydreaming/intuitions.wav",
+        audio: "/audio/daydreaming/intuitions.mp3",
       },
       {
         title: "Night Cap",
-        audio: "/audio/daydreaming/nightcap.wav",
+        audio: "/audio/daydreaming/nightcap.mp3",
       },
       {
         title: "Digital World",
-        audio: "/audio/daydreaming/digitalworld.wav",
+        audio: "/audio/daydreaming/digitalworld.mp3",
       },
       {
         title: "Break Up To Make Up Part 2",
-        audio: "/audio/daydreaming/breakup2.wav",
+        audio: "/audio/daydreaming/breakup2.mp3",
       },
       {
         title: "Venus Heat",
-        audio: "/audio/daydreaming/venusheat.wav",
+        audio: "/audio/daydreaming/venusheat.mp3",
       },
       {
         title: "Purple Skies",
-        audio: "/audio/daydreaming/purpleskies.wav",
+        audio: "/audio/daydreaming/purpleskies.mp3",
       },
       {
         title: "Lucid Dreams Part 2",
-        audio: "/audio/daydreaming/lucid2.wav",
+        audio: "/audio/daydreaming/lucid2.mp3",
       },
       {
         title: "Daydreaming Remix",
         type: "Remix",
-        audio: "/audio/daydreaming/day2.wav",
+        audio: "/audio/daydreaming/day2.mp3",
       },
       {
         title: "Wake Me Slowly",
-        audio: "/audio/daydreaming/wakeme.wav",
+        audio: "/audio/daydreaming/wakeme.mp3",
       },
       {
         title: "Black Noir (Femme Fatale Mix) (Outro)",
         type: "Outro",
-        audio: "/audio/daydreaming/noir2.wav",
+        audio: "/audio/daydreaming/noir2.mp3",
       },
     ],
 
