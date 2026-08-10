@@ -5,7 +5,7 @@ export const books = [
     type: "Novel",
     description:
       "A story waiting to pull you into the darkness. Discover the latest work from P. R. Bey.",
-    image: "/Images/books/whispers2.png",
+    image: "/images/books/whispers2.png",
     featured: true,
     status: "Available Now",
     link: "https://www.amazon.com/author/prbey",
@@ -17,7 +17,7 @@ export const books = [
     type: "Novel",
     description:
       "A story of secrets, temptation, deception, and the consequences of getting too close to the devil.",
-    image: "/Images/books/secretly.png",
+    image: "/images/books/secretly.png",
     featured: false,
     status: "Available Now",
     link: "https://www.amazon.com/author/prbey",
@@ -29,9 +29,9 @@ export const books = [
     type: "Novel",
     description:
       "Harriet enters a world where secrets run deep, power comes with a price, and the truth may be more dangerous than the lies surrounding her.",
-    image: "/Images/books/harriet.png",
+    image: "/images/books/harriet.png",
     featured: false,
     status: "Available Now",
     link: "https://www.amazon.com/author/prbey",
   },
-];
+];npum run build

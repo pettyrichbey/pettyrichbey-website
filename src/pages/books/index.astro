@@ -8,60 +8,175 @@ const libraryBooks = books.filter((book) => !book.featured);
 
 <BaseLayout title="Books | P. R. Bey">
 
-  <section class="relative overflow-hidden px-8 py-24">
+  <!-- Atmospheric Glow -->
 
-    <!-- Atmospheric Glow -->
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
+  ></div>
 
-    <div
-      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
-    ></div>
+  <div class="relative mx-auto max-w-7xl">
 
-    <div class="relative mx-auto max-w-7xl">
+    <!-- Books Header -->
+
+    <div class="mx-auto max-w-3xl text-center">
+
+      <p class="uppercase tracking-[0.45em] text-yellow-400">
+        Books
+      </p>
+
+      <h1 class="logo mt-5 text-6xl md:text-7xl">
+        Stories Beyond the Sound
+      </h1>
+
+      <p class="mt-8 text-lg leading-8 text-zinc-400">
+        Worlds, characters, and stories created by P. R. Bey.
+        Enter the pages and discover another side of the universe.
+      </p>
+
+    </div>
 
 
-      <!-- Books Header -->
+    <!-- Featured Book -->
 
-      <div class="mx-auto max-w-3xl text-center">
+    {featuredBook && (
+      <div class="mt-20">
 
-        <p class="uppercase tracking-[0.45em] text-yellow-400">
-          Books
+        <p class="mb-8 uppercase tracking-[0.35em] text-yellow-400">
+          Featured Book
         </p>
 
-        <h1 class="logo mt-5 text-6xl md:text-7xl">
-          Stories Beyond the Sound
-        </h1>
+        <a
+          href={featuredBook.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 lg:grid-cols-2"
+        >
 
-        <p class="mt-8 text-lg leading-8 text-zinc-400">
-          Worlds, characters, and stories created by P. R. Bey.
-          Enter the pages and discover another side of the universe.
+          <!-- Book Artwork -->
+
+          <div class="overflow-hidden bg-zinc-950">
+
+            <img
+              src={featuredBook.image}
+              alt={`${featuredBook.title} by P. R. Bey`}
+              class="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-105"
+            />
+
+          </div>
+
+
+          <!-- Book Information -->
+
+          <div class="flex flex-col justify-center p-10 md:p-14">
+
+            <p class="uppercase tracking-[0.35em] text-yellow-400">
+              P. R. Bey
+            </p>
+
+            <h2 class="logo mt-5 text-5xl md:text-6xl">
+              {featuredBook.title}
+            </h2>
+
+            <p class="mt-6 text-lg leading-8 text-zinc-400">
+              {featuredBook.description}
+            </p>
+
+            <div class="mt-8 flex gap-6 text-sm text-zinc-500">
+              <span>{featuredBook.year}</span>
+              <span>•</span>
+              <span>{featuredBook.status}</span>
+            </div>
+
+            <div
+              class="mt-10 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"
+            >
+              Explore Book →
+            </div>
+
+          </div>
+
+        </a>
+
+      </div>
+    )}
+
+
+    <!-- Author -->
+
+    <div class="mt-20">
+
+      <div
+        class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 md:flex md:items-center md:justify-between md:gap-10 md:p-12"
+      >
+
+        <div>
+
+          <p class="uppercase tracking-[0.35em] text-yellow-400">
+            The Author
+          </p>
+
+          <h2 class="logo mt-4 text-4xl md:text-5xl">
+            Meet P. R. Bey
+          </h2>
+
+          <p class="mt-4 max-w-2xl text-lg leading-8 text-zinc-400">
+            Explore the complete library, discover new releases,
+            and step further into the worlds created by P. R. Bey.
+          </p>
+
+        </div>
+
+        <a
+          href="https://www.amazon.com/author/prbey"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-block w-fit shrink-0 rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black md:mt-0"
+        >
+          View Author Page →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- The Library -->
+
+    <div class="mt-24">
+
+      <div class="mb-10">
+
+        <p class="uppercase tracking-[0.35em] text-yellow-400">
+          The Library
         </p>
+
+        <h2 class="logo mt-4 text-5xl">
+          Stories & Worlds
+        </h2>
 
       </div>
 
 
-      <!-- Featured Book -->
+      <!-- Book Grid -->
 
-      {featuredBook && (
-        <div class="mt-20">
+      <div class="grid gap-8 md:grid-cols-2">
 
-          <p class="mb-8 uppercase tracking-[0.35em] text-yellow-400">
-            Featured Book
-          </p>
+        {libraryBooks.map((book) => (
 
           <a
-            href={featuredBook.link}
+            href={book.link}
             target="_blank"
             rel="noopener noreferrer"
-            class="group grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 lg:grid-cols-2"
+            class="group block overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
           >
 
-            <!-- Book Artwork -->
+            <!-- Book Cover -->
 
             <div class="overflow-hidden bg-zinc-950">
 
               <img
-                src={featuredBook.image}
-                alt={`${featuredBook.title} by P. R. Bey`}
+                src={book.image}
+                alt={`${book.title} by P. R. Bey`}
                 class="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-105"
               />
 
@@ -70,32 +185,30 @@ const libraryBooks = books.filter((book) => !book.featured);
 
             <!-- Book Information -->
 
-            <div class="flex flex-col justify-center p-10 md:p-14">
+            <div class="p-8">
 
-              <p class="uppercase tracking-[0.35em] text-yellow-400">
-                P. R. Bey
+              <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">
+                {book.type}
               </p>
 
-              <h2 class="logo mt-5 text-5xl md:text-6xl">
-                {featuredBook.title}
-              </h2>
+              <h3 class="logo mt-4 text-4xl">
+                {book.title}
+              </h3>
 
-              <p class="mt-6 text-lg leading-8 text-zinc-400">
-                {featuredBook.description}
+              <p class="mt-4 text-zinc-400">
+                {book.description}
               </p>
 
-              <div class="mt-8 flex gap-6 text-sm text-zinc-500">
+              <div class="mt-8 flex justify-between text-sm text-zinc-500">
 
-                <span>{featuredBook.year}</span>
+                <span>{book.year}</span>
 
-                <span>•</span>
-
-                <span>{featuredBook.status}</span>
+                <span>{book.status}</span>
 
               </div>
 
               <div
-                class="mt-10 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"
+                class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"
               >
                 Explore Book →
               </div>
@@ -104,160 +217,38 @@ const libraryBooks = books.filter((book) => !book.featured);
 
           </a>
 
-        </div>
-      )}
-
-
-      <!-- Author -->
-
-      <div class="mt-20">
-
-        <div
-          class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 md:flex md:items-center md:justify-between md:gap-10 md:p-12"
-        >
-
-          <div>
-
-            <p class="uppercase tracking-[0.35em] text-yellow-400">
-              The Author
-            </p>
-
-            <h2 class="logo mt-4 text-4xl md:text-5xl">
-              Meet P. R. Bey
-            </h2>
-
-            <p class="mt-4 max-w-2xl text-lg leading-8 text-zinc-400">
-              Explore the complete library, discover new releases,
-              and step further into the worlds created by P. R. Bey.
-            </p>
-
-          </div>
-
-          <a
-            href="https://www.amazon.com/author/prbey"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-8 inline-block w-fit shrink-0 rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black md:mt-0"
-          >
-            View Author Page →
-          </a>
-
-        </div>
+        ))}
 
       </div>
-
-
-      <!-- The Library -->
-
-      <div class="mt-24">
-
-        <div class="mb-10">
-
-          <p class="uppercase tracking-[0.35em] text-yellow-400">
-            The Library
-          </p>
-
-          <h2 class="logo mt-4 text-5xl">
-            Stories & Worlds
-          </h2>
-
-        </div>
-
-
-        <!-- Book Grid -->
-
-        <div class="grid gap-8 md:grid-cols-2">
-
-          {libraryBooks.map((book) => (
-
-            <a
-              href={book.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group block overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-            >
-
-              <!-- Book Cover -->
-
-              <div class="overflow-hidden bg-zinc-950">
-
-                <img
-                  src={book.image}
-                  alt={`${book.title} by P. R. Bey`}
-                  class="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-
-              </div>
-
-
-              <!-- Book Information -->
-
-              <div class="p-8">
-
-                <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">
-                  {book.type}
-                </p>
-
-                <h3 class="logo mt-4 text-4xl">
-                  {book.title}
-                </h3>
-
-                <p class="mt-4 text-zinc-400">
-                  {book.description}
-                </p>
-
-                <div class="mt-8 flex justify-between text-sm text-zinc-500">
-
-                  <span>{book.year}</span>
-
-                  <span>{book.status}</span>
-
-                </div>
-
-                <div
-                  class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"
-                >
-                  Explore Book →
-                </div>
-
-              </div>
-
-            </a>
-
-          ))}
-
-        </div>
-
-      </div>
-
-
-      <!-- Closing Statement -->
-
-      <div class="mt-24">
-
-        <div
-          class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 text-center md:p-16"
-        >
-
-          <p class="uppercase tracking-[0.4em] text-yellow-400">
-            P. R. Bey
-          </p>
-
-          <h2 class="logo mt-5 text-4xl md:text-5xl">
-            The Story Is Still Being Written.
-          </h2>
-
-          <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-            New stories. New characters. New worlds waiting to be discovered.
-          </p>
-
-        </div>
-
-      </div>
-
 
     </div>
 
-  </section>
+
+    <!-- Closing Statement -->
+
+    <div class="mt-24">
+
+      <div
+        class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 text-center md:p-16"
+      >
+
+        <p class="uppercase tracking-[0.4em] text-yellow-400">
+          P. R. Bey
+        </p>
+
+        <h2 class="logo mt-5 text-4xl md:text-5xl">
+          The Story Is Still Being Written.
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+          New stories. New characters. New worlds waiting to be discovered.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
 
 </BaseLayout>
