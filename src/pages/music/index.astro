@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { albums } from "../../data/albums";
+import AlbumCard from "../../components/AlbumCard.astro";
+---
+
+<BaseLayout title="Music | Petty Rich Bey">
+
+  <section class="relative overflow-hidden px-8 py-24">
+
+    <!-- Atmospheric Glow -->
+
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
+    ></div>
+
+    <div class="relative mx-auto max-w-7xl">
+
+      <!-- Music Header -->
+
+      <div class="mx-auto max-w-3xl text-center">
+
+        <p class="uppercase tracking-[0.45em] text-yellow-400">
+          Music
+        </p>
+
+        <h1 class="logo mt-5 text-6xl md:text-7xl">
+          The Soundtrack
+        </h1>
+
+        <p class="mt-8 text-lg leading-8 text-zinc-400">
+          Every song tells a story.
+          Every album represents a different chapter
+          in the Petty Rich Bey universe.
+        </p>
+
+      </div>
+
+
+      <!-- Featured Project -->
+
+      <div class="mt-20">
+
+        <p class="mb-8 uppercase tracking-[0.35em] text-yellow-400">
+          Featured Project
+        </p>
+
+        {
+          albums
+            .filter((album) => album.featured)
+            .map((album) => (
+              <a
+                href={album.link}
+                class="group grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 lg:grid-cols-2"
+              >
+
+                <!-- Album Artwork -->
+
+                <div class="overflow-hidden">
+
+                  <img
+                    src={album.image}
+                    alt={`${album.title} album cover`}
+                    class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                </div>
+
+
+                <!-- Album Information -->
+
+                <div class="flex flex-col justify-center p-10 md:p-14">
+
+                  <p class="uppercase tracking-[0.35em] text-yellow-400">
+                    {album.type}
+                  </p>
+
+                  <h2 class="logo mt-5 text-5xl md:text-6xl">
+                    {album.title}
+                  </h2>
+
+                  <p class="mt-6 text-lg leading-8 text-zinc-400">
+                    {album.description}
+                  </p>
+
+                  <div class="mt-8 flex gap-6 text-sm text-zinc-500">
+
+                    <span>{album.year}</span>
+
+                    <span>•</span>
+
+                    <span>{album.tracks} Tracks</span>
+
+                  </div>
+
+                  <div
+                    class="mt-10 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"
+                  >
+                    Explore {album.title} →
+                  </div>
+
+                </div>
+
+              </a>
+            ))
+        }
+
+      </div>
+
+
+      <!-- Catalog -->
+
+      <div class="mt-24">
+
+        <div class="mb-10">
+
+          <p class="uppercase tracking-[0.35em] text-yellow-400">
+            The Catalog
+          </p>
+
+          <h2 class="logo mt-4 text-5xl">
+            More Releases
+          </h2>
+
+        </div>
+
+
+        <!-- Album Cards -->
+
+        <div class="grid gap-8 md:grid-cols-2">
+
+          {
+            albums
+              .filter((album) => !album.featured)
+              .map((album) => (
+                <AlbumCard album={album} />
+              ))
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</BaseLayout>

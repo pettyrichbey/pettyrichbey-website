@@ -1,85 +1,235 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FeaturedProject from "../components/FeaturedProject.astro";
-import CreativeUniverse from "../components/CreativeUniverse.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout title="Petty Rich Bey | Official Website">
 
-<section class="relative flex min-h-screen items-center overflow-hidden px-8">
+  <!-- HERO -->
 
-  <!-- Background Glow -->
-  <div
-    class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
-  ></div>
+  <section class="relative flex min-h-screen items-center overflow-hidden px-8">
 
-  <div
-    class="relative mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-[3fr_2fr]"
-  >
+    <!-- Background Glow -->
 
-    <!-- Left Side -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
+    ></div>
 
-    <div>
+    <div
+      class="relative mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-[3fr_2fr]"
+    >
 
-      <p class="mb-6 uppercase tracking-[0.45em] text-yellow-400">
-        WELCOME TO
-      </p>
+      <!-- LEFT SIDE -->
 
-      <h1 class="logo text-7xl md:text-8xl lg:text-9xl leading-none whitespace-nowrap">
-        Petty Rich Bey
-      </h1>
+      <div>
 
-      <p class="mt-8 text-2xl text-zinc-300">
-        Music • Stories • Conversations
-      </p>
+        <p class="mb-6 uppercase tracking-[0.45em] text-yellow-400">
+          WELCOME TO
+        </p>
 
-      <p class="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
-
-        Explore the music, books, podcast conversations, and stories that define the world of Petty Rich Bey.
-      </p>
-
-      <div class="mt-12 flex flex-wrap gap-6">
-
-        <a
-          href="/music"
-          class="rounded-xl bg-purple-700 px-8 py-4 font-semibold transition duration-300 hover:bg-purple-600"
+        <h1
+          class="logo text-7xl leading-none whitespace-nowrap md:text-8xl lg:text-9xl"
         >
-          Listen Now
-        </a>
+          Petty Rich Bey
+        </h1>
 
-        <a
-          href="/about"
-          class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+        <p class="mt-8 text-2xl text-zinc-300">
+          Music • Stories • Conversations
+        </p>
+
+        <p class="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
+          Explore the music, books, podcast conversations, and stories that
+          define the world of Petty Rich Bey.
+        </p>
+
+        <div class="mt-12 flex flex-wrap gap-6">
+
+          <a
+            href="/music"
+            class="rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]"
+          >
+            Listen Now
+          </a>
+
+          <a
+            href="/about"
+            class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+          >
+            Explore
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT SIDE / PRB BRAND VISUAL -->
+
+      <div class="flex justify-center">
+
+        <div
+          class="group relative flex h-[540px] w-[400px] items-center justify-center overflow-hidden rounded-3xl border border-yellow-400/20 bg-zinc-950 shadow-2xl transition duration-500 hover:border-purple-500/50"
         >
-          Explore
-        </a>
+
+          <!-- Purple Atmospheric Glow -->
+
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.20),transparent_65%)]"
+          ></div>
+
+          <!-- PRB Logo -->
+
+          <img
+            src="/Images/logos/prb site logo.png"
+            alt="Petty Rich Bey"
+            class="relative z-10 w-[320px] object-contain transition duration-700 group-hover:scale-105"
+          />
+
+        </div>
 
       </div>
 
     </div>
 
-    <!-- Right Side -->
+  </section>
 
-    <div class="flex justify-center">
 
-      <div
-        class="flex h-[540px] w-[400px] flex-col items-center justify-center rounded-3xl border border-yellow-400/20 bg-zinc-900 shadow-2xl"
+  <!-- FEATURED PROJECT -->
+
+  <FeaturedProject />
+
+  <!-- CREATIVE UNIVERSE -->
+
+<section class="border-t border-zinc-800 py-24">
+
+  <div class="mx-auto max-w-7xl px-8">
+
+    <!-- Section Heading -->
+
+    <div class="mx-auto max-w-2xl text-center">
+
+      <p class="uppercase tracking-[0.4em] text-yellow-400">
+        The Creative Universe
+      </p>
+
+      <h2 class="logo mt-4 text-5xl md:text-6xl">
+        Every project begins with a story.
+      </h2>
+
+      <p class="mt-6 leading-8 text-zinc-400">
+        Explore the music, books, podcast conversations, and videos
+        that make up the world of Petty Rich Bey.
+      </p>
+
+    </div>
+
+
+    <!-- Creative Categories -->
+
+    <div class="mt-16 grid gap-6 md:grid-cols-2">
+
+      <!-- Music -->
+
+      <a
+        href="/music"
+        class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
       >
 
-        <p class="logo text-3xl text-yellow-400">
-          Petty Rich Bey
+        <div class="text-4xl">
+          🎵
+        </div>
+
+        <h3 class="logo mt-6 text-3xl">
+          Music
+        </h3>
+
+        <p class="mt-4 text-zinc-400">
+          Albums, singles, lyrics, and upcoming releases.
         </p>
 
-        <p class="mt-4 uppercase tracking-[0.3em] text-zinc-500">
-          Featured Visual
+        <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
+          Explore Music →
         </p>
 
-        <p class="mt-8 text-zinc-600">
-          Coming Soon
+      </a>
+
+
+      <!-- Books -->
+
+      <a
+        href="/books"
+        class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
+      >
+
+        <div class="text-4xl">
+          📚
+        </div>
+
+        <h3 class="logo mt-6 text-3xl">
+          Books
+        </h3>
+
+        <p class="mt-4 text-zinc-400">
+          Fiction, storytelling, and published works.
         </p>
 
-      </div>
+        <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
+          Explore Books →
+        </p>
+
+      </a>
+
+
+      <!-- Podcast -->
+
+      <a
+        href="/podcast"
+        class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
+      >
+
+        <div class="text-4xl">
+          🎙️
+        </div>
+
+        <h3 class="logo mt-6 text-3xl">
+          Podcast
+        </h3>
+
+        <p class="mt-4 text-zinc-400">
+          Conversations, interviews, and fresh perspectives.
+        </p>
+
+        <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
+          Explore Podcast →
+        </p>
+
+      </a>
+
+
+      <!-- Videos -->
+
+      <a
+        href="/videos"
+        class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
+      >
+
+        <div class="text-4xl">
+          🎥
+        </div>
+
+        <h3 class="logo mt-6 text-3xl">
+          Videos
+        </h3>
+
+        <p class="mt-4 text-zinc-400">
+          Music videos, visual projects, and behind the scenes.
+        </p>
+
+        <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
+          Explore Videos →
+        </p>
+
+      </a>
 
     </div>
 
@@ -87,13 +237,4 @@ import Footer from "../components/Footer.astro";
 
 </section>
 
-
-
-<FeaturedProject />
-
-<CreativeUniverse />
-
-<Footer />
-
 </BaseLayout>
-

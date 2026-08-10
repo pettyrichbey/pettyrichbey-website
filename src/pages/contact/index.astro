@@ -1,0 +1,283 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contact | Petty Rich Bey">
+
+  <section class="relative overflow-hidden px-8 py-24">
+
+    <!-- Atmospheric Glow -->
+
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
+    ></div>
+
+    <div class="relative mx-auto max-w-6xl">
+
+      <!-- Contact Header -->
+
+      <div class="mx-auto max-w-3xl text-center">
+
+        <p class="uppercase tracking-[0.45em] text-yellow-400">
+          Contact
+        </p>
+
+        <h1 class="logo mt-5 text-6xl md:text-7xl">
+          Let's Connect
+        </h1>
+
+        <p class="mt-8 text-lg leading-8 text-zinc-400">
+          Have a question, collaboration idea, creative opportunity,
+          or something you'd like to discuss?
+          Send a message and let's connect.
+        </p>
+
+      </div>
+
+
+      <!-- Contact Area -->
+
+      <div class="mt-20 grid gap-8 lg:grid-cols-5">
+
+
+        <!-- Contact Information -->
+
+        <div
+          class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 lg:col-span-2"
+        >
+
+          <p class="uppercase tracking-[0.35em] text-yellow-400">
+            Get In Touch
+          </p>
+
+          <h2 class="logo mt-5 text-4xl">
+            Let's Talk
+          </h2>
+
+          <p class="mt-6 leading-8 text-zinc-400">
+            Whether you're interested in music, publishing, podcast
+            collaborations, media, or creative projects, I'd love to
+            hear from you.
+          </p>
+
+
+          <!-- Contact Details -->
+
+          <div class="mt-10 space-y-6">
+
+
+            <!-- Email -->
+
+            <div>
+
+              <p class="text-sm uppercase tracking-[0.25em] text-zinc-500">
+                Email
+              </p>
+
+              <a
+                href="mailto:contact@pettyrichbey.com"
+                class="mt-2 inline-block text-lg text-zinc-200 transition hover:text-yellow-400"
+              >
+                contact@pettyrichbey.com
+              </a>
+
+            </div>
+
+
+            <!-- Website -->
+
+            <div>
+
+              <p class="text-sm uppercase tracking-[0.25em] text-zinc-500">
+                Website
+              </p>
+
+              <p class="mt-2 text-lg text-zinc-200">
+                pettyrichbey.com
+              </p>
+
+            </div>
+
+
+          </div>
+
+
+          <!-- Social Links -->
+
+          <div class="mt-12">
+
+            <p class="text-sm uppercase tracking-[0.25em] text-zinc-500">
+              Follow the Universe
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-4">
+
+              <a
+                href="#"
+                class="rounded-lg border border-zinc-700 px-4 py-2 text-sm text-zinc-300 transition hover:border-yellow-400 hover:text-yellow-400"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="#"
+                class="rounded-lg border border-zinc-700 px-4 py-2 text-sm text-zinc-300 transition hover:border-yellow-400 hover:text-yellow-400"
+              >
+                TikTok
+              </a>
+
+              <a
+                href="#"
+                class="rounded-lg border border-zinc-700 px-4 py-2 text-sm text-zinc-300 transition hover:border-yellow-400 hover:text-yellow-400"
+              >
+                YouTube
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Contact Form -->
+
+        <div
+          class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 md:p-10 lg:col-span-3"
+        >
+
+          <p class="uppercase tracking-[0.35em] text-yellow-400">
+            Send a Message
+          </p>
+
+          <h2 class="logo mt-5 text-4xl">
+            Start the Conversation
+          </h2>
+
+
+          <form class="mt-10 space-y-6">
+
+
+            <!-- Name -->
+
+            <div>
+
+              <label
+                for="name"
+                class="mb-2 block text-sm font-medium text-zinc-300"
+              >
+                Name
+              </label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                class="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-zinc-200 outline-none transition focus:border-yellow-400"
+              />
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div>
+
+              <label
+                for="email"
+                class="mb-2 block text-sm font-medium text-zinc-300"
+              >
+                Email
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                class="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-zinc-200 outline-none transition focus:border-yellow-400"
+              />
+
+            </div>
+
+
+            <!-- Subject -->
+
+            <div>
+
+              <label
+                for="subject"
+                class="mb-2 block text-sm font-medium text-zinc-300"
+              >
+                Subject
+              </label>
+
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="What's this about?"
+                class="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-zinc-200 outline-none transition focus:border-yellow-400"
+              />
+
+            </div>
+
+
+            <!-- Message -->
+
+            <div>
+
+              <label
+                for="message"
+                class="mb-2 block text-sm font-medium text-zinc-300"
+              >
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell me what's on your mind..."
+                class="w-full resize-none rounded-xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-zinc-200 outline-none transition focus:border-yellow-400"
+              ></textarea>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <button
+              type="submit"
+              class="w-full rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]"
+            >
+              Send Message →
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+      <!-- Closing Statement -->
+
+      <div class="mt-20 text-center">
+
+        <p class="text-sm uppercase tracking-[0.4em] text-yellow-400">
+          Petty Rich Bey
+        </p>
+
+        <p class="mt-4 text-zinc-500">
+          Music • Stories • Conversations • Visuals
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</BaseLayout>

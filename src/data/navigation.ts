@@ -12,8 +12,8 @@ export const navigation = [
     href: "/podcast",
   },
   {
-    label: "Videos",
-    href: "/videos",
+    label: "Video",
+    href: "/video",
   },
   {
     label: "About",

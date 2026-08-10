@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Ballet&family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,7 +18,7 @@ h3,
   font-family: "Cinzel", serif;
 }
 
-::selection {
-  background: #7c3aed;
-  color: white;
+.hero-script {
+  font-family: "Ballet", cursive;
+  font-weight: 400;
 }

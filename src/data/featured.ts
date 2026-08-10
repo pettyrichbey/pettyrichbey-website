@@ -1,14 +1,10 @@
 export const featuredProject = {
-  type: "New Album",
-
+  type: "Upcoming Album",
   title: "Daydreaming",
-
   description:
     "A cinematic R&B journey through love, imagination, and late-night reflections.",
-
-  image: "/images/daydreaming-cover.jpg",
-
-  button: "Listen Now",
-
-  link: "/music",
+  releaseDate: "October 12, 2026",
+  image: "/Images/albums/daydreaming.png",
+  link: "/music/daydreaming",
+  button: "Explore Daydreaming",
 };

@@ -9,7 +9,7 @@ const { album } = Astro.props;
 
   <!-- Album Artwork -->
 
-  <div class="h-72 overflow-hidden bg-zinc-800">
+  <div class="aspect-square overflow-hidden bg-zinc-800">
 
     <img
       src={album.image}
@@ -21,7 +21,7 @@ const { album } = Astro.props;
 
   <!-- Album Information -->
 
-  <div class="p-8">
+  <div class="p-6">
 
     <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">
       {album.type}
