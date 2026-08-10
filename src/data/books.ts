@@ -34,4 +34,4 @@ export const books = [
     status: "Available Now",
     link: "https://www.amazon.com/author/prbey",
   },
-];npum run build
+];

@@ -1,118 +1,140 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { podcast } from "../../data/podcast";
+
+const { segments } = podcast;
 ---
 
-<BaseLayout title="Podcast | Petty Rich Bey">
+<BaseLayout title={`${podcast.shortTitle} | Petty Rich Bey`}>
 
-  <section class="relative overflow-hidden px-8 py-24">
+  <!-- Atmospheric Glow -->
 
-    <!-- Atmospheric Glow -->
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
+  ></div>
 
-    <div
-      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
-    ></div>
+  <div class="relative mx-auto max-w-7xl">
 
-    <div class="relative mx-auto max-w-7xl">
+    <!-- Podcast Header -->
 
-      <!-- Podcast Header -->
+    <div class="mx-auto max-w-4xl text-center">
 
-      <div class="mx-auto max-w-4xl text-center">
+      <p class="uppercase tracking-[0.45em] text-yellow-400">
+        The Conversation
+      </p>
 
-        <p class="uppercase tracking-[0.45em] text-yellow-400">
-          The Conversation
-        </p>
+      <h1 class="logo mt-5 text-6xl md:text-7xl">
+        {podcast.title}
+      </h1>
 
-        <h1 class="logo mt-5 text-6xl md:text-7xl">
-          Absolutely No Excuses Podcast
-        </h1>
+      <p class="mt-8 text-lg leading-8 text-zinc-400">
+        {podcast.description}
+      </p>
 
-        <p class="mt-8 text-lg leading-8 text-zinc-400">
-          Real conversations. Real perspectives. No excuses.
-          Step inside the conversations, debates, stories, and personalities
-          that make ANE Podcast what it is.
-        </p>
+      <!-- Podcast Platforms -->
+
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+
+        <a
+          href={podcast.spotify}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]"
+        >
+          🎧 Listen on Spotify →
+        </a>
+
+        <a
+          href={podcast.youtube}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+        >
+          ▶ Watch on YouTube →
+        </a>
 
       </div>
 
+    </div>
 
-      <!-- Featured Podcast -->
 
-      <div class="mt-20">
+    <!-- Featured Podcast -->
 
-        <p class="mb-8 uppercase tracking-[0.35em] text-yellow-400">
-          Featured Show
-        </p>
+    <div class="mt-20">
 
-        <div
-          class="group grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 lg:grid-cols-2"
-        >
+      <p class="mb-8 uppercase tracking-[0.35em] text-yellow-400">
+        Featured Show
+      </p>
 
-          <!-- Podcast Visual -->
+      <div
+        class="group grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 lg:grid-cols-2"
+      >
+
+        <!-- Podcast Artwork -->
+
+        <div class="relative overflow-hidden bg-zinc-950">
 
           <div
-            class="relative flex min-h-[420px] items-center justify-center overflow-hidden bg-zinc-950"
-          >
+            class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.25),transparent_65%)]"
+          ></div>
 
-            <div
-              class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.25),transparent_65%)]"
-            ></div>
+          <img
+            src="/images/podcast/anepod.png"
+            alt="Absolutely No Excuses Podcast"
+            class="relative z-10 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+          />
 
-            <div class="relative z-10 text-center">
+        </div>
 
-              <p class="text-7xl font-bold text-yellow-400">
-                ANE
-              </p>
 
-              <p class="mt-4 text-sm uppercase tracking-[0.4em] text-zinc-400">
-                Absolutely No Excuses
-              </p>
+        <!-- Podcast Information -->
 
-              <p class="mt-3 text-xs uppercase tracking-[0.3em] text-zinc-600">
-                Podcast
-              </p>
+        <div class="flex flex-col justify-center p-10 md:p-14">
 
-            </div>
+          <p class="uppercase tracking-[0.35em] text-yellow-400">
+            {podcast.shortTitle}
+          </p>
+
+          <h2 class="logo mt-5 text-5xl md:text-6xl">
+            {podcast.tagline}
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-zinc-400">
+            {podcast.description}
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4 text-sm text-zinc-500">
+
+            <span>Conversations</span>
+
+            <span>•</span>
+
+            <span>Culture</span>
+
+            <span>•</span>
+
+            <span>Entertainment</span>
 
           </div>
 
-
-          <!-- Podcast Information -->
-
-          <div class="flex flex-col justify-center p-10 md:p-14">
-
-            <p class="uppercase tracking-[0.35em] text-yellow-400">
-              Absolutely No Excuses Podcast
-            </p>
-
-            <h2 class="logo mt-5 text-5xl md:text-6xl">
-              The Conversation
-            </h2>
-
-            <p class="mt-6 text-lg leading-8 text-zinc-400">
-              From messy conversations to health and wellness,
-              entertainment, culture, and everything in between,
-              ANE Podcast brings honest conversations without the filter.
-            </p>
-
-            <div class="mt-8 flex flex-wrap gap-4 text-sm text-zinc-500">
-
-              <span>Conversations</span>
-
-              <span>•</span>
-
-              <span>Culture</span>
-
-              <span>•</span>
-
-              <span>Entertainment</span>
-
-            </div>
+          <div class="mt-10 flex flex-wrap gap-4">
 
             <a
-              href="#episodes"
-              class="mt-10 inline-block w-fit rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]"
+              href={podcast.spotify}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl bg-purple-700 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-purple-600"
             >
-              Explore the Podcast →
+              Listen on Spotify
+            </a>
+
+            <a
+              href={podcast.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold text-zinc-300 transition duration-300 hover:border-yellow-400 hover:text-yellow-400"
+            >
+              Watch on YouTube
             </a>
 
           </div>
@@ -121,167 +143,118 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
       </div>
 
-
-      <!-- Podcast Segments -->
-
-      <div
-        id="episodes"
-        class="mt-24"
-      >
-
-        <div class="mb-10">
-
-          <p class="uppercase tracking-[0.35em] text-yellow-400">
-            The ANE Universe
-          </p>
-
-          <h2 class="logo mt-4 text-5xl">
-            More Than a Podcast
-          </h2>
-
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-            ANE Podcast has grown into a collection of conversations,
-            recurring segments, and shows built around the personalities
-            behind the microphone.
-          </p>
-
-        </div>
+    </div>
 
 
-        <!-- Segment Grid -->
+    <!-- Podcast Segments -->
 
-        <div class="grid gap-8 md:grid-cols-2">
+    <div
+      id="episodes"
+      class="mt-24"
+    >
 
+      <div class="mb-10">
 
-          <!-- Podcast Fridays -->
+        <p class="uppercase tracking-[0.35em] text-yellow-400">
+          The ANE Universe
+        </p>
 
-          <article
-            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-          >
+        <h2 class="logo mt-4 text-5xl">
+          More Than a Podcast
+        </h2>
 
-            <p class="text-4xl">
-              🎙️
-            </p>
-
-            <h3 class="logo mt-6 text-3xl">
-              Podcast Fridays
-            </h3>
-
-            <p class="mt-4 text-zinc-400">
-              The main ANE Podcast experience featuring conversations,
-              debates, stories, guests, and plenty of personality.
-            </p>
-
-            <div class="mt-8 font-semibold text-yellow-400">
-              Explore Episodes →
-            </div>
-
-          </article>
-
-
-          <!-- Messy Mondays -->
-
-          <article
-            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-          >
-
-            <p class="text-4xl">
-              💋
-            </p>
-
-            <h3 class="logo mt-6 text-3xl">
-              Messy Mondays
-            </h3>
-
-            <p class="mt-4 text-zinc-400">
-              The conversations get messy, the opinions get louder,
-              and absolutely nobody gets a free pass.
-            </p>
-
-            <div class="mt-8 font-semibold text-yellow-400">
-              Explore Messy Mondays →
-            </div>
-
-          </article>
-
-
-          <!-- Health & Wellness -->
-
-          <article
-            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-          >
-
-            <p class="text-4xl">
-              🧠
-            </p>
-
-            <h3 class="logo mt-6 text-3xl">
-              Health & Wellness
-            </h3>
-
-            <p class="mt-4 text-zinc-400">
-              Honest conversations about wellness, healthy behavior,
-              personal growth, and taking care of yourself.
-            </p>
-
-            <div class="mt-8 font-semibold text-yellow-400">
-              Explore Health & Wellness →
-            </div>
-
-          </article>
-
-
-          <!-- Wild Out Wednesday -->
-
-          <article
-            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-          >
-
-            <p class="text-4xl">
-              🔥
-            </p>
-
-            <h3 class="logo mt-6 text-3xl">
-              Wild Out Wednesday
-            </h3>
-
-            <p class="mt-4 text-zinc-400">
-              The energy turns all the way up with stories,
-              personalities, entertainment, and unapologetic fun.
-            </p>
-
-            <div class="mt-8 font-semibold text-yellow-400">
-              Explore Wild Out Wednesday →
-            </div>
-
-          </article>
-
-
-        </div>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+          ANE Podcast has grown into a collection of conversations,
+          recurring segments, and shows built around the personalities
+          behind the microphone.
+        </p>
 
       </div>
 
 
-      <!-- Behind the Mic -->
+      <!-- Segment Grid -->
 
-      <div class="mt-24">
+      <div class="grid gap-8 md:grid-cols-2">
 
-        <div
-          class="rounded-3xl border border-zinc-800 bg-zinc-900 p-10 text-center md:p-14"
-        >
+        {segments.map((segment) => (
 
-          <p class="uppercase tracking-[0.35em] text-yellow-400">
-            Behind the Mic
-          </p>
+          <a
+            href={podcast.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
+          >
 
-          <h2 class="logo mt-4 text-4xl md:text-5xl">
-            The People Behind the Conversations
-          </h2>
+            <p class="text-4xl">
+              {segment.icon}
+            </p>
 
-          <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-            Meet the personalities, guests, and voices that help bring
-            the ANE universe to life.
-          </p>
+            <p class="mt-6 text-sm uppercase tracking-[0.3em] text-yellow-400">
+              {segment.type}
+            </p>
+
+            <h3 class="logo mt-3 text-3xl">
+              {segment.title}
+            </h3>
+
+            <p class="mt-4 text-zinc-400">
+              {segment.description}
+            </p>
+
+            <div class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
+              Watch on YouTube →
+            </div>
+
+          </a>
+
+        ))}
+
+      </div>
+
+    </div>
+
+
+    <!-- Listen & Watch -->
+
+    <div class="mt-24">
+
+      <div
+        class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 text-center md:p-16"
+      >
+
+        <p class="uppercase tracking-[0.4em] text-yellow-400">
+          Choose Your Experience
+        </p>
+
+        <h2 class="logo mt-5 text-4xl md:text-5xl">
+          Listen. Watch. Join the Conversation.
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+          Catch ANE Podcast wherever you prefer.
+          Listen to the show on Spotify or watch the conversations
+          unfold on YouTube.
+        </p>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+
+          <a
+            href={podcast.spotify}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600"
+          >
+            🎧 Spotify →
+          </a>
+
+          <a
+            href={podcast.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+          >
+            ▶ YouTube →
+          </a>
 
         </div>
 
@@ -289,6 +262,33 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
     </div>
 
-  </section>
+
+    <!-- Behind the Mic -->
+
+    <div class="mt-24">
+
+      <div
+        class="rounded-3xl border border-zinc-800 bg-zinc-900 p-10 text-center md:p-14"
+      >
+
+        <p class="uppercase tracking-[0.35em] text-yellow-400">
+          Behind the Mic
+        </p>
+
+        <h2 class="logo mt-4 text-4xl md:text-5xl">
+          The People Behind the Conversations
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+          Meet the personalities, guests, and voices that help bring
+          the ANE universe to life.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
 
 </BaseLayout>
