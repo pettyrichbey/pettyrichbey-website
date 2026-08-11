@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { artists } from "../../data/artists";
+---
+
+<BaseLayout title="Artists | Petty Rich Bey">
+  <section class="relative overflow-hidden px-8 py-24">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"></div>
+
+    <div class="relative mx-auto max-w-7xl">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="uppercase tracking-[0.45em] text-yellow-400">Artists</p>
+        <h1 class="logo mt-5 text-6xl md:text-7xl">The Artists</h1>
+        <p class="mt-8 text-lg leading-8 text-zinc-400">
+          Meet the voices, collaborators, and independent artists connected to
+          the Petty Rich Bey creative universe.
+        </p>
+      </div>
+
+      <div class="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        {artists.map((artist) => (
+          <a
+            href={`/artists/${artist.slug}`}
+            class="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-purple-500"
+          >
+            <img
+              src={artist.image}
+              alt={`${artist.name} artwork`}
+              class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="p-7">
+              <p class="text-xs uppercase tracking-[0.3em] text-yellow-400">
+                {artist.role}
+              </p>
+              <h2 class="logo mt-3 text-3xl text-white">{artist.name}</h2>
+              <p class="mt-4 leading-7 text-zinc-400">{artist.bio}</p>
+              <span class="mt-6 inline-block text-sm uppercase tracking-[0.2em] text-purple-300">
+                View Artist →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
