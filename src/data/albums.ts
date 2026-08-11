@@ -1,5 +1,60 @@
 export const albums = [
   {
+    title: "Spoken IV",
+    year: "2026",
+    type: "Studio Album",
+    tracks: 5,
+
+    tracklist: [
+      {
+        title: "Burning",
+        audio: "/audio/spoken/burning.mp3",
+      },
+      {
+        title: "Quiet",
+        audio: "/audio/spoken/quiet.mp3",
+      },
+      {
+        title: "Story",
+        audio: "/audio/spoken/story.mp3",
+      },
+      {
+        title: "This Version",
+        audio: "/audio/spoken/thisversion.mp3",
+      },
+      {
+        title: "Unsaid",
+        audio: "/audio/spoken/unsaid.mp3",
+      },
+    ],
+
+    description:
+      "Spoken IV marks the beginning of a new chapter in the Petty Rich Bey catalog—intimate, reflective, and completely owned. A collection of honest moments, quiet thoughts, and stories that needed to be said.",
+
+    image: "/images/albums/spoken.png",
+
+    featured: false,
+
+    link: "/music/spoken-iv",
+  },
+
+  {
+    title: "Heat Wave",
+    year: "2026",
+    type: "Summer EP",
+    tracks: 18,
+
+    description:
+      "Feel-good summer anthems, romance, cookouts, and late-night drives.",
+
+    image: "/images/albums/heatwave.png",
+
+    featured: false,
+
+    link: "/music/heatwave",
+  },
+
+  {
     title: "Daydreaming",
     year: "2026",
     type: "Studio Album",
@@ -114,37 +169,5 @@ export const albums = [
     featured: true,
 
     link: "/music/daydreaming",
-  },
-
-  {
-    title: "Heat Wave",
-    year: "2026",
-    type: "Summer EP",
-    tracks: 18,
-
-    description:
-      "Feel-good summer anthems, romance, cookouts, and late-night drives.",
-
-    image: "/images/albums/heatwave.png",
-
-    featured: false,
-
-    link: "/music/heatwave",
-  },
-
-  {
-    title: "Carnival",
-    year: "2026",
-    type: "Studio Album",
-    tracks: 14,
-
-    description:
-      "A colorful celebration of rhythm, emotion, and unforgettable moments.",
-
-    image: "/images/albums/carnival.jpg",
-
-    featured: false,
-
-    link: "/music/carnival",
   },
 ];
