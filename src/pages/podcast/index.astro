@@ -11,6 +11,14 @@ const latestEpisode = {
   spotify: "https://open.spotify.com/episode/7EUNX3ZjQyRqhy5vskGFjr?si=Ey7cnb8WTzO6QgXcwMJlOw",
   youtube: "https://www.youtube.com/watch?v=qMYAO3uIqk0",
 };
+
+const cast = [
+  { name: "Petty Rich Bey", role: "Host / Creator", image: "/Images/podcast/petty.png" },
+  { name: "Lola Lev", role: "Cast", image: "/Images/podcast/lola.png" },
+  { name: "K-Doc", role: "Cast", image: "/Images/podcast/kdoc.png" },
+  { name: "E-Flow", role: "Cast", image: "/Images/podcast/eflow.png" },
+  { name: "Yolie", role: "Cast", image: "/Images/podcast/yolie.png" },
+];
 ---
 
 <BaseLayout title={`${podcast.shortTitle} | Petty Rich Bey`}>
@@ -94,6 +102,37 @@ const latestEpisode = {
       </div>
     </div>
 
+    <div class="mt-24">
+      <div class="mb-10 text-center">
+        <p class="uppercase tracking-[0.35em] text-yellow-400">The People Behind ANE</p>
+        <h2 class="logo mt-4 text-5xl md:text-6xl">Meet the Cast</h2>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+          The personalities behind the microphones, the conversations, and the ANE experience.
+        </p>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {cast.map((member) => (
+          <article class="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 transition duration-500 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_20px_50px_rgba(124,58,237,.18)]">
+            <div class="relative overflow-hidden bg-zinc-900">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.18),transparent_65%)]"></div>
+              <img
+                src={member.image}
+                alt={`${member.name} - ANE Podcast cast member`}
+                class="relative z-10 aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-7">
+              <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">{member.role}</p>
+              <h3 class="logo mt-3 text-3xl">{member.name}</h3>
+              <div class="mt-5 h-px w-16 bg-purple-600 transition-all duration-300 group-hover:w-24"></div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
     <div id="episodes" class="mt-24">
       <div class="mb-10">
         <p class="uppercase tracking-[0.35em] text-yellow-400">The ANE Universe</p>
@@ -138,7 +177,7 @@ const latestEpisode = {
         <p class="uppercase tracking-[0.35em] text-yellow-400">Behind the Mic</p>
         <h2 class="logo mt-4 text-4xl md:text-5xl">The People Behind the Conversations</h2>
         <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-          Meet the personalities, guests, and voices that help bring the ANE universe to life.
+          Meet the cast that helps bring the ANE universe to life.
         </p>
       </div>
     </div>
