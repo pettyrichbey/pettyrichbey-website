@@ -33,6 +33,9 @@ export const albums = [
 
     image: "/images/albums/spoken.png",
 
+    purchaseLink:
+      "https://pettyrichbey.bandcamp.com/album/spoken-iv",
+
     featured: false,
 
     link: "/music/spoken-iv",
@@ -48,6 +51,9 @@ export const albums = [
       "Feel-good summer anthems, romance, cookouts, and late-night drives.",
 
     image: "/images/albums/heatwave.png",
+
+    purchaseLink:
+      "https://pettyrichbey.bandcamp.com/album/heat-wave-ep",
 
     featured: false,
 
