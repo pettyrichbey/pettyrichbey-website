@@ -101,7 +101,13 @@ export const albums = [
     ],
 
     description:
-      "A cinematic R&B journey through love, imagination, and late-night reflections.",
+      "A sonic escape for the moments when reality gets a little too loud. Daydreaming is an atmospheric journey through desire, emotion, fantasy, reflection, intimacy, and those late-night thoughts that refuse to stay quiet. Blending alternative R&B, melodic hip-hop, lush synths, airy textures, hypnotic melodies, and cinematic production, the album creates a world that feels both familiar and somewhere completely outside of reality. Every song is its own little dream. Some are seductive. Some are vulnerable. Some are chaotic. Some feel like memories that never actually happened. And some simply make you want to close your eyes, disappear into the music, and let your mind wander. This is music for headphones, late nights, long drives, falling in love with a moment, and getting lost in your own imagination. Press play. Let the world fade. Welcome to the mind of Leroy.",
+
+    dedication:
+      "To everyone who has supported my music, shared a song, streamed a project, or simply pressed play—thank you. Daydreaming is a special project for me because it represents a place I can go when I let my imagination take over. Every song carries a different feeling, thought, memory, fantasy, or late-night moment. I made this album for the dreamers—for the people who think too much, feel deeply, stay up late, fall in love with possibilities, and sometimes need music to escape the noise of the real world. If you've ever found yourself lost inside a song, this album is for you. Thank you for listening, thank you for believing in independent music, and thank you for allowing me to keep creating. Put the headphones on. Close your eyes. I'll meet you in the dream. With love, Petty Rich Bey.",
+
+    purchaseLink:
+      "https://pettyrichbey.bandcamp.com/album/daydreaming",
 
     image: "/images/albums/daydreaming.png",
 
