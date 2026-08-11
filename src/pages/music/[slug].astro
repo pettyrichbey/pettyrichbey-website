@@ -95,15 +95,25 @@ const { album } = Astro.props;
               </a>
             )}
 
+            {album.purchaseLink && (
+              <a
+                href={album.purchaseLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition hover:bg-yellow-400 hover:text-black"
+              >
+                Pre-Order on Bandcamp →
+              </a>
+            )}
+
             <a
               href="/music"
-              class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+              class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition hover:border-zinc-500 hover:text-white"
             >
               Back to Music
             </a>
 
           </div>
-
 
           <!-- Album Note -->
 
@@ -124,11 +134,48 @@ const { album } = Astro.props;
 
       </div>
 
+      <!-- Personal Dedication -->
+
+      {album.dedication && (
+        <div class="mx-auto mt-24 max-w-4xl rounded-3xl border border-zinc-800 bg-zinc-950/70 p-8 shadow-2xl md:p-12">
+          <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">
+            A Note to My Listeners
+          </p>
+
+          <div class="mt-6 space-y-5 text-base leading-8 text-zinc-400 md:text-lg">
+            <p>
+              To everyone who has supported my music, shared a song, streamed a project, or simply pressed play—thank you.
+            </p>
+
+            <p>
+              Daydreaming is a special project for me because it represents a place I can go when I let my imagination take over. Every song carries a different feeling, thought, memory, fantasy, or late-night moment.
+            </p>
+
+            <p>
+              I made this album for the dreamers—for the people who think too much, feel deeply, stay up late, fall in love with possibilities, and sometimes need music to escape the noise of the real world. If you've ever found yourself lost inside a song, this album is for you.
+            </p>
+
+            <p>
+              Thank you for listening, thank you for believing in independent music, and thank you for allowing me to keep creating.
+            </p>
+
+            <p class="font-medium text-zinc-300">
+              Put the headphones on. Close your eyes. I'll meet you in the dream.
+            </p>
+
+            <p class="pt-2 text-yellow-400">
+              With love,<br />
+              Petty Rich Bey
+            </p>
+          </div>
+        </div>
+      )}
+
 
       <!-- Tracklist -->
 
       {album.tracklist && album.tracklist.length > 0 && (
-        <div id="tracklist" class="scroll-mt-24">
+        <div id="tracklist" class="mt-24 scroll-mt-24">
 
           <TrackList tracks={album.tracklist} />
 
