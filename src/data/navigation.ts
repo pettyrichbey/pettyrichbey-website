@@ -16,6 +16,10 @@ export const navigation = [
     href: "/video",
   },
   {
+    label: "Journal",
+    href: "/blog",
+  },
+  {
     label: "About",
     href: "/about",
   },
