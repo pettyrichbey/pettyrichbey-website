@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const categories = [
+  {
+    icon: "🎮",
+    title: "What I'm Playing",
+    text: "Xbox, new releases, favorites, reviews, and whatever has me locked in.",
+  },
+  {
+    icon: "🎬",
+    title: "Movie Night",
+    text: "New releases, streaming picks, throwbacks, reviews, and the movies worth talking about.",
+  },
+  {
+    icon: "🍥",
+    title: "Anime Corner",
+    text: "New seasons, premieres, favorites, discoveries, and the shows I can't stop watching.",
+  },
+  {
+    icon: "🎧",
+    title: "The Soundtrack",
+    text: "Music I'm listening to, artists I'm discovering, and thoughts on the culture.",
+  },
+  {
+    icon: "🧠",
+    title: "Scientific Streets",
+    text: "Interesting claims, big questions, and internet rabbit holes examined with curiosity and evidence.",
+  },
+  {
+    icon: "📚",
+    title: "The Writer's Room",
+    text: "Books, characters, creative process, publishing, and life as P. R. Bey.",
+  },
+  {
+    icon: "🎙️",
+    title: "Behind the Mic",
+    text: "Guest conversations, interviews, highlights, and the stories behind the conversations.",
+  },
+  {
+    icon: "🌙",
+    title: "Nostalgia",
+    text: "The memories, music, movies, games, and moments that still live rent-free in my head.",
+  },
+  {
+    icon: "✍🏽",
+    title: "Petty's POV",
+    text: "No category. Just my thoughts, observations, stories, and whatever is on my mind.",
+  },
+];
+---
+
+<BaseLayout
+  title="Blog | Petty Rich Bey"
+  description="The Petty Rich Bey Journal — music, gaming, movies, anime, books, culture, conversations, nostalgia, and personal perspectives."
+>
+  <section class="relative overflow-hidden border-b border-zinc-800">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_65%)]"></div>
+
+    <div class="relative mx-auto max-w-7xl px-8 py-24 md:py-32">
+      <p class="uppercase tracking-[0.4em] text-yellow-400">The Petty Rich Bey Journal</p>
+      <h1 class="logo mt-5 max-w-4xl text-6xl leading-tight md:text-8xl">
+        Life beyond the music.
+      </h1>
+      <p class="mt-8 max-w-2xl text-xl leading-9 text-zinc-400">
+        Music. Culture. Gaming. Stories. Random thoughts. Whatever has my attention.
+        This is where the world of Petty Rich Bey gets personal.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="mx-auto max-w-7xl px-8">
+      <div class="max-w-2xl">
+        <p class="uppercase tracking-[0.35em] text-yellow-400">Explore the Journal</p>
+        <h2 class="logo mt-4 text-5xl md:text-6xl">Something for every side of me.</h2>
+        <p class="mt-6 leading-8 text-zinc-400">
+          The blog is more than promotion. It's the place to see what I'm playing,
+          watching, reading, thinking about, creating, and discovering.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {categories.map((category) => (
+          <article class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
+            <div class="text-4xl">{category.icon}</div>
+            <h3 class="logo mt-6 text-3xl">{category.title}</h3>
+            <p class="mt-4 leading-7 text-zinc-400">{category.text}</p>
+            <p class="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">Coming to the Journal</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-zinc-800 py-24">
+    <div class="mx-auto max-w-5xl px-8 text-center">
+      <p class="text-5xl">🪞</p>
+      <h2 class="logo mt-6 text-5xl md:text-6xl">Welcome inside the creative universe.</h2>
+      <p class="mx-auto mt-6 max-w-2xl leading-8 text-zinc-400">
+        New posts will live here as the Journal grows. Come for the music and stay
+        for the games, movies, anime, books, conversations, nostalgia, and the occasional
+        “wait… hold on” moment.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
