@@ -27,4 +27,20 @@ export const artists = [
       },
     ],
   },
+  {
+    name: "Diamond Gyal",
+    slug: "diamond-gyal",
+    role: "Featured Artist",
+    bio: "Diamond Gyal is an independent artist featured in the Petty Rich Bey creative universe. Explore her music and the upcoming Pretti Gyal Riddim project.",
+    image: "/images/albums/pretti.png",
+    releases: [
+      {
+        title: "Grind & Whine",
+        type: "Single",
+        artwork: "/images/albums/pretti.png",
+        audio: "/audio/pretti/grind.mp3",
+      },
+    ],
+    appearances: [],
+  },
 ];
