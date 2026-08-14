@@ -176,4 +176,67 @@ export const albums = [
 
     link: "/music/daydreaming",
   },
+
+  {
+    title: "Daydreaming Deluxe Edition",
+    year: "2026",
+    type: "Deluxe Edition",
+    tracks: 11,
+
+    tracklist: [
+      {
+        title: "Talk to Me Nice (feat. Price Tag)",
+        audio: "/audio/talk.mp3",
+      },
+      {
+        title: "Need Me (feat. Baker B)",
+      },
+      {
+        title: "Generate a Movie (feat. Aurea Hill)",
+      },
+      {
+        title: "Nosferatu",
+        audio: "/audio/nosferatu.mp3",
+      },
+      {
+        title: "Speakerboxx",
+      },
+      {
+        title: "Rolls Royce Petals",
+      },
+      {
+        title: "Bruk It Down, Brugga",
+      },
+      {
+        title: "Need Me (Remix) (feat. Baker B)",
+        type: "Remix",
+      },
+      {
+        title: "Bruk It Down, Brugga (Remix)",
+        type: "Remix",
+      },
+      {
+        title: "Rolls Royce Petals (Remix)",
+        type: "Remix",
+      },
+      {
+        title: "Generate a Movie (Remix) (feat. Aurea Hill)",
+        type: "Remix",
+      },
+    ],
+
+    description:
+      "The dream continues. Daydreaming Deluxe Edition expands the world of Daydreaming with eleven new moments of ambition, desire, nightlife, fantasy, vulnerability, and unapologetic self-expression. From the dark seduction of Nosferatu and the club-ready energy of Talk to Me Nice to the dancehall pulse of Bruk It Down, Brugga, the futuristic sensuality of Need Me, the cinematic life anthem Generate a Movie, the soulful luxury of Rolls Royce Petals, and the Y2K-inspired romance of Speakerboxx, this collection explores the places the original dream couldn't contain. Four remixes close the journey and offer new perspectives on some of the deluxe edition's standout moments. This is not simply a collection of bonus tracks—it is an extension of the dream.",
+
+    image: "/images/albums/daydeluxe.png",
+
+    backImage: "/images/albums/daydeluxe2.png",
+
+    purchaseLink:
+      "https://pettyrichbey.bandcamp.com/album/daydreaming-deluxe-edition",
+
+    featured: false,
+
+    link: "/music/daydreaming-deluxe-edition",
+  },
 ];
