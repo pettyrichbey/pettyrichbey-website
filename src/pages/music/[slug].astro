@@ -174,7 +174,10 @@ const { album } = Astro.props;
       {album.tracklist && album.tracklist.length > 0 && (
         <div id="tracklist" class="mt-24 scroll-mt-24">
 
-          <TrackList tracks={album.tracklist} />
+          <TrackList
+            tracks={album.tracklist}
+            autoAdvance={album.autoAdvance ?? false}
+          />
 
         </div>
       )}
