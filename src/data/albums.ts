@@ -40,6 +40,7 @@ export const albums = [
     year: "2026",
     type: "Studio Album",
     tracks: 22,
+    autoAdvance: true,
 
     tracklist: [
       { title: "Blurred Vision (Intro)", type: "Intro", audio: "/audio/daydreaming/blurredvision.mp3" },
@@ -83,6 +84,7 @@ export const albums = [
     year: "2026",
     type: "Deluxe Edition",
     tracks: 11,
+    autoAdvance: true,
 
     tracklist: [
       { title: "Talk to Me Nice (feat. Price Tag)", audio: "/audio/day2/talk.mp3" },
