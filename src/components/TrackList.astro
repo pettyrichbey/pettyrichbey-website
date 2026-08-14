@@ -1,5 +1,5 @@
 ---
-const { tracks } = Astro.props;
+const { tracks, autoAdvance = false } = Astro.props;
 ---
 
 <section class="mt-24">
@@ -77,28 +77,82 @@ const { tracks } = Astro.props;
 
 </section>
 
-<script>
+<script define:vars={{ autoAdvance }}>
   const buttons =
     document.querySelectorAll<HTMLButtonElement>(".play-button");
 
   let currentAudio: HTMLAudioElement | null = null;
   let currentButton: HTMLButtonElement | null = null;
 
+  const resetCurrent = () => {
+    if (currentButton) {
+      currentButton.textContent = "▶";
+    }
+
+    currentAudio = null;
+    currentButton = null;
+  };
+
+  const playTrack = async (button: HTMLButtonElement) => {
+    const source = button.dataset.audio;
+
+    if (!source) {
+      return;
+    }
+
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    if (currentButton) {
+      currentButton.textContent = "▶";
+    }
+
+    const audio = new Audio(source);
+
+    currentAudio = audio;
+    currentButton = button;
+
+    try {
+      await audio.play();
+      button.textContent = "❚❚";
+    } catch (error) {
+      console.error("Audio playback failed:", error);
+      resetCurrent();
+      return;
+    }
+
+    audio.addEventListener("ended", () => {
+      const currentIndex = Array.from(buttons).indexOf(button);
+      const nextButton = buttons[currentIndex + 1];
+
+      button.textContent = "▶";
+      currentAudio = null;
+      currentButton = null;
+
+      if (autoAdvance && nextButton?.dataset.audio) {
+        void playTrack(nextButton);
+      }
+    });
+  };
+
   buttons.forEach((button) => {
     button.addEventListener("click", async () => {
-
       const source = button.dataset.audio;
 
       if (!source) {
         return;
       }
 
-      // Clicking the currently selected track
       if (currentAudio && currentButton === button) {
-
         if (currentAudio.paused) {
-          await currentAudio.play();
-          button.textContent = "❚❚";
+          try {
+            await currentAudio.play();
+            button.textContent = "❚❚";
+          } catch (error) {
+            console.error("Audio playback failed:", error);
+          }
         } else {
           currentAudio.pause();
           button.textContent = "▶";
@@ -107,37 +161,7 @@ const { tracks } = Astro.props;
         return;
       }
 
-      // Stop the previous track
-      if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-      }
-
-      if (currentButton) {
-        currentButton.textContent = "▶";
-      }
-
-      // Create the new audio player
-      const audio = new Audio(source);
-
-      currentAudio = audio;
-      currentButton = button;
-
-      try {
-        await audio.play();
-        button.textContent = "❚❚";
-      } catch (error) {
-        console.error("Audio playback failed:", error);
-        button.textContent = "▶";
-      }
-
-      // Reset button when the song finishes
-      audio.addEventListener("ended", () => {
-        button.textContent = "▶";
-        currentAudio = null;
-        currentButton = null;
-      });
-
+      await playTrack(button);
     });
   });
 </script>
