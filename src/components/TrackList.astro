@@ -2,7 +2,7 @@
 const { tracks, autoAdvance = false } = Astro.props;
 ---
 
-<section class="mt-24">
+<section class="mt-24" data-auto-advance={autoAdvance ? "true" : "false"}>
 
   <div class="mb-10">
 
@@ -27,8 +27,6 @@ const { tracks, autoAdvance = false } = Astro.props;
         class="group flex items-center gap-6 border-b border-zinc-800 px-6 py-5 last:border-b-0 transition duration-300 hover:bg-zinc-800/60"
       >
 
-        <!-- Play Button -->
-
         <button
           type="button"
           aria-label={`Play ${track.title}`}
@@ -39,16 +37,11 @@ const { tracks, autoAdvance = false } = Astro.props;
           ▶
         </button>
 
-        <!-- Track Number -->
-
         <span class="w-8 text-sm text-zinc-600">
           {(index + 1).toString().padStart(2, "0")}
         </span>
 
-        <!-- Track Information -->
-
         <div class="flex flex-1 items-center gap-4">
-
           <span class="text-lg text-zinc-200">
             {track.title}
           </span>
@@ -58,10 +51,7 @@ const { tracks, autoAdvance = false } = Astro.props;
               {track.type}
             </span>
           )}
-
         </div>
-
-        <!-- Duration -->
 
         {track.duration && (
           <span class="text-sm text-zinc-500">
@@ -77,91 +67,76 @@ const { tracks, autoAdvance = false } = Astro.props;
 
 </section>
 
-<script define:vars={{ autoAdvance }}>
-  const buttons =
-    document.querySelectorAll<HTMLButtonElement>(".play-button");
+<script>
+  const tracklists = document.querySelectorAll<HTMLElement>("section[data-auto-advance]");
 
-  let currentAudio: HTMLAudioElement | null = null;
-  let currentButton: HTMLButtonElement | null = null;
+  tracklists.forEach((tracklist) => {
+    const buttons = tracklist.querySelectorAll<HTMLButtonElement>(".play-button");
+    const autoAdvance = tracklist.dataset.autoAdvance === "true";
 
-  const resetCurrent = () => {
-    if (currentButton) {
-      currentButton.textContent = "▶";
-    }
+    let currentAudio: HTMLAudioElement | null = null;
+    let currentButton: HTMLButtonElement | null = null;
 
-    currentAudio = null;
-    currentButton = null;
-  };
+    buttons.forEach((button) => {
+      button.addEventListener("click", async () => {
+        const source = button.dataset.audio;
 
-  const playTrack = async (button: HTMLButtonElement) => {
-    const source = button.dataset.audio;
-
-    if (!source) {
-      return;
-    }
-
-    if (currentAudio) {
-      currentAudio.pause();
-      currentAudio.currentTime = 0;
-    }
-
-    if (currentButton) {
-      currentButton.textContent = "▶";
-    }
-
-    const audio = new Audio(source);
-
-    currentAudio = audio;
-    currentButton = button;
-
-    try {
-      await audio.play();
-      button.textContent = "❚❚";
-    } catch (error) {
-      console.error("Audio playback failed:", error);
-      resetCurrent();
-      return;
-    }
-
-    audio.addEventListener("ended", () => {
-      const currentIndex = Array.from(buttons).indexOf(button);
-      const nextButton = buttons[currentIndex + 1];
-
-      button.textContent = "▶";
-      currentAudio = null;
-      currentButton = null;
-
-      if (autoAdvance && nextButton?.dataset.audio) {
-        void playTrack(nextButton);
-      }
-    });
-  };
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", async () => {
-      const source = button.dataset.audio;
-
-      if (!source) {
-        return;
-      }
-
-      if (currentAudio && currentButton === button) {
-        if (currentAudio.paused) {
-          try {
-            await currentAudio.play();
-            button.textContent = "❚❚";
-          } catch (error) {
-            console.error("Audio playback failed:", error);
-          }
-        } else {
-          currentAudio.pause();
-          button.textContent = "▶";
+        if (!source) {
+          return;
         }
 
-        return;
-      }
+        if (currentAudio && currentButton === button) {
+          if (currentAudio.paused) {
+            try {
+              await currentAudio.play();
+              button.textContent = "❚❚";
+            } catch (error) {
+              console.error("Audio playback failed:", error);
+            }
+          } else {
+            currentAudio.pause();
+            button.textContent = "▶";
+          }
+          return;
+        }
 
-      await playTrack(button);
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio.currentTime = 0;
+        }
+
+        if (currentButton) {
+          currentButton.textContent = "▶";
+        }
+
+        const audio = new Audio(source);
+        currentAudio = audio;
+        currentButton = button;
+
+        try {
+          await audio.play();
+          button.textContent = "❚❚";
+        } catch (error) {
+          console.error("Audio playback failed:", error);
+          button.textContent = "▶";
+          currentAudio = null;
+          currentButton = null;
+          return;
+        }
+
+        audio.addEventListener("ended", () => {
+          const currentIndex = Array.from(buttons).indexOf(button);
+          const nextButton = buttons[currentIndex + 1];
+
+          button.textContent = "▶";
+          currentAudio = null;
+          currentButton = null;
+
+          if (autoAdvance && nextButton?.dataset.audio) {
+            nextButton.click();
+          }
+        });
+      });
     });
   });
 </script>
