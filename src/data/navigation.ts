@@ -20,6 +20,10 @@ export const navigation = [
     href: "/blog",
   },
   {
+    label: "VIP Club",
+    href: "https://pettyrichbey.bandcamp.com/vip-membership",
+  },
+  {
     label: "About",
     href: "/about",
   },
