@@ -8,34 +8,17 @@ import FeaturedProject from "../components/FeaturedProject.astro";
   <!-- HERO -->
 
   <section class="relative flex min-h-screen items-center overflow-hidden px-8">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"></div>
 
-    <!-- Background Glow -->
-
-    <div
-      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
-    ></div>
-
-    <div
-      class="relative mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-[3fr_2fr]"
-    >
-
-      <!-- LEFT SIDE -->
-
+    <div class="relative mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-[3fr_2fr]">
       <div>
+        <p class="mb-6 uppercase tracking-[0.45em] text-yellow-400">WELCOME TO</p>
 
-        <p class="mb-6 uppercase tracking-[0.45em] text-yellow-400">
-          WELCOME TO
-        </p>
-
-        <h1
-          class="logo text-7xl leading-none whitespace-nowrap md:text-8xl lg:text-9xl"
-        >
+        <h1 class="logo text-7xl leading-none whitespace-nowrap md:text-8xl lg:text-9xl">
           Petty Rich Bey
         </h1>
 
-        <p class="mt-8 text-2xl text-zinc-300">
-          Music • Stories • Conversations
-        </p>
+        <p class="mt-8 text-2xl text-zinc-300">Music • Stories • Conversations</p>
 
         <p class="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
           Explore the music, books, podcast conversations, and stories that
@@ -43,81 +26,34 @@ import FeaturedProject from "../components/FeaturedProject.astro";
         </p>
 
         <div class="mt-12 flex flex-wrap gap-6">
-
-          <a
-            href="/music"
-            class="rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]"
-          >
+          <a href="/music" class="rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]">
             Listen Now
           </a>
-
-          <a
-            href="/about"
-            class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
-          >
+          <a href="/about" class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black">
             Explore
           </a>
-
         </div>
-
       </div>
-
-
-      <!-- RIGHT SIDE / PRB BRAND VISUAL -->
 
       <div class="flex justify-center">
-
-        <div
-          class="group relative flex h-[540px] w-[400px] items-center justify-center overflow-hidden rounded-3xl border border-yellow-400/20 bg-zinc-950 shadow-2xl transition duration-500 hover:border-purple-500/50"
-        >
-
-          <!-- Purple Atmospheric Glow -->
-
-          <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.20),transparent_65%)]"
-          ></div>
-
-          <!-- PRB Logo -->
-
-          <img
-            src="/images/logos/logo.png"
-            alt="Petty Rich Bey"
-            class="relative z-10 w-[320px] object-contain transition duration-700 group-hover:scale-105"
-          />
-
+        <div class="group relative flex h-[540px] w-[400px] items-center justify-center overflow-hidden rounded-3xl border border-yellow-400/20 bg-zinc-950 shadow-2xl transition duration-500 hover:border-purple-500/50">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.20),transparent_65%)]"></div>
+          <img src="/images/logos/logo.png" alt="Petty Rich Bey" class="relative z-10 w-[320px] object-contain transition duration-700 group-hover:scale-105" />
         </div>
-
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- FEATURED PROJECT -->
 
   <FeaturedProject />
 
-
   <!-- PRB VIP CLUB -->
-
   <section class="border-t border-zinc-800 py-24">
-
     <div class="mx-auto max-w-5xl px-8">
-
-      <div
-        class="relative overflow-hidden rounded-3xl border border-yellow-400/30 bg-zinc-900 p-8 shadow-2xl md:p-12"
-      >
-
-        <div
-          class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,.20),transparent_55%)]"
-        ></div>
+      <div class="relative overflow-hidden rounded-3xl border border-yellow-400/30 bg-zinc-900 p-8 shadow-2xl md:p-12">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,.20),transparent_55%)]"></div>
 
         <div class="relative text-center">
-
-          <p class="uppercase tracking-[0.4em] text-yellow-400">
-            PRB VIP CLUB
-          </p>
+          <p class="uppercase tracking-[0.4em] text-yellow-400">PRB VIP CLUB</p>
 
           <h2 class="logo mt-4 text-5xl md:text-6xl">
             First to hear it. First to see it. First to get it.
@@ -138,78 +74,37 @@ import FeaturedProject from "../components/FeaturedProject.astro";
             <span class="rounded-full border border-zinc-700 bg-zinc-950 px-5 py-2">🎤 Behind the Music</span>
           </div>
 
-          <a
-            href="https://pettyrichbey.bandcamp.com/vip-membership"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-10 inline-flex rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]"
-          >
+          <a href="/vip" class="mt-10 inline-flex rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]">
             Join the PRB VIP Club →
           </a>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-
   <!-- CURRENTLY INTO -->
-
   <section class="border-t border-zinc-800 py-24">
-
     <div class="mx-auto max-w-7xl px-8">
-
       <div class="mx-auto max-w-2xl text-center">
-
-        <p class="uppercase tracking-[0.4em] text-yellow-400">
-          Right Now
-        </p>
-
-        <h2 class="logo mt-4 text-5xl md:text-6xl">
-          Currently Into
-        </h2>
-
-        <p class="mt-6 leading-8 text-zinc-400">
-          What I’m playing, watching, and enjoying right now.
-        </p>
-
+        <p class="uppercase tracking-[0.4em] text-yellow-400">Right Now</p>
+        <h2 class="logo mt-4 text-5xl md:text-6xl">Currently Into</h2>
+        <p class="mt-6 leading-8 text-zinc-400">What I’m playing, watching, and enjoying right now.</p>
       </div>
 
-
       <div class="mt-16 grid gap-6 md:grid-cols-3">
-
-        <!-- Gaming -->
-
-        <div
-          class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
-        >
-
+        <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
           <div class="text-4xl">🎮</div>
-
           <h3 class="logo mt-6 text-3xl">Gaming</h3>
-
           <ul class="mt-6 space-y-3 text-zinc-300">
             <li>State of Decay 2</li>
             <li>Resident Evil: Operation Raccoon City</li>
             <li>Marvel Cosmic Universe</li>
           </ul>
-
         </div>
 
-
-        <!-- Movies -->
-
-        <div
-          class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
-        >
-
+        <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
           <div class="text-4xl">🎬</div>
-
           <h3 class="logo mt-6 text-3xl">Movies</h3>
-
           <ul class="mt-6 space-y-3 text-zinc-300">
             <li>Masters of The Universe</li>
             <li>Flight 7500</li>
@@ -217,173 +112,63 @@ import FeaturedProject from "../components/FeaturedProject.astro";
             <li>Peppermint</li>
             <li>A Low Down Dirty Shame</li>
           </ul>
-
         </div>
 
-
-        <!-- Anime -->
-
-        <div
-          class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
-        >
-
+        <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
           <div class="text-4xl">🍿</div>
-
           <h3 class="logo mt-6 text-3xl">Anime</h3>
-
           <ul class="mt-6 space-y-3 text-zinc-300">
             <li>Demon Slayer</li>
             <li>Castlevania Nocturne</li>
             <li>Black Clover</li>
             <li>Solo Leveling</li>
           </ul>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-
   <!-- CREATIVE UNIVERSE -->
+  <section class="border-t border-zinc-800 py-24">
+    <div class="mx-auto max-w-7xl px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="uppercase tracking-[0.4em] text-yellow-400">The Creative Universe</p>
+        <h2 class="logo mt-4 text-5xl md:text-6xl">Every project begins with a story.</h2>
+        <p class="mt-6 leading-8 text-zinc-400">
+          Explore the music, books, podcast conversations, and videos that make up the world of Petty Rich Bey.
+        </p>
+      </div>
 
-<section class="border-t border-zinc-800 py-24">
+      <div class="mt-16 grid gap-6 md:grid-cols-2">
+        <a href="/music" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
+          <div class="text-4xl">🎵</div>
+          <h3 class="logo mt-6 text-3xl">Music</h3>
+          <p class="mt-4 text-zinc-400">Albums, singles, lyrics, and upcoming releases.</p>
+          <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Explore Music →</p>
+        </a>
 
-  <div class="mx-auto max-w-7xl px-8">
+        <a href="/books" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
+          <div class="text-4xl">📚</div>
+          <h3 class="logo mt-6 text-3xl">Books</h3>
+          <p class="mt-4 text-zinc-400">Fiction, storytelling, and published works.</p>
+          <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Explore Books →</p>
+        </a>
 
-    <!-- Section Heading -->
+        <a href="/podcast" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
+          <div class="text-4xl">🎙️</div>
+          <h3 class="logo mt-6 text-3xl">Podcast</h3>
+          <p class="mt-4 text-zinc-400">Conversations, interviews, and fresh perspectives.</p>
+          <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Explore Podcast →</p>
+        </a>
 
-    <div class="mx-auto max-w-2xl text-center">
-
-      <p class="uppercase tracking-[0.4em] text-yellow-400">
-        The Creative Universe
-      </p>
-
-      <h2 class="logo mt-4 text-5xl md:text-6xl">
-        Every project begins with a story.
-      </h2>
-
-      <p class="mt-6 leading-8 text-zinc-400">
-        Explore the music, books, podcast conversations, and videos
-        that make up the world of Petty Rich Bey.
-      </p>
-
+        <a href="/videos" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
+          <div class="text-4xl">🎥</div>
+          <h3 class="logo mt-6 text-3xl">Videos</h3>
+          <p class="mt-4 text-zinc-400">Music videos, visual projects, and behind the scenes.</p>
+          <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Explore Videos →</p>
+        </a>
+      </div>
     </div>
-
-
-    <!-- Creative Categories -->
-
-    <div class="mt-16 grid gap-6 md:grid-cols-2">
-
-      <!-- Music -->
-
-      <a
-        href="/music"
-        class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
-      >
-
-        <div class="text-4xl">
-          🎵
-        </div>
-
-        <h3 class="logo mt-6 text-3xl">
-          Music
-        </h3>
-
-        <p class="mt-4 text-zinc-400">
-          Albums, singles, lyrics, and upcoming releases.
-        </p>
-
-        <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
-          Explore Music →
-        </p>
-
-      </a>
-
-
-      <!-- Books -->
-
-      <a
-        href="/books"
-        class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
-      >
-
-        <div class="text-4xl">
-          📚
-        </div>
-
-        <h3 class="logo mt-6 text-3xl">
-          Books
-        </h3>
-
-        <p class="mt-4 text-zinc-400">
-          Fiction, storytelling, and published works.
-        </p>
-
-        <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
-          Explore Books →
-        </p>
-
-      </a>
-
-
-      <!-- Podcast -->
-
-      <a
-        href="/podcast"
-        class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
-      >
-
-        <div class="text-4xl">
-          🎙️
-        </div>
-
-        <h3 class="logo mt-6 text-3xl">
-          Podcast
-        </h3>
-
-        <p class="mt-4 text-zinc-400">
-          Conversations, interviews, and fresh perspectives.
-        </p>
-
-        <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
-          Explore Podcast →
-        </p>
-
-      </a>
-
-
-      <!-- Videos -->
-
-      <a
-        href="/videos"
-        class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]"
-      >
-
-        <div class="text-4xl">
-          🎥
-        </div>
-
-        <h3 class="logo mt-6 text-3xl">
-          Videos
-        </h3>
-
-        <p class="mt-4 text-zinc-400">
-          Music videos, visual projects, and behind the scenes.
-        </p>
-
-        <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">
-          Explore Videos →
-        </p>
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
 </BaseLayout>
