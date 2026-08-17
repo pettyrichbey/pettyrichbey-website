@@ -23,7 +23,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <ul class="mt-8 space-y-4 text-zinc-300">
             <li>🎵 Early access to new music</li><li>🎬 Early access to videos</li><li>🖼️ Exclusive artwork and posters</li><li>🎬 Behind-the-scenes content</li><li>🎤 Behind-the-music access</li><li>🎧 Private listening parties and VIP experiences</li><li>👕 Early access to merchandise drops</li><li>🗳️ Opportunities to vote on select creative decisions</li>
           </ul>
-          <div id="paypal-button-container-P-5-99"></div>
+          <div id="paypal-button-container-P-5BT506595M093153GNKBYUSA" class="mt-10"></div>
         </article>
 
         <article class="rounded-3xl border border-purple-500/40 bg-zinc-900 p-8 shadow-2xl md:p-10">
@@ -33,7 +33,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <ul class="mt-8 space-y-4 text-zinc-300">
             <li>✨ Everything included with VIP</li><li>🎶 Members-only music releases</li><li>🎁 VIP merchandise discounts</li><li>🛍️ Access to limited VIP items</li><li>🎥 Deeper behind-the-scenes access</li><li>🎤 Enhanced access to private experiences</li>
           </ul>
-          <div id="paypal-button-container-P-21Y71848B5279091ANKBYTOI"></div>
+          <div id="paypal-button-container-P-21Y71848B5279091ANKBYTOI" class="mt-10"></div>
         </article>
       </div>
 
@@ -48,6 +48,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   <script is:inline src="https://www.paypal.com/sdk/js?client-id=BAAmvrTBcFERarEIDwhDw-Z-2XUHk1W7nPEDV0KuEZpvVXvRBzRGIF9OYh7JJB9Z17iA9gFKoq8kekDBAg&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
   <script is:inline>
+    paypal.Buttons({
+      style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({ plan_id: 'P-5BT506595M093153GNKBYUSA' });
+      },
+      onApprove: function(data) {
+        alert('Welcome to the PRB VIP Club! Subscription ID: ' + data.subscriptionID);
+      }
+    }).render('#paypal-button-container-P-5BT506595M093153GNKBYUSA');
+
     paypal.Buttons({
       style: { shape: 'pill', color: 'black', layout: 'vertical', label: 'subscribe' },
       createSubscription: function(data, actions) {
