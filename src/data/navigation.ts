@@ -21,7 +21,7 @@ export const navigation = [
   },
   {
     label: "VIP Club",
-    href: "https://pettyrichbey.bandcamp.com/vip-membership",
+    href: "/vip",
   },
   {
     label: "About",
