@@ -4,7 +4,6 @@ export const albums = [
     year: "2026",
     type: "Studio Album",
     tracks: 5,
-
     tracklist: [
       { title: "Burning", audio: "/audio/spoken/burning.mp3" },
       { title: "Quiet", audio: "/audio/spoken/quiet.mp3" },
@@ -12,12 +11,9 @@ export const albums = [
       { title: "This Version", audio: "/audio/spoken/thisversion.mp3" },
       { title: "Unsaid", audio: "/audio/spoken/unsaid.mp3" },
     ],
-
     description:
       "Spoken IV marks the beginning of a new chapter in the Petty Rich Bey catalog—intimate, reflective, and completely owned. A collection of honest moments, quiet thoughts, and stories that needed to be said.",
-
     image: "/images/albums/spoken.png",
-    purchaseLink: "https://pettyrichbey.bandcamp.com/album/spoken-iv",
     featured: false,
     link: "/music/spoken-iv",
   },
@@ -30,7 +26,6 @@ export const albums = [
     description:
       "Feel-good summer anthems, romance, cookouts, and late-night drives.",
     image: "/images/albums/heatwave.png",
-    purchaseLink: "https://pettyrichbey.bandcamp.com/album/heat-wave-ep",
     featured: false,
     link: "/music/heatwave",
   },
@@ -41,7 +36,6 @@ export const albums = [
     type: "Studio Album",
     tracks: 22,
     autoAdvance: true,
-
     tracklist: [
       { title: "Blurred Vision (Intro)", type: "Intro", audio: "/audio/daydreaming/blurredvision.mp3" },
       { title: "Daydreaming", audio: "/audio/daydreaming/daydreaming.mp3" },
@@ -66,14 +60,10 @@ export const albums = [
       { title: "Wake Me Slowly", audio: "/audio/daydreaming/wakeme.mp3" },
       { title: "Black Noir (Femme Fatale Mix) (Outro)", type: "Outro", audio: "/audio/daydreaming/noir2.mp3" },
     ],
-
     description:
       "A sonic escape for the moments when reality gets a little too loud. Daydreaming is an atmospheric journey through desire, emotion, fantasy, reflection, intimacy, and those late-night thoughts that refuse to stay quiet. Blending alternative R&B, melodic hip-hop, lush synths, airy textures, hypnotic melodies, and cinematic production, the album creates a world that feels both familiar and somewhere completely outside of reality. Every song is its own little dream. Some are seductive. Some are vulnerable. Some are chaotic. Some feel like memories that never actually happened. And some simply make you want to close your eyes, disappear into the music, and let your mind wander. This is music for headphones, late nights, long drives, falling in love with a moment, and getting lost in your own imagination. Press play. Let the world fade. Welcome to the mind of Leroy.",
-
     dedication:
       "To everyone who has supported my music, shared a song, streamed a project, or simply pressed play—thank you. Daydreaming is a special project for me because it represents a place I can go when I let my imagination take over. Every song carries a different feeling, thought, memory, fantasy, or late-night moment. I made this album for the dreamers—for the people who think too much, feel deeply, stay up late, fall in love with possibilities, and sometimes need music to escape the noise of the real world. If you've ever found yourself lost inside a song, this album is for you. Thank you for listening, thank you for believing in independent music, and thank you for allowing me to keep creating. Put the headphones on. Close your eyes. I'll meet you in the dream. With love, Petty Rich Bey.",
-
-    purchaseLink: "https://pettyrichbey.bandcamp.com/album/daydreaming",
     image: "/images/albums/daydreaming.png",
     featured: true,
     link: "/music/daydreaming",
@@ -85,7 +75,6 @@ export const albums = [
     type: "Deluxe Edition",
     tracks: 11,
     autoAdvance: true,
-
     tracklist: [
       { title: "Talk to Me Nice (feat. Price Tag)", audio: "/audio/day2/talk.mp3" },
       { title: "Need Me (feat. Baker B)", audio: "/audio/day2/need.mp3" },
@@ -99,13 +88,10 @@ export const albums = [
       { title: "Rolls Royce Petals (Remix)", type: "Remix", audio: "/audio/day2/rolls2.mp3" },
       { title: "Generate a Movie (Remix) (feat. Aurea Hill)", type: "Remix", audio: "/audio/day2/generate2.mp3" },
     ],
-
     description:
       "The dream continues. Daydreaming Deluxe Edition expands the world of Daydreaming with eleven new moments of ambition, desire, nightlife, fantasy, vulnerability, and unapologetic self-expression. From the dark seduction of Nosferatu and the club-ready energy of Talk to Me Nice to the dancehall pulse of Bruk It Down, Brugga, the futuristic sensuality of Need Me, the cinematic life anthem Generate a Movie, the soulful luxury of Rolls Royce Petals, and the Y2K-inspired romance of Speakerboxx, this collection explores the places the original dream couldn't contain. Four remixes close the journey and offer new perspectives on some of the deluxe edition's standout moments. This is not simply a collection of bonus tracks—it is an extension of the dream.",
-
     image: "/images/albums/daydeluxe.png",
     backImage: "/images/albums/daydeluxe2.png",
-    purchaseLink: "https://pettyrichbey.bandcamp.com/album/daydreaming-deluxe-edition",
     featured: false,
     link: "/music/daydreaming-deluxe-edition",
   },
