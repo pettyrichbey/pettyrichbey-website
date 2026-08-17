@@ -18,39 +18,24 @@ const { album } = Astro.props;
 ---
 
 <BaseLayout title={`${album.title} | Petty Rich Bey`}>
-
   <section class="relative overflow-hidden px-8 py-24">
-
-    <!-- Atmospheric Glow -->
-
     <div
       class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
     ></div>
 
     <div class="relative mx-auto max-w-7xl">
-
-      <!-- Album Hero -->
-
       <div class="grid items-center gap-16 lg:grid-cols-2">
-
-        <!-- Album Artwork -->
-
         <div
           class="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 shadow-2xl"
         >
-
           <img
             src={album.image}
             alt={`${album.title} album cover`}
             class="w-full object-cover transition duration-700 group-hover:scale-105"
           />
-
         </div>
 
-        <!-- Album Information -->
-
         <div>
-
           <p class="uppercase tracking-[0.4em] text-yellow-400">
             {album.type}
           </p>
@@ -60,23 +45,16 @@ const { album } = Astro.props;
           </h1>
 
           <div class="mt-6 flex gap-6 text-sm text-zinc-500">
-
             <span>{album.year}</span>
-
             <span>•</span>
-
             <span>{album.tracks} Tracks</span>
-
           </div>
 
           <p class="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
             {album.description}
           </p>
 
-          <!-- Album Actions -->
-
           <div class="mt-10 flex flex-wrap gap-5">
-
             {album.tracklist && album.tracklist.length > 0 ? (
               <a
                 href="#tracklist"
@@ -93,30 +71,15 @@ const { album } = Astro.props;
               </a>
             )}
 
-            {album.purchaseLink && (
-              <a
-                href={album.purchaseLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition hover:bg-yellow-400 hover:text-black"
-              >
-                Buy Digital Copy on Bandcamp →
-              </a>
-            )}
-
             <a
               href="/music"
               class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition hover:border-zinc-500 hover:text-white"
             >
               Back to Music
             </a>
-
           </div>
 
-          <!-- Album Note -->
-
           <div class="mt-12 border-l border-yellow-400/40 pl-6">
-
             <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">
               The Experience
             </p>
@@ -125,14 +88,9 @@ const { album } = Astro.props;
               Press play, turn the lights down, and experience
               the album from beginning to end.
             </p>
-
           </div>
-
         </div>
-
       </div>
-
-      <!-- Personal Dedication -->
 
       {album.dedication && (
         <div class="mx-auto mt-24 max-w-4xl rounded-3xl border border-zinc-800 bg-zinc-950/70 p-8 shadow-2xl md:p-12">
@@ -144,23 +102,18 @@ const { album } = Astro.props;
             <p>
               To everyone who has supported my music, shared a song, streamed a project, or simply pressed play—thank you.
             </p>
-
             <p>
               Daydreaming is a special project for me because it represents a place I can go when I let my imagination take over. Every song carries a different feeling, thought, memory, fantasy, or late-night moment.
             </p>
-
             <p>
               I made this album for the dreamers—for the people who think too much, feel deeply, stay up late, fall in love with possibilities, and sometimes need music to escape the noise of the real world. If you've ever found yourself lost inside a song, this album is for you.
             </p>
-
             <p>
               Thank you for listening, thank you for believing in independent music, and thank you for allowing me to keep creating.
             </p>
-
             <p class="font-medium text-zinc-300">
               Put the headphones on. Close your eyes. I'll meet you in the dream.
             </p>
-
             <p class="pt-2 text-yellow-400">
               With love,<br />
               Petty Rich Bey
@@ -169,21 +122,14 @@ const { album } = Astro.props;
         </div>
       )}
 
-      <!-- Tracklist -->
-
       {album.tracklist && album.tracklist.length > 0 && (
         <div id="tracklist" class="mt-24 scroll-mt-24">
-
           <TrackList
             tracks={album.tracklist}
             autoAdvance={album.autoAdvance ?? false}
           />
-
         </div>
       )}
-
     </div>
-
   </section>
-
 </BaseLayout>
