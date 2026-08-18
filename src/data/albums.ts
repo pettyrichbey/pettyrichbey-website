@@ -26,6 +26,7 @@ export const albums = [
     description:
       "Feel-good summer anthems, romance, cookouts, and late-night drives.",
     image: "/images/albums/heatwave.png",
+    purchaseLink: "/music/heatwave",
     featured: false,
     link: "/music/heatwave",
   },
