@@ -1,0 +1,296 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Heat Wave | Petty Rich Bey">
+
+  <section class="relative overflow-hidden px-8 py-24">
+
+  <div class="relative z-50 mb-10 rounded-xl bg-yellow-400 p-5 text-center font-bold text-black">
+  🔥 HEAT WAVE TEST PAGE — PAYPAL CHECKOUT
+</div>
+
+    <!-- Atmospheric Glow -->
+
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
+    ></div>
+
+    <div class="relative mx-auto max-w-6xl">
+
+      <!-- Breadcrumb -->
+
+      <a
+        href="/music"
+        class="inline-flex text-sm uppercase tracking-[0.3em] text-zinc-500 transition hover:text-yellow-400"
+      >
+        ← Back to Music
+      </a>
+
+      <!-- Album -->
+
+      <div
+        class="mt-10 grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 lg:grid-cols-2"
+      >
+
+        <!-- Artwork -->
+
+        <div class="overflow-hidden bg-zinc-900">
+          <img
+            src="/images/albums/heatwave.png"
+            alt="Heat Wave album cover"
+            class="aspect-square w-full object-cover"
+          />
+        </div>
+
+        <!-- Information -->
+
+        <div class="flex flex-col justify-center p-8 md:p-12 lg:p-16">
+
+          <p class="uppercase tracking-[0.35em] text-yellow-400">
+            Summer EP • 2026
+          </p>
+
+          <h1 class="logo mt-5 text-5xl md:text-6xl">
+            Heat Wave
+          </h1>
+
+          <p class="mt-2 text-xl text-zinc-400">
+            18 Tracks
+          </p>
+
+          <p class="mt-8 text-lg leading-8 text-zinc-400">
+            Feel-good summer anthems, romance, cookouts,
+            day-party energy, and late-night drives.
+          </p>
+
+          <div class="mt-8 border-t border-zinc-800 pt-8">
+
+            <p class="text-sm uppercase tracking-[0.3em] text-zinc-500">
+              Digital Album
+            </p>
+
+            <div class="mt-2 text-4xl font-bold">
+              $9.99
+            </div>
+
+            <p class="mt-3 text-sm leading-6 text-zinc-500">
+              Instant digital delivery. No physical shipping.
+            </p>
+
+          </div>
+
+          <!-- PayPal Checkout -->
+
+          <div class="mt-8">
+
+            <div id="paypal-button-container"></div>
+
+            <div
+              id="payment-message"
+              class="mt-4 hidden rounded-xl border border-zinc-800 bg-zinc-900 p-4 text-sm text-zinc-300"
+            ></div>
+
+          </div>
+
+          <p class="mt-6 text-xs leading-5 text-zinc-600">
+            Secure checkout powered by PayPal. Your digital download
+            remains protected until your payment is successfully completed.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Purchase Information -->
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+        <div class="rounded-3xl border border-zinc-800 bg-zinc-950 p-7">
+          <p class="text-sm uppercase tracking-[0.25em] text-yellow-400">
+            Digital
+          </p>
+          <h2 class="mt-3 text-xl font-semibold">
+            No Shipping
+          </h2>
+          <p class="mt-3 leading-7 text-zinc-500">
+            This is a digital album. Nothing physical will be mailed.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-zinc-800 bg-zinc-950 p-7">
+          <p class="text-sm uppercase tracking-[0.25em] text-yellow-400">
+            Delivery
+          </p>
+          <h2 class="mt-3 text-xl font-semibold">
+            Instant Access
+          </h2>
+          <p class="mt-3 leading-7 text-zinc-500">
+            After successful payment, you'll receive a secure download
+            link for your Heat Wave ZIP file.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-zinc-800 bg-zinc-950 p-7">
+          <p class="text-sm uppercase tracking-[0.25em] text-yellow-400">
+            Secure
+          </p>
+          <h2 class="mt-3 text-xl font-semibold">
+            Protected Download
+          </h2>
+          <p class="mt-3 leading-7 text-zinc-500">
+            Your purchase is verified through PayPal before the download
+            is released.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PayPal SDK -->
+
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=BAAmvrTBcFERarEIDwhDw-Z-2XUHk1W7nPEDV0KuEZpvVXvRBzRGIF9OYh7JJB9Z17iA9gFKoq8kekDBAg&currency=USD"
+  ></script>
+
+  <script>
+    const message =
+      document.getElementById("payment-message");
+
+    function showMessage(text, type = "normal") {
+      if (!message) return;
+
+      message.textContent = text;
+      message.classList.remove("hidden");
+
+      if (type === "success") {
+        message.classList.add(
+          "border-yellow-400",
+          "text-yellow-400"
+        );
+      }
+    }
+
+    paypal.Buttons({
+
+      style: {
+        shape: "pill",
+        color: "gold",
+        layout: "vertical",
+        label: "paypal"
+      },
+
+      createOrder: async function () {
+
+        showMessage(
+          "Preparing your secure checkout..."
+        );
+
+        const response = await fetch(
+          "https://prb-digital-delivery.pettyrichbey.workers.dev/paypal/create-order",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok || !data.orderID) {
+          throw new Error(
+            data.message ||
+            "Unable to create PayPal order."
+          );
+        }
+
+        return data.orderID;
+      },
+
+      onApprove: async function (data) {
+
+        showMessage(
+          "Payment approved. Completing your purchase..."
+        );
+
+        const response = await fetch(
+          "https://prb-digital-delivery.pettyrichbey.workers.dev/paypal/capture-order",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              orderID: data.orderID
+            })
+          }
+        );
+
+        const result = await response.json();
+
+        if (
+          !response.ok ||
+          !result.success
+        ) {
+          throw new Error(
+            result.message ||
+            "Payment could not be completed."
+          );
+        }
+
+        showMessage(
+          "🎉 Your Heat Wave purchase is complete!",
+          "success"
+        );
+
+        if (result.download_url) {
+
+          const downloadButton =
+            document.createElement("a");
+
+          downloadButton.href =
+            result.download_url;
+
+          downloadButton.textContent =
+            "Download Heat Wave →";
+
+          downloadButton.className =
+            "mt-5 block rounded-xl bg-yellow-400 px-6 py-4 text-center font-bold text-black transition hover:bg-yellow-300";
+
+          message.appendChild(
+            downloadButton
+          );
+        }
+      },
+
+      onCancel: function () {
+
+        showMessage(
+          "Checkout was canceled. Your payment was not completed."
+        );
+
+      },
+
+      onError: function (error) {
+
+        console.error(
+          "PayPal error:",
+          error
+        );
+
+        showMessage(
+          "Something went wrong with PayPal checkout. Please try again."
+        );
+
+      }
+
+    }).render(
+      "#paypal-button-container"
+    );
+  </script>
+
+</BaseLayout>
