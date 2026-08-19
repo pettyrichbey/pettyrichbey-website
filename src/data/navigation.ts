@@ -20,6 +20,10 @@ export const navigation = [
     href: "/blog",
   },
   {
+    label: "Sponsors",
+    href: "/sponsors",
+  },
+  {
     label: "VIP Club",
     href: "/vip",
   },
