@@ -1,0 +1,598 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Whispers After Dark | P. R. Bey">
+
+  <section class="relative overflow-hidden px-6 py-20 md:px-8 md:py-28">
+
+    <!-- Atmospheric Background -->
+
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.20),transparent_55%)]"
+    ></div>
+
+    <div
+      class="absolute -left-40 top-40 h-96 w-96 rounded-full bg-purple-900/20 blur-3xl"
+    ></div>
+
+    <div
+      class="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-yellow-500/10 blur-3xl"
+    ></div>
+
+    <div class="relative mx-auto max-w-6xl">
+
+      <!-- Breadcrumb -->
+
+      <div class="mb-10 text-sm text-zinc-500">
+        <a
+          href="/"
+          class="transition hover:text-yellow-400"
+        >
+          Home
+        </a>
+
+        <span class="mx-2">/</span>
+
+        <a
+          href="/books"
+          class="transition hover:text-yellow-400"
+        >
+          Books
+        </a>
+
+        <span class="mx-2">/</span>
+
+        <span class="text-zinc-400">
+          Whispers After Dark
+        </span>
+      </div>
+
+      <!-- Main Product -->
+
+      <div
+        class="grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 shadow-2xl lg:grid-cols-2"
+      >
+
+        <!-- Cover -->
+
+        <div
+          class="relative flex items-center justify-center overflow-hidden bg-black p-8 md:p-12"
+        >
+
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle,rgba(124,58,237,.18),transparent_65%)]"
+          ></div>
+
+          <img
+            src="/images/books/whispers2.png"
+            alt="Whispers After Dark by P. R. Bey"
+            class="relative w-full max-w-md rounded-xl shadow-2xl"
+          />
+
+        </div>
+
+        <!-- Product Information -->
+
+        <div class="flex flex-col justify-center p-8 md:p-12 lg:p-16">
+
+          <p
+            class="uppercase tracking-[0.4em] text-yellow-400"
+          >
+            Digital Edition
+          </p>
+
+          <h1
+            class="logo mt-5 text-5xl leading-tight md:text-6xl"
+          >
+            Whispers After Dark
+          </h1>
+
+          <p class="mt-4 text-xl text-zinc-400">
+            by P. R. Bey
+          </p>
+
+          <div class="mt-8 h-px w-24 bg-yellow-400"></div>
+
+          <p
+            class="mt-8 text-lg leading-8 text-zinc-300"
+          >
+            Enter a world where secrets don't stay buried,
+            the night has a voice, and some whispers are
+            better left unheard.
+          </p>
+
+          <p
+            class="mt-5 leading-7 text-zinc-500"
+          >
+            Get the official digital edition of
+            <em>Whispers After Dark</em> directly from
+            P. R. Bey.
+          </p>
+
+          <!-- Product Details -->
+
+          <div class="mt-8 grid grid-cols-2 gap-4">
+
+            <div
+              class="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5"
+            >
+              <p
+                class="text-xs uppercase tracking-[0.25em] text-zinc-500"
+              >
+                Format
+              </p>
+
+              <p class="mt-2 font-semibold text-white">
+                EPUB
+              </p>
+            </div>
+
+            <div
+              class="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5"
+            >
+              <p
+                class="text-xs uppercase tracking-[0.25em] text-zinc-500"
+              >
+                Edition
+              </p>
+
+              <p class="mt-2 font-semibold text-white">
+                Digital
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Price -->
+
+          <div class="mt-10">
+
+            <p class="text-sm uppercase tracking-[0.25em] text-zinc-500">
+              Digital Edition
+            </p>
+
+            <div class="mt-2 flex items-baseline gap-2">
+
+              <span class="text-5xl font-bold text-white">
+                $4.99
+              </span>
+
+              <span class="text-zinc-500">
+                USD
+              </span>
+
+            </div>
+
+          </div>
+
+          <!-- PayPal -->
+
+          <div class="mt-8">
+
+            <div
+              id="paypal-button-container"
+              class="min-h-[45px]"
+            ></div>
+
+            <p
+              id="paypal-status"
+              class="mt-4 text-center text-sm text-zinc-500"
+            >
+              Secure checkout powered by PayPal.
+            </p>
+
+          </div>
+
+          <!-- Kindle -->
+
+          <div
+            class="mt-8 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5"
+          >
+
+            <p
+              class="text-sm font-semibold text-white"
+            >
+              Prefer Kindle?
+            </p>
+
+            <p
+              class="mt-2 text-sm leading-6 text-zinc-500"
+            >
+              The Kindle edition is available separately
+              through Amazon.
+            </p>
+
+            <a
+              href="https://www.amazon.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-4 inline-block font-semibold text-yellow-400 transition hover:text-yellow-300"
+            >
+              Find it on Amazon →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- What You Receive -->
+
+      <div class="mt-16 grid gap-8 md:grid-cols-3">
+
+        <article
+          class="rounded-3xl border border-zinc-800 bg-zinc-950 p-7"
+        >
+
+          <div class="text-2xl">
+            📖
+          </div>
+
+          <h2 class="mt-4 text-xl font-semibold">
+            EPUB Edition
+          </h2>
+
+          <p class="mt-3 leading-7 text-zinc-500">
+            Receive the professionally formatted digital
+            edition of <em>Whispers After Dark</em>.
+          </p>
+
+        </article>
+
+        <article
+          class="rounded-3xl border border-zinc-800 bg-zinc-950 p-7"
+        >
+
+          <div class="text-2xl">
+            🔐
+          </div>
+
+          <h2 class="mt-4 text-xl font-semibold">
+            Secure Delivery
+          </h2>
+
+          <p class="mt-3 leading-7 text-zinc-500">
+            Your download is delivered through a secure,
+            time-limited link after payment.
+          </p>
+
+        </article>
+
+        <article
+          class="rounded-3xl border border-zinc-800 bg-zinc-950 p-7"
+        >
+
+          <div class="text-2xl">
+            ⚡
+          </div>
+
+          <h2 class="mt-4 text-xl font-semibold">
+            Instant Access
+          </h2>
+
+          <p class="mt-3 leading-7 text-zinc-500">
+            Once your payment is completed, your ebook
+            download becomes available immediately.
+          </p>
+
+        </article>
+
+      </div>
+
+      <!-- About -->
+
+      <div
+        class="mt-16 rounded-3xl border border-zinc-800 bg-zinc-950 p-8 md:p-12"
+      >
+
+        <p
+          class="uppercase tracking-[0.35em] text-yellow-400"
+        >
+          About The Book
+        </p>
+
+        <h2 class="logo mt-4 text-4xl md:text-5xl">
+          Whispers After Dark
+        </h2>
+
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
+          <em>Whispers After Dark</em> invites readers into
+          a darker side of the P. R. Bey universe — a place
+          where atmosphere, secrets, and the unknown collide.
+        </p>
+
+      </div>
+
+      <!-- Back to Books -->
+
+      <div class="mt-12 text-center">
+
+        <a
+          href="/books"
+          class="inline-flex items-center rounded-xl border border-zinc-700 px-7 py-4 font-semibold text-zinc-300 transition hover:border-yellow-400 hover:text-yellow-400"
+        >
+          ← Back to Books
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PayPal SDK -->
+
+  <script
+    is:inline
+    src="https://www.paypal.com/sdk/js?client-id=BAAmvrTBcFERarEIDwhDw-Z-2XUHk1W7nPEDV0KuEZpvVXvRBzRGIF9OYh7JJB9Z17iA9gFKoq8kekDBAg&currency=USD&intent=capture"
+  ></script>
+
+
+  <!-- PayPal Checkout -->
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", async () => {
+
+      const container =
+        document.getElementById(
+          "paypal-button-container"
+        );
+
+      const status =
+        document.getElementById(
+          "paypal-status"
+        );
+
+      if (!container) {
+        return;
+      }
+
+      if (
+        typeof window.paypal ===
+        "undefined"
+      ) {
+
+        status.textContent =
+          "PayPal could not be loaded. Please refresh the page.";
+
+        status.classList.add(
+          "text-red-400"
+        );
+
+        return;
+      }
+
+      try {
+
+        window.paypal
+          .Buttons({
+
+            style: {
+              layout: "vertical",
+              shape: "rect",
+              label: "paypal",
+              height: 48,
+            },
+
+
+            // ------------------------------------------
+            // CREATE ORDER
+            // ------------------------------------------
+
+            createOrder:
+              async function () {
+
+                status.textContent =
+                  "Creating secure checkout...";
+
+                const response =
+                  await fetch(
+                    "https://prb-digital-delivery.pettyrichbey.workers.dev/paypal/create-order",
+                    {
+                      method: "POST",
+
+                      headers: {
+                        "Content-Type":
+                          "application/json",
+                      },
+
+                      body:
+                        JSON.stringify({
+                          product:
+                            "PRB-WHISPERS-AFTER-DARK",
+                        }),
+                    }
+                  );
+
+                const data =
+                  await response.json();
+
+                if (
+                  !response.ok ||
+                  !data.success ||
+                  !data.orderID
+                ) {
+
+                  console.error(
+                    "Create order error:",
+                    data
+                  );
+
+                  throw new Error(
+                    data.message ||
+                      "Unable to create PayPal order."
+                  );
+                }
+
+                return data.orderID;
+              },
+
+
+            // ------------------------------------------
+            // ON APPROVE / CAPTURE
+            // ------------------------------------------
+
+            onApprove:
+              async function (
+                data
+              ) {
+
+                status.textContent =
+                  "Processing your payment...";
+
+                try {
+
+                  const response =
+                    await fetch(
+                      "https://prb-digital-delivery.pettyrichbey.workers.dev/paypal/capture-order",
+                      {
+                        method: "POST",
+
+                        headers: {
+                          "Content-Type":
+                            "application/json",
+                        },
+
+                        body:
+                          JSON.stringify({
+                            orderID:
+                              data.orderID,
+                          }),
+                      }
+                    );
+
+                  const result =
+                    await response.json();
+
+                  console.log(
+                    "Whispers fulfillment:",
+                    result
+                  );
+
+                  if (
+                    !response.ok ||
+                    !result.success
+                  ) {
+
+                    throw new Error(
+                      result.message ||
+                        "Payment completed, but delivery could not be generated."
+                    );
+                  }
+
+                  status.textContent =
+                    "Payment complete! Your ebook is ready.";
+
+                  status.className =
+                    "mt-4 text-center text-sm text-green-400";
+
+
+                  // --------------------------------------
+                  // DOWNLOAD
+                  // --------------------------------------
+
+                  if (
+                    result.download_url
+                  ) {
+
+                    const downloadButton =
+                      document.createElement(
+                        "a"
+                      );
+
+                    downloadButton.href =
+                      result.download_url;
+
+                    downloadButton.textContent =
+                      "Download Whispers After Dark →";
+
+                    downloadButton.className =
+                      "mt-6 block w-full rounded-xl bg-yellow-400 px-6 py-4 text-center font-bold text-black transition hover:bg-yellow-300";
+
+                    downloadButton.rel =
+                      "noopener";
+
+                    container.appendChild(
+                      downloadButton
+                    );
+
+                  }
+
+                } catch (error) {
+
+                  console.error(
+                    "Whispers capture error:",
+                    error
+                  );
+
+                  status.textContent =
+                    "Your payment was received, but we couldn't generate the download automatically. Please contact support.";
+
+                  status.className =
+                    "mt-4 text-center text-sm text-red-400";
+                }
+              },
+
+
+            // ------------------------------------------
+            // CANCEL
+            // ------------------------------------------
+
+            onCancel:
+              function () {
+
+                status.textContent =
+                  "Checkout cancelled. No payment was completed.";
+
+                status.className =
+                  "mt-4 text-center text-sm text-zinc-500";
+              },
+
+
+            // ------------------------------------------
+            // ERROR
+            // ------------------------------------------
+
+            onError:
+              function (
+                error
+              ) {
+
+                console.error(
+                  "PayPal checkout error:",
+                  error
+                );
+
+                status.textContent =
+                  "Something went wrong with PayPal checkout. Please try again.";
+
+                status.className =
+                  "mt-4 text-center text-sm text-red-400";
+              },
+
+          })
+          .render(
+            "#paypal-button-container"
+          );
+
+      } catch (error) {
+
+        console.error(
+          "PayPal initialization error:",
+          error
+        );
+
+        status.textContent =
+          "PayPal could not be initialized.";
+
+        status.className =
+          "mt-4 text-center text-sm text-red-400";
+      }
+
+    });
+  </script>
+
+</BaseLayout>
