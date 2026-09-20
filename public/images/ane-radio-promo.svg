@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">ANE Radio — Real Music. Real People. All Vibes.</title>
+<desc id="desc">Purple and gold ANE Radio studio graphic with microphone, headphones, skyline and ON AIR sign.</desc>
+<defs>
+<radialGradient id="bg" cx="50%" cy="25%" r="85%"><stop offset="0" stop-color="#2b0752"/><stop offset=".5" stop-color="#10051d"/><stop offset="1" stop-color="#050308"/></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff1a8"/><stop offset=".28" stop-color="#f8c33b"/><stop offset=".65" stop-color="#b87508"/><stop offset="1" stop-color="#ffe27a"/></linearGradient>
+<linearGradient id="purple" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a855f7"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#d946ef"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-opacity=".65"/></filter>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<circle cx="600" cy="300" r="350" fill="none" stroke="#8b5cf6" stroke-width="7" opacity=".7" filter="url(#glow)"/>
+<circle cx="600" cy="300" r="285" fill="none" stroke="#d946ef" stroke-width="2" opacity=".55"/>
+<g opacity=".7" fill="#240b3c"><rect x="0" y="560" width="1200" height="220"/></g>
+<g fill="#08070d" opacity=".95">
+<path d="M0 650V520h70v-95h55v225h45V470h70v180h45V390h58v260h48V500h76v150h48V430h62v220h55V350h60v300h46V470h70v180h48V405h63v245h50V520h78v130h48V445h58v205h45V500h65v150h70V390h62v260h55v-80h70v80H0z"/>
+</g>
+<g fill="#d946ef" opacity=".45"><rect x="110" y="450" width="6" height="20"/><rect x="210" y="500" width="6" height="20"/><rect x="340" y="430" width="6" height="20"/><rect x="470" y="540" width="6" height="20"/><rect x="650" y="400" width="6" height="20"/><rect x="790" y="510" width="6" height="20"/><rect x="930" y="455" width="6" height="20"/><rect x="1060" y="500" width="6" height="20"/></g>
+<text x="600" y="72" text-anchor="middle" fill="url(#gold)" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="10">ABSOLUTELY   NO EXCUSES</text>
+<g transform="translate(600 115)" fill="none" stroke="url(#gold)" stroke-width="7"><path d="M0 35V0"/><path d="M-18 35a18 18 0 0 0 36 0V8a18 18 0 0 0-36 0v27z"/><path d="M-35 35a35 35 0 0 0 70 0M0 70v22M-28 92h56"/></g>
+<text x="600" y="285" text-anchor="middle" fill="url(#gold)" font-family="Georgia,serif" font-size="185" font-weight="900" letter-spacing="-10" filter="url(#shadow)">ANE</text>
+<text x="600" y="415" text-anchor="middle" fill="url(#gold)" font-family="Arial,sans-serif" font-size="112" font-weight="900" font-style="italic" letter-spacing="2" filter="url(#shadow)">RADIO</text>
+<g stroke="url(#purple)" stroke-width="10" stroke-linecap="round" filter="url(#glow)"><path d="M235 385h130"/><path d="M835 385h130"/><path d="M260 440h85"/><path d="M855 440h85"/></g>
+<text x="600" y="475" text-anchor="middle" fill="#f7d76a" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="6">REAL MUSIC. REAL PEOPLE. ALL VIBES.</text>
+<g transform="translate(110 520)" filter="url(#shadow)">
+<rect x="0" y="0" width="205" height="205" rx="36" fill="#09070d" stroke="#8b5cf6" stroke-width="4"/>
+<circle cx="102" cy="85" r="54" fill="#17101f" stroke="url(#gold)" stroke-width="5"/>
+<path d="M73 85h58M82 72h40M82 98h40" stroke="#f7d76a" stroke-width="6"/>
+<text x="102" y="155" text-anchor="middle" fill="#f7d76a" font-family="Arial,sans-serif" font-size="19" font-weight="700">GOOD MUSIC</text>
+<text x="102" y="181" text-anchor="middle" fill="#a855f7" font-family="Arial,sans-serif" font-size="19" font-weight="700">BETTER DAYS</text>
+</g>
+<g transform="translate(475 500)" filter="url(#shadow)">
+<rect x="65" y="0" width="120" height="275" rx="58" fill="#09070d" stroke="#c58b17" stroke-width="6"/>
+<rect x="91" y="24" width="68" height="115" rx="34" fill="url(#gold)"/>
+<path d="M102 42h46M102 58h46M102 74h46M102 90h46M102 106h46M102 122h46" stroke="#24132b" stroke-width="3" opacity=".8"/>
+<rect x="103" y="145" width="44" height="82" rx="18" fill="#121016"/>
+<circle cx="125" cy="180" r="31" fill="#09070d" stroke="#f7d76a" stroke-width="2"/>
+<text x="125" y="188" text-anchor="middle" fill="#f7d76a" font-family="Arial,sans-serif" font-size="16" font-weight="900">ANE</text>
+<path d="M125 227v35M78 266h94" stroke="#f7d76a" stroke-width="7" stroke-linecap="round"/>
+</g>
+<g transform="translate(885 525)" filter="url(#shadow)">
+<rect width="205" height="180" rx="28" fill="#09070d" stroke="#8b5cf6" stroke-width="4"/>
+<text x="102" y="66" text-anchor="middle" fill="#f7d76a" font-family="Arial,sans-serif" font-size="24" font-weight="900">ON AIR</text>
+<circle cx="102" cy="112" r="18" fill="#d946ef" filter="url(#glow)"/>
+<text x="102" y="148" text-anchor="middle" fill="#a855f7" font-family="Arial,sans-serif" font-size="16" font-weight="700">TUNE IN • VIBE • REPEAT</text>
+</g>
+<g transform="translate(335 790)" text-anchor="middle">
+<text x="0" y="0" fill="#f7d76a" font-family="Arial,sans-serif" font-size="18" font-weight="700">LIVE SHOWS</text>
+<text x="165" y="0" fill="#f7d76a" font-family="Arial,sans-serif" font-size="18" font-weight="700">INDEPENDENT HOSTS</text>
+<text x="375" y="0" fill="#f7d76a" font-family="Arial,sans-serif" font-size="18" font-weight="700">ARTIST SPOTLIGHTS</text>
+<text x="580" y="0" fill="#f7d76a" font-family="Arial,sans-serif" font-size="18" font-weight="700">COMMUNITY</text>
+</g>
+<text x="600" y="850" text-anchor="middle" fill="#a855f7" font-family="Arial,sans-serif" font-size="24" font-weight="800" letter-spacing="8">SAME VIBES. MORE FREEDOM.</text>
+</svg>
