@@ -1,5 +1,9 @@
 export const navigation = [
   {
+    label: "People's Report",
+    href: "/peoples-report",
+  },
+  {
     label: "ANE Radio",
     href: "/ane-radio",
   },
