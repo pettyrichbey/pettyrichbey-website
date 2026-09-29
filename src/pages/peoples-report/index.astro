@@ -129,13 +129,33 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
           endorsed or treated as People’s Report stories.
         </p>
 
-        <div class="mt-8 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950">
-          <iframe
-            src={rssFeed}
-            title="External news headlines"
-            class="h-[520px] w-full"
-            loading="lazy"
-          ></iframe>
+        <div class="mt-8 rounded-2xl border border-zinc-800 bg-zinc-950 p-5 md:p-6">
+          <div class="flex flex-col gap-3 border-b border-zinc-800 pb-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">Powered by Google News RSS</p>
+              <p class="mt-1 text-sm text-zinc-400">External headlines • Updated when this section loads</p>
+            </div>
+            <a
+              href="https://news.google.com/?hl=en-US&gl=US&ceid=US:en"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-fit rounded-full border border-zinc-700 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-zinc-200 transition hover:border-red-500 hover:text-white"
+            >
+              Open Google News ↗
+            </a>
+          </div>
+
+          <div id="external-news-feed" class="mt-5 space-y-3" aria-live="polite">
+            <div class="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 text-sm text-zinc-400">
+              Loading the latest headlines…
+            </div>
+          </div>
+
+          <noscript>
+            <div class="mt-5 rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 text-sm text-zinc-400">
+              JavaScript is required to display the external headline feed. Use the “Open Google News” button above to view the latest headlines directly.
+            </div>
+          </noscript>
         </div>
 
         <p class="mt-4 text-xs leading-5 text-zinc-500">
@@ -145,4 +165,81 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
       </div>
     </div>
   </section>
+  <script>
+    const feedContainer = document.querySelector("#external-news-feed");
+    const apiUrl =
+      "https://api.rss2json.com/v1/api.json?rss_url=" +
+      encodeURIComponent("https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en");
+
+    const formatDate = (value) => {
+      if (!value) return "";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "";
+      return new Intl.DateTimeFormat("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      }).format(date);
+    };
+
+    const renderFeed = (items) => {
+      if (!feedContainer) return;
+
+      feedContainer.innerHTML = "";
+
+      items.slice(0, 12).forEach((item) => {
+        const article = document.createElement("article");
+        article.className =
+          "rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition hover:border-red-500/50";
+
+        const meta = document.createElement("p");
+        meta.className =
+          "text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500";
+        meta.textContent = formatDate(item.pubDate);
+
+        const link = document.createElement("a");
+        link.href = item.link;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.className =
+          "mt-2 block text-lg font-semibold leading-7 text-zinc-100 transition hover:text-red-300";
+        link.textContent = item.title;
+
+        article.append(meta, link);
+        feedContainer.appendChild(article);
+      });
+
+      if (!items.length) {
+        throw new Error("No headlines were returned.");
+      }
+    };
+
+    const loadFeed = async () => {
+      if (!feedContainer) return;
+
+      try {
+        const response = await fetch(apiUrl, {
+          headers: { Accept: "application/json" },
+        });
+        if (!response.ok) throw new Error("Feed request failed.");
+
+        const data = await response.json();
+        if (data.status !== "ok" || !Array.isArray(data.items)) {
+          throw new Error("Feed returned an unexpected response.");
+        }
+
+        renderFeed(data.items);
+      } catch (error) {
+        feedContainer.innerHTML = "";
+        const message = document.createElement("div");
+        message.className =
+          "rounded-xl border border-red-900/50 bg-red-950/20 p-5 text-sm leading-6 text-zinc-400";
+        message.textContent =
+          "The external headlines could not be loaded right now. You can still view the latest stories directly on Google News.";
+        feedContainer.appendChild(message);
+      }
+    };
+
+    loadFeed();
+  </script>
 </BaseLayout>
