@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">The People's Report</title>
+<desc id="desc">Newsroom graphic for The People's Report by Bey Mirror Media</desc>
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#020617"/><stop offset=".5" stop-color="#0b2a62"/><stop offset="1" stop-color="#020617"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#2563eb" stop-opacity=".8"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="800" cy="220" r="330" fill="url(#glow)" opacity=".55"/>
+<g stroke="#2563eb" opacity=".35" fill="none">
+  <path d="M0 170H1600M0 280H1600M0 390H1600M0 500H1600M0 610H1600M0 720H1600"/>
+  <path d="M120 0V900M360 0V900M600 0V900M840 0V900M1080 0V900M1320 0V900M1480 0V900"/>
+</g>
+<circle cx="800" cy="260" r="180" fill="none" stroke="#60a5fa" stroke-width="4" opacity=".7"/>
+<path d="M620 260h360M800 80v360M675 140c85 80 165 80 250 0M675 380c85-80 165-80 250 0" stroke="#93c5fd" stroke-width="3" fill="none" opacity=".5"/>
+<text x="800" y="180" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="64" font-weight="700" letter-spacing="8">THE</text>
+<text x="800" y="285" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="108" font-weight="900" letter-spacing="2">PEOPLE’S</text>
+<rect x="515" y="315" width="570" height="105" rx="8" fill="#991b1b" stroke="#ef4444" stroke-width="5"/>
+<text x="800" y="392" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="84" font-weight="900" font-style="italic">REPORT</text>
+<text x="800" y="470" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="28" letter-spacing="10">NEWS • FACTS • COMMUNITY</text>
+<text x="800" y="515" text-anchor="middle" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="25" letter-spacing="7">ACCOUNTABILITY</text>
+<g font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#fff">
+<text x="65" y="110">POLITICS &amp; POLICY</text><text x="65" y="165">WORK &amp; ECONOMY</text><text x="65" y="220">COMMUNITY ISSUES</text><text x="65" y="275">CIVIL RIGHTS</text><text x="65" y="330">LEGISLATION</text>
+<text x="1240" y="110">REAL NEWS</text><text x="1240" y="165">REAL PEOPLE</text><text x="1240" y="220">REAL ISSUES</text><text x="1240" y="275">REAL CONVERSATIONS</text><text x="1240" y="330">REAL CHANGE</text>
+</g>
+<rect x="0" y="760" width="1600" height="140" fill="#020617" opacity=".92"/>
+<text x="800" y="835" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="44" font-weight="800" letter-spacing="8">THE NEWS THAT MATTERS TO YOU</text>
+<text x="800" y="875" text-anchor="middle" fill="#94a3b8" font-family="Arial,sans-serif" font-size="20" letter-spacing="4">BEY MIRROR MEDIA • INFORMATION • PEOPLE • PROGRESS</text>
+</svg>
