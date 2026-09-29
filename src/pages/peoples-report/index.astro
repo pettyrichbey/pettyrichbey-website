@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
+---
+
+<BaseLayout
+  title="The People's Report | News • Facts • Community • Accountability"
+  description="The People's Report from Bey Mirror Media — news, facts, community issues, accountability, and the voices of real people."
+>
+  <section class="relative overflow-hidden border-b border-zinc-800">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,.24),transparent_62%)]"></div>
+    <div class="relative mx-auto max-w-7xl px-4 py-8 md:px-6 lg:px-8">
+      <div class="overflow-hidden rounded-3xl border border-blue-500/30 bg-zinc-950 shadow-2xl">
+        <img
+          src="/images/peoples-report-hero.svg"
+          alt="The People's Report newsroom graphic"
+          class="h-auto w-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-zinc-800 py-20">
+    <div class="mx-auto max-w-5xl px-6 text-center">
+      <p class="uppercase tracking-[0.35em] text-red-400">Bey Mirror Media</p>
+      <h1 class="logo mt-4 text-5xl md:text-7xl">The People’s Report</h1>
+      <p class="mt-6 text-xl font-semibold text-zinc-200">News • Facts • Community • Accountability</p>
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
+        A news and community-focused program examining the issues that affect real people —
+        from politics and policy to employment, the economy, civil rights, legislation,
+        and significant community concerns.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="uppercase tracking-[0.3em] text-red-400">About The Report</p>
+        <h2 class="logo mt-3 text-4xl md:text-5xl">Information first. People at the center.</h2>
+        <p class="mt-6 leading-8 text-zinc-400">
+          The People's Report brings together reporting, documented information,
+          community experiences, and conversations with people directly affected by
+          the issues being covered. The goal is to examine the facts, ask questions,
+          and give people an opportunity to be heard.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {[
+          ["🏛️", "Politics & Policy", "Government, public policy, elections, and decisions that affect communities."],
+          ["💼", "Work & Economy", "Employment, wages, workplace experiences, economic opportunity, and labor issues."],
+          ["🏘️", "Community Issues", "Stories and developments affecting neighborhoods and everyday life."],
+          ["⚖️", "Civil Rights", "Civil rights, equal opportunity, access, and documented public-interest concerns."],
+          ["📜", "Legislation", "Bills, laws, regulatory changes, and what they mean for the public."],
+          ["🎙️", "The People’s Voice", "Firsthand community experiences that can help identify issues for further reporting."]
+        ].map(([icon, title, text]) => (
+          <article class="rounded-3xl border border-zinc-800 bg-zinc-900 p-7 transition hover:-translate-y-1 hover:border-red-500/60">
+            <div class="text-4xl">{icon}</div>
+            <h3 class="logo mt-5 text-2xl">{title}</h3>
+            <p class="mt-3 leading-7 text-zinc-400">{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-zinc-800 bg-zinc-950 py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="uppercase tracking-[0.3em] text-red-400">Original Coverage</p>
+          <h2 class="logo mt-3 text-4xl md:text-5xl">Latest Reports</h2>
+        </div>
+        <p class="max-w-xl text-zinc-400">
+          Original People’s Report coverage will appear here as stories are published.
+        </p>
+      </div>
+
+      <div class="mt-10 rounded-3xl border border-dashed border-zinc-700 bg-zinc-900/60 p-10 text-center">
+        <p class="text-4xl">📰</p>
+        <h3 class="logo mt-5 text-2xl">Your newsroom starts here.</h3>
+        <p class="mx-auto mt-3 max-w-2xl leading-7 text-zinc-400">
+          Reports, interviews, investigations, explainers, and community-focused stories
+          will be added to this section.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="uppercase tracking-[0.3em] text-red-400">Community</p>
+        <h2 class="logo mt-3 text-4xl md:text-5xl">The People’s Voice</h2>
+        <p class="mt-5 leading-8 text-zinc-400">
+          Have an experience, issue, or community concern you believe deserves attention?
+          Share the details. Submissions may help identify topics for future reporting,
+          interviews, or follow-up.
+        </p>
+        <p class="mt-4 text-sm leading-6 text-zinc-500">
+          Sharing an experience does not by itself establish that unlawful conduct occurred.
+          The People's Report may use submissions as leads for further reporting and verification.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-2">
+        <a href="/contact" class="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition hover:border-red-500/60">
+          <h3 class="logo text-2xl">Submit a Story Tip →</h3>
+          <p class="mt-2 text-zinc-400">Send information about an issue or development you think should be examined.</p>
+        </a>
+        <a href="/contact" class="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition hover:border-red-500/60">
+          <h3 class="logo text-2xl">Request a Guest Invitation →</h3>
+          <p class="mt-2 text-zinc-400">Interested in sharing your experience on an upcoming report?</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-zinc-800 py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-7 md:p-10">
+        <p class="uppercase tracking-[0.3em] text-blue-400">External News Feed</p>
+        <h2 class="logo mt-3 text-4xl">Latest News</h2>
+        <p class="mt-4 max-w-3xl leading-7 text-zinc-400">
+          Headlines from the wider news cycle are provided here as an informational add-on.
+          They are separate from The People's Report’s original reporting and are not automatically
+          endorsed or treated as People’s Report stories.
+        </p>
+
+        <div class="mt-8 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950">
+          <iframe
+            src={rssFeed}
+            title="External news headlines"
+            class="h-[520px] w-full"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <p class="mt-4 text-xs leading-5 text-zinc-500">
+          External headlines are provided for informational purposes. The People's Report does not
+          independently report or endorse every story displayed in this external feed.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
