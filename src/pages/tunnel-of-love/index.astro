@@ -1,65 +1,179 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const worker = "https://prb-digital-delivery.pettyrichbey.workers.dev";
 ---
 
 <BaseLayout
-  title="Tunnel of Love: ACT I — Masterpiece Theatre | Petty Rich Bey"
-  description="Enter Tunnel of Love: ACT I — Masterpiece Theatre, the new R&B album from Petty Rich Bey. Coming January 15, 2027."
+  title="Tunnel of Love: ACT I — Early Access | Petty Rich Bey"
+  description="Buy INTOXICATED, the lead single, or get early access to the complete Tunnel of Love: ACT I — Masterpiece Theatre album directly from Petty Rich Bey."
 >
-  <section class="relative isolate overflow-hidden px-6 py-24 md:px-10 md:py-32">
-    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(214,184,135,.16),transparent_48%),linear-gradient(145deg,#35101f,#170f13_58%,#100b0e)]"></div>
-    <div class="mx-auto max-w-6xl">
-      <div class="mx-auto max-w-4xl text-center">
-        <p class="prb-kicker">Petty Rich Bey presents</p>
-        <p class="mt-8 text-sm uppercase tracking-[0.55em] text-[#d6b887]">A new R&amp;B experience</p>
-        <h1 class="logo mt-6 text-5xl leading-tight text-[#f5efe5] md:text-7xl lg:text-8xl">Tunnel of Love</h1>
-        <p class="mt-4 text-xl uppercase tracking-[0.32em] text-[#d6b887] md:text-2xl">ACT I · Masterpiece Theatre</p>
-        <p class="mx-auto mt-8 max-w-2xl text-lg leading-8 text-[#e4d8d1]">
-          A beautiful, seductive carnival of love, desire, and late-night emotion—with shadows waiting just beyond the lights.
-        </p>
-        <div class="mt-10 flex flex-wrap justify-center gap-4">
-          <span class="rounded-full border border-[#d6b887]/40 px-5 py-2 text-sm text-[#f5efe5]">19 tracks</span>
-          <span class="rounded-full border border-[#d6b887]/40 px-5 py-2 text-sm text-[#f5efe5]">January 15, 2027</span>
-          <span class="rounded-full border border-[#d6b887]/40 px-5 py-2 text-sm text-[#f5efe5]">$9.99</span>
-        </div>
-      </div>
-
-      <div class="mx-auto mt-20 grid max-w-5xl gap-8 lg:grid-cols-[1.1fr_.9fr]">
-        <div class="prb-panel flex min-h-[360px] flex-col justify-center p-8 md:p-12">
-          <p class="prb-kicker">The experience</p>
-          <h2 class="logo mt-5 text-4xl text-[#f5efe5] md:text-5xl">Step inside the theatre.</h2>
-          <p class="mt-6 leading-8 text-[#d8c9c2]">
-            ACT I opens the Tunnel of Love story with a cinematic R&amp;B journey. Let the music pull you in, follow the story, and discover what waits behind the curtain.
+  <main class="overflow-hidden bg-[#130b10] text-[#f5efe5]">
+    <section class="relative isolate px-5 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_18%_12%,rgba(157,28,54,.34),transparent_42%),radial-gradient(ellipse_at_85%_65%,rgba(214,184,135,.12),transparent_40%),linear-gradient(145deg,#2a0d19,#130b10_60%,#09070a)]"></div>
+      <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1fr_.9fr]">
+        <div>
+          <p class="prb-kicker text-xs md:text-sm">Petty Rich Bey presents</p>
+          <h1 class="logo mt-6 text-5xl leading-tight md:text-7xl">Tunnel of Love</h1>
+          <p class="mt-3 text-sm uppercase tracking-[.35em] text-[#d6b887] md:text-lg">ACT I · Masterpiece Theatre</p>
+          <p class="mt-7 max-w-xl text-lg leading-8 text-[#e4d8d1]">
+            A beautiful, seductive carnival of love, desire, and late-night emotion—with shadows waiting just beyond the lights.
           </p>
-          <p class="mt-8 text-sm leading-6 text-[#bcaeaa]">
-            The full 19-track album download will be available with purchase. The private album file is not hosted as a public download.
-          </p>
-        </div>
-
-        <div class="rounded-3xl border border-[#d6b887]/30 bg-[#24171c]/90 p-8 md:p-10">
-          <p class="prb-kicker">The first act</p>
-          <h2 class="logo mt-4 text-3xl text-[#f5efe5]">Own the album</h2>
-          <p class="mt-4 text-4xl font-semibold text-[#d6b887]">$9.99</p>
-          <p class="mt-4 leading-7 text-[#d8c9c2]">
-            Get the complete ACT I album as a digital download when it releases.
-          </p>
-          <div class="mt-8 rounded-2xl border border-[#d6b887]/20 bg-black/20 p-5">
-            <p class="text-sm font-semibold text-[#f5efe5]">Release date</p>
-            <p class="mt-1 text-[#d6b887]">Friday, January 15, 2027</p>
+          <div class="mt-9 flex flex-wrap gap-3 text-xs uppercase tracking-widest text-[#e7d7ce]">
+            <span class="rounded-full border border-[#d6b887]/40 px-4 py-2">19-track album</span>
+            <span class="rounded-full border border-[#d6b887]/40 px-4 py-2">Early access available</span>
+            <span class="rounded-full border border-[#d6b887]/40 px-4 py-2">Official streaming · Jan 15, 2027</span>
           </div>
-          <p class="mt-6 text-sm leading-6 text-[#bcaeaa]">
-            Secure checkout and instant private delivery will be connected after the payment and download endpoints are verified.
-          </p>
+          <a href="#shop" class="prb-button mt-9">Shop early access</a>
+        </div>
+        <div class="mx-auto w-full max-w-[470px]">
+          <div class="overflow-hidden rounded-[1.6rem] border border-[#d6b887]/35 shadow-[0_25px_90px_rgba(0,0,0,.55)]">
+            <img
+              src={`${worker}/media/intoxicated-thumbnail`}
+              alt="INTOXICATED single cover by Petty Rich Bey"
+              class="aspect-square w-full object-cover"
+              loading="eager"
+            />
+          </div>
+          <p class="mt-4 text-center text-xs uppercase tracking-[.3em] text-[#c8aaa9]">The lead single · INTOXICATED</p>
         </div>
       </div>
+    </section>
 
-      <div class="mx-auto mt-16 max-w-5xl border-t border-[#d6b887]/20 pt-10 text-center">
-        <p class="prb-kicker">The opening number</p>
-        <h2 class="logo mt-4 text-3xl text-[#f5efe5] md:text-4xl">INTOXICATED</h2>
-        <p class="mx-auto mt-4 max-w-xl leading-7 text-[#cbbdb6]">
-          The first taste of Tunnel of Love. The public preview player will appear here once its secure streaming address is confirmed.
+    <section class="border-y border-[#d6b887]/15 bg-black/20 px-5 py-14 md:px-8">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="prb-kicker text-xs">Listen before you buy</p>
+        <h2 class="logo mt-4 text-3xl md:text-4xl">Take a taste of the theatre.</h2>
+        <p class="mx-auto mt-4 max-w-2xl leading-7 text-[#cbbdb6]">
+          Preview INTOXICATED, the first single from Tunnel of Love: ACT I.
+        </p>
+        <audio controls preload="none" class="mt-8 w-full" aria-label="INTOXICATED audio preview">
+          <source src={`${worker}/media/intoxicated`} type="audio/mpeg" />
+          Your browser does not support audio playback.
+        </audio>
+        <p class="mt-3 text-xs text-[#a99595]">Audio preview provided for listening. Purchase the single below for your own MP3 download.</p>
+      </div>
+    </section>
+
+    <section id="shop" class="px-5 py-20 md:px-8 md:py-28">
+      <div class="mx-auto max-w-6xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="prb-kicker text-xs">The Petty Rich Bey early access store</p>
+          <h2 class="logo mt-4 text-4xl md:text-5xl">Choose your experience.</h2>
+          <p class="mt-5 leading-7 text-[#cbbdb6]">Get the single or own the complete first act before the official streaming release.</p>
+        </div>
+
+        <div class="mt-12 grid gap-7 md:grid-cols-2">
+          <article class="overflow-hidden rounded-3xl border border-[#d6b887]/35 bg-[#24131b] shadow-2xl">
+            <img
+              src={`${worker}/media/intoxicated-thumbnail`}
+              alt="INTOXICATED single cover"
+              class="aspect-square w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-7 md:p-9">
+              <p class="prb-kicker text-[11px]">Lead single · Early access</p>
+              <h3 class="logo mt-3 text-3xl">INTOXICATED</h3>
+              <p class="mt-4 text-4xl font-semibold text-[#d6b887]">$0.99</p>
+              <ul class="mt-5 space-y-2 text-sm leading-6 text-[#d8c9c2]">
+                <li>• One digital MP3 single</li>
+                <li>• Secure checkout through PayPal</li>
+                <li>• Private download after successful payment</li>
+              </ul>
+              <button class="prb-button mt-8 w-full" data-product="PRB-INTOXICATED-SINGLE">Buy single · $0.99</button>
+            </div>
+          </article>
+
+          <article class="flex flex-col rounded-3xl border border-[#d6b887]/35 bg-[linear-gradient(150deg,#35101f,#1b1016_70%)] p-7 shadow-2xl md:p-9">
+            <div class="flex flex-1 flex-col justify-center">
+              <p class="prb-kicker text-[11px]">The complete first act · Early access</p>
+              <div class="mt-7 flex aspect-square w-full items-center justify-center rounded-2xl border border-[#d6b887]/30 bg-[radial-gradient(ellipse_at_50%_35%,rgba(214,184,135,.17),transparent_55%),linear-gradient(145deg,#421629,#130b10)] p-8 text-center">
+                <div>
+                  <p class="text-xs uppercase tracking-[.5em] text-[#d6b887]">Petty Rich Bey</p>
+                  <h3 class="logo mt-6 text-4xl leading-tight text-[#f5efe5] md:text-5xl">Tunnel of Love</h3>
+                  <p class="mt-4 text-sm uppercase tracking-[.3em] text-[#d6b887]">ACT I</p>
+                  <p class="mt-2 text-xs uppercase tracking-[.25em] text-[#e4d8d1]">Masterpiece Theatre</p>
+                  <p class="mt-8 text-xs uppercase tracking-[.35em] text-[#bcaeaa]">19 tracks</p>
+                </div>
+              </div>
+              <h3 class="logo mt-7 text-3xl">Tunnel of Love: ACT I</h3>
+              <p class="mt-2 text-sm uppercase tracking-[.2em] text-[#d6b887]">Masterpiece Theatre</p>
+              <p class="mt-5 text-4xl font-semibold text-[#d6b887]">$9.99</p>
+              <ul class="mt-5 space-y-2 text-sm leading-6 text-[#d8c9c2]">
+                <li>• Complete 19-track digital album</li>
+                <li>• Secure checkout through PayPal</li>
+                <li>• Private ZIP download after successful payment</li>
+              </ul>
+            </div>
+            <button class="prb-button mt-8 w-full" data-product="PRB-TUNNEL-OF-LOVE-ACT-I">Buy full album · $9.99</button>
+          </article>
+        </div>
+
+        <p id="checkout-status" class="mx-auto mt-8 min-h-6 max-w-2xl text-center text-sm text-[#d6b887]" role="status" aria-live="polite"></p>
+        <p class="mt-5 text-center text-xs leading-6 text-[#9f8c91]">
+          Official streaming release: Friday, January 15, 2027. Direct purchases are early-access digital downloads. The single and album are separate purchases.
         </p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="border-t border-[#d6b887]/15 bg-black/20 px-5 py-14 text-center md:px-8">
+      <p class="prb-kicker text-xs">The curtain rises</p>
+      <h2 class="logo mt-4 text-3xl md:text-4xl">Buy direct. Listen early.</h2>
+      <p class="mx-auto mt-4 max-w-2xl leading-7 text-[#cbbdb6]">
+        Thank you for supporting independent music and Petty Rich Bey. Every direct purchase supports the artist.
+      </p>
+    </section>
+  </main>
+
+  <script define:vars={{ worker }}>
+    const status = document.getElementById("checkout-status");
+
+    async function captureReturnedOrder() {
+      const params = new URLSearchParams(window.location.search);
+      const orderID = params.get("token");
+      if (!orderID || params.get("paypal") !== "return") return;
+
+      status.textContent = "Confirming your payment securely…";
+      try {
+        const response = await fetch(`${worker}/paypal/capture-order`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ orderID })
+        });
+        const result = await response.json();
+        if (!response.ok || !result.success || !result.download_url) {
+          throw new Error(result.message || "Payment confirmation could not be completed.");
+        }
+        status.textContent = "Payment confirmed. Your download is starting…";
+        window.location.replace(result.download_url);
+      } catch (error) {
+        status.textContent = error.message || "We couldn't confirm the payment. Please contact support before trying again.";
+      }
+    }
+
+    document.querySelectorAll("[data-product]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const product = button.dataset.product;
+        button.disabled = true;
+        status.textContent = "Preparing your secure PayPal checkout…";
+        try {
+          const response = await fetch(`${worker}/paypal/create-order`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ product })
+          });
+          const result = await response.json();
+          if (!response.ok || !result.success || !result.approval_url) {
+            throw new Error(result.message || "Checkout is not ready yet. Please try again shortly.");
+          }
+          window.location.assign(result.approval_url);
+        } catch (error) {
+          status.textContent = error.message || "Unable to start checkout. Please try again.";
+          button.disabled = false;
+        }
+      });
+    });
+
+    captureReturnedOrder();
+  </script>
 </BaseLayout>
