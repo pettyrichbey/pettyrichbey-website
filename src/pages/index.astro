@@ -1,174 +1,91 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import FeaturedProject from "../components/FeaturedProject.astro";
 ---
 
-<BaseLayout title="Petty Rich Bey | Official Website">
-
-  <!-- HERO -->
-
-  <section class="relative flex min-h-screen items-center overflow-hidden px-8">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"></div>
-
-    <div class="relative mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-[3fr_2fr]">
-      <div>
-        <p class="mb-6 uppercase tracking-[0.45em] text-yellow-400">WELCOME TO</p>
-
-        <h1 class="logo text-7xl leading-none whitespace-nowrap md:text-8xl lg:text-9xl">
-          Petty Rich Bey
-        </h1>
-
-        <p class="mt-8 text-2xl text-zinc-300">Music • Stories • Conversations</p>
-
-        <p class="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
-          Explore the music, books, podcast conversations, and stories that
-          define the world of Petty Rich Bey.
-        </p>
-
-        <div class="mt-12 flex flex-wrap gap-6">
-          <a href="/music" class="rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]">
-            Listen Now
-          </a>
-          <a href="/about" class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black">
-            Explore
-          </a>
+<BaseLayout
+  title="Petty Rich Bey | The Creative House"
+  description="The official home of Petty Rich Bey — music, stories, conversations, publishing and Bey Mirror Media."
+>
+  <section class="relative isolate min-h-[82vh] overflow-hidden border-b border-[var(--prb-line)]">
+    <div class="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_50%_0%,rgba(115,37,63,.42),transparent_58%),linear-gradient(135deg,#1c1016_0%,#100b0e_55%,#211019_100%)]"></div>
+    <div class="absolute inset-0 -z-10 opacity-[.12] [background-image:linear-gradient(rgba(214,184,135,.18)_1px,transparent_1px),linear-gradient(90deg,rgba(214,184,135,.18)_1px,transparent_1px)] [background-size:72px_72px]"></div>
+    <div class="mx-auto grid min-h-[82vh] max-w-7xl items-center gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.15fr_.85fr]">
+      <div class="max-w-3xl">
+        <p class="prb-kicker mb-7 text-xs md:text-sm">Bey Mirror Media presents</p>
+        <p class="mb-4 text-xs uppercase tracking-[.5em] text-[var(--prb-champagne)]">The creative house of</p>
+        <h1 class="prb-display text-6xl leading-[.98] text-[var(--prb-cream)] sm:text-7xl md:text-8xl xl:text-[7.5rem]">Petty<br/><span class="prb-italic text-[var(--prb-champagne)]">Rich Bey</span></h1>
+        <p class="mt-8 max-w-xl text-lg leading-8 text-[#e9ded4]/75 md:text-xl">Music. Stories. Conversations. An independent creative world built on bold ideas, unmistakable style, and no apologies.</p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="/music" class="prb-button">Explore the music <span aria-hidden="true">↗</span></a>
+          <a href="/about" class="prb-button prb-button-outline">Enter the world</a>
         </div>
+        <div class="mt-16 flex items-center gap-5 text-[10px] uppercase tracking-[.35em] text-[var(--prb-muted)]"><span class="h-px w-12 bg-[var(--prb-champagne)]/60"></span> Artist · Author · Creator</div>
       </div>
-
-      <div class="flex justify-center">
-        <div class="group relative flex h-[540px] w-[400px] items-center justify-center overflow-hidden rounded-3xl border border-yellow-400/20 bg-zinc-950 shadow-2xl transition duration-500 hover:border-purple-500/50">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.20),transparent_65%)]"></div>
-          <img src="/images/logos/logo.png" alt="Petty Rich Bey" class="relative z-10 w-[320px] object-contain transition duration-700 group-hover:scale-105" />
+      <div class="relative mx-auto w-full max-w-[430px]">
+        <div class="absolute -inset-5 rounded-[2rem] border border-[var(--prb-champagne)]/20"></div>
+        <div class="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[1.5rem] border border-[var(--prb-champagne)]/35 bg-[radial-gradient(circle_at_50%_35%,#6c2a42,#28131d_55%,#100b0e_100%)] p-10 shadow-[0_35px_100px_rgba(0,0,0,.5)]">
+          <div class="absolute inset-4 border border-[var(--prb-champagne)]/20"></div>
+          <img src="/images/logos/logo.png" alt="Petty Rich Bey crowned monogram" class="relative z-10 w-[82%] object-contain drop-shadow-[0_15px_35px_rgba(0,0,0,.6)]"/>
+          <p class="absolute bottom-8 left-0 right-0 text-center text-[10px] uppercase tracking-[.55em] text-[var(--prb-champagne)]">The art of being unforgettable</p>
         </div>
       </div>
     </div>
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--prb-champagne)]/50 to-transparent"></div>
   </section>
 
-  <FeaturedProject />
-
-  <!-- PRB VIP CLUB -->
-  <section class="border-t border-zinc-800 py-24">
-    <div class="mx-auto max-w-5xl px-8">
-      <div class="relative overflow-hidden rounded-3xl border border-yellow-400/30 bg-zinc-900 p-8 shadow-2xl md:p-12">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,.20),transparent_55%)]"></div>
-
-        <div class="relative text-center">
-          <p class="uppercase tracking-[0.4em] text-yellow-400">PRB VIP CLUB</p>
-
-          <h2 class="logo mt-4 text-5xl md:text-6xl">
-            First to hear it. First to see it. First to get it.
-          </h2>
-
-          <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
-            Step inside the world of Petty Rich Bey and get exclusive access to
-            new music, videos, artwork, posters, behind-the-scenes content,
-            merchandise drops, private listening experiences, and more before
-            the public.
-          </p>
-
-          <div class="mt-10 flex flex-wrap justify-center gap-4 text-sm font-semibold text-zinc-300">
-            <span class="rounded-full border border-zinc-700 bg-zinc-950 px-5 py-2">🎵 Early Music</span>
-            <span class="rounded-full border border-zinc-700 bg-zinc-950 px-5 py-2">🎬 Early Videos</span>
-            <span class="rounded-full border border-zinc-700 bg-zinc-950 px-5 py-2">🖼️ Exclusive Artwork</span>
-            <span class="rounded-full border border-zinc-700 bg-zinc-950 px-5 py-2">👕 VIP Merch</span>
-            <span class="rounded-full border border-zinc-700 bg-zinc-950 px-5 py-2">🎤 Behind the Music</span>
+  <section class="mx-auto max-w-7xl px-6 py-24 md:px-10">
+    <div class="mb-12 flex flex-wrap items-end justify-between gap-6">
+      <div><p class="prb-kicker text-xs">The next chapter</p><h2 class="prb-display mt-4 text-4xl md:text-6xl">New music. <span class="prb-italic text-[var(--prb-champagne)]">On the way.</span></h2></div>
+      <p class="max-w-md text-sm leading-7 text-[var(--prb-muted)]">Two dates. One story. Get ready for the first taste of the Tunnel of Love era.</p>
+    </div>
+    <div class="grid gap-6 lg:grid-cols-2">
+      <article class="prb-panel group overflow-hidden rounded-2xl">
+        <div class="grid h-full sm:grid-cols-[.82fr_1fr]">
+          <div class="relative min-h-[280px] overflow-hidden bg-[#26121b]">
+            <img src="https://prb-digital-delivery.pettyrichbey.workers.dev/media/intoxicated-thumbnail" alt="INTOXICATED single artwork" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"></div>
+            <span class="absolute bottom-5 left-5 text-[10px] uppercase tracking-[.35em] text-white/80">Lead single</span>
           </div>
-
-          <a href="/vip" class="mt-10 inline-flex rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]">
-            Join the PRB VIP Club →
-          </a>
+          <div class="flex flex-col justify-center p-8 md:p-10">
+            <p class="prb-kicker text-[10px]">January 15, 2027</p>
+            <h3 class="prb-display mt-4 text-4xl md:text-5xl">INTOXICATED</h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--prb-muted)]">The first taste of Tunnel of Love: ACT I. Experience the single before its official release.</p>
+            <a href="/tunnel-of-love" class="mt-8 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[.22em] text-[var(--prb-champagne)]">Discover the single <span>↗</span></a>
+          </div>
         </div>
+      </article>
+      <article class="prb-panel flex flex-col justify-between overflow-hidden rounded-2xl p-8 md:p-10">
+        <div>
+          <p class="prb-kicker text-[10px]">The full album · February 12, 2027</p>
+          <h3 class="prb-display mt-5 text-4xl leading-tight md:text-5xl">Tunnel of Love:<br/><span class="prb-italic text-[var(--prb-champagne)]">ACT I</span></h3>
+          <p class="mt-5 text-xs uppercase tracking-[.32em] text-[var(--prb-champagne)]">Masterpiece Theatre</p>
+          <p class="mt-6 max-w-md text-sm leading-7 text-[var(--prb-muted)]">A beautiful, seductive carnival of love, desire, and late-night emotion—with shadows waiting just beyond the lights.</p>
+        </div>
+        <a href="/tunnel-of-love" class="mt-10 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[.22em] text-[var(--prb-champagne)]">Enter the experience <span>↗</span></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="border-y border-[var(--prb-line)] bg-[#120c10] py-24">
+    <div class="mx-auto max-w-7xl px-6 md:px-10">
+      <div class="mx-auto max-w-2xl text-center"><p class="prb-kicker text-xs">More than music</p><h2 class="prb-display mt-4 text-4xl md:text-6xl">A world of its <span class="prb-italic text-[var(--prb-champagne)]">own.</span></h2><p class="mt-6 text-sm leading-7 text-[var(--prb-muted)]">Explore the projects, platforms, and stories that live under the Bey Mirror Media umbrella.</p></div>
+      <div class="mt-14 grid gap-px overflow-hidden rounded-2xl border border-[var(--prb-line)] bg-[var(--prb-line)] sm:grid-cols-2 lg:grid-cols-4">
+        <a href="/peoples-report" class="prb-tile"><span>01 / News & culture</span><h3>People's Report</h3><p>Stories and conversations that matter.</p><b>Explore ↗</b></a>
+        <a href="/podcast" class="prb-tile"><span>02 / On air</span><h3>ANE Radio</h3><p>Absolutely No Excuses and original programming.</p><b>Listen in ↗</b></a>
+        <a href="/music" class="prb-tile"><span>03 / Sound</span><h3>Music</h3><p>Singles, albums, releases, and exclusives.</p><b>Discover ↗</b></a>
+        <a href="/books" class="prb-tile"><span>04 / Written worlds</span><h3>Books</h3><p>Fiction, imagination, and stories in print.</p><b>Read more ↗</b></a>
+        <a href="/videos" class="prb-tile"><span>05 / Moving image</span><h3>Video</h3><p>Visuals, trailers, and behind-the-scenes.</p><b>Watch ↗</b></a>
+        <a href="/journal" class="prb-tile"><span>06 / The journal</span><h3>Journal</h3><p>Notes, perspectives, and creative dispatches.</p><b>Read ↗</b></a>
+        <a href="/sponsors" class="prb-tile"><span>07 / Partnerships</span><h3>Sponsors</h3><p>Collaborate with Bey Mirror Media.</p><b>Partner ↗</b></a>
+        <a href="/vip" class="prb-tile"><span>08 / Inner circle</span><h3>PRB VIP Club</h3><p>First to hear it. First to see it. First to get it.</p><b>Get access ↗</b></a>
       </div>
     </div>
   </section>
 
-  <!-- CURRENTLY INTO -->
-  <section class="border-t border-zinc-800 py-24">
-    <div class="mx-auto max-w-7xl px-8">
-      <div class="mx-auto max-w-2xl text-center">
-        <p class="uppercase tracking-[0.4em] text-yellow-400">Right Now</p>
-        <h2 class="logo mt-4 text-5xl md:text-6xl">Currently Into</h2>
-        <p class="mt-6 leading-8 text-zinc-400">What I’m playing, watching, and enjoying right now.</p>
-      </div>
-
-      <div class="mt-16 grid gap-6 md:grid-cols-3">
-        <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
-          <div class="text-4xl">🎮</div>
-          <h3 class="logo mt-6 text-3xl">Gaming</h3>
-          <ul class="mt-6 space-y-3 text-zinc-300">
-            <li>State of Decay 2</li>
-            <li>Resident Evil: Operation Raccoon City</li>
-            <li>Marvel Cosmic Universe</li>
-          </ul>
-        </div>
-
-        <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
-          <div class="text-4xl">🎬</div>
-          <h3 class="logo mt-6 text-3xl">Movies</h3>
-          <ul class="mt-6 space-y-3 text-zinc-300">
-            <li>Masters of The Universe</li>
-            <li>Flight 7500</li>
-            <li>Mortal Kombat II</li>
-            <li>Peppermint</li>
-            <li>A Low Down Dirty Shame</li>
-          </ul>
-        </div>
-
-        <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
-          <div class="text-4xl">🍿</div>
-          <h3 class="logo mt-6 text-3xl">Anime</h3>
-          <ul class="mt-6 space-y-3 text-zinc-300">
-            <li>Demon Slayer</li>
-            <li>Castlevania Nocturne</li>
-            <li>Black Clover</li>
-            <li>Solo Leveling</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <section class="relative overflow-hidden px-6 py-24 text-center md:px-10">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_100%,rgba(88,27,50,.5),transparent_65%)]"></div>
+    <p class="prb-kicker text-xs">Bey Mirror Media</p>
+    <h2 class="prb-display mx-auto mt-5 max-w-4xl text-4xl leading-tight md:text-6xl">Independent vision.<br/><span class="prb-italic text-[var(--prb-champagne)]">Unmistakable presence.</span></h2>
+    <a href="/about" class="prb-button mt-10">Discover the story</a>
   </section>
-
-  <!-- CREATIVE UNIVERSE -->
-  <section class="border-t border-zinc-800 py-24">
-    <div class="mx-auto max-w-7xl px-8">
-      <div class="mx-auto max-w-2xl text-center">
-        <p class="uppercase tracking-[0.4em] text-yellow-400">The Creative Universe</p>
-        <h2 class="logo mt-4 text-5xl md:text-6xl">Every project begins with a story.</h2>
-        <p class="mt-6 leading-8 text-zinc-400">
-          Explore the music, books, podcast conversations, and videos that make up the world of Petty Rich Bey.
-        </p>
-      </div>
-
-      <div class="mt-16 grid gap-6 md:grid-cols-2">
-        <a href="/music" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
-          <div class="text-4xl">🎵</div>
-          <h3 class="logo mt-6 text-3xl">Music</h3>
-          <p class="mt-4 text-zinc-400">Albums, singles, lyrics, and upcoming releases.</p>
-          <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Explore Music →</p>
-        </a>
-
-        <a href="/books" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
-          <div class="text-4xl">📚</div>
-          <h3 class="logo mt-6 text-3xl">Books</h3>
-          <p class="mt-4 text-zinc-400">Fiction, storytelling, and published works.</p>
-          <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Explore Books →</p>
-        </a>
-
-        <a href="/podcast" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
-          <div class="text-4xl">🎙️</div>
-          <h3 class="logo mt-6 text-3xl">Podcast</h3>
-          <p class="mt-4 text-zinc-400">Conversations, interviews, and fresh perspectives.</p>
-          <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Explore Podcast →</p>
-        </a>
-
-        <a href="/videos" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
-          <div class="text-4xl">🎥</div>
-          <h3 class="logo mt-6 text-3xl">Videos</h3>
-          <p class="mt-4 text-zinc-400">Music videos, visual projects, and behind the scenes.</p>
-          <p class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Explore Videos →</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
 </BaseLayout>
