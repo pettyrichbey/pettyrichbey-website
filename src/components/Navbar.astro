@@ -22,4 +22,19 @@ import { navigation } from "../data/navigation";
       </div>
     </details>
   </nav>
+  <div class="prb-filmstrip" aria-hidden="true"></div>
 </header>
+
+<style>
+  .prb-filmstrip {
+    height: 12px;
+    width: 100%;
+    border-top: 1px solid rgba(190, 190, 190, .34);
+    border-bottom: 1px solid rgba(190, 190, 190, .34);
+    background-color: #080808;
+    background-image:
+      repeating-linear-gradient(90deg, transparent 0 13px, rgba(180, 180, 180, .52) 13px 19px, transparent 19px 31px),
+      linear-gradient(180deg, transparent 0 3px, rgba(180, 180, 180, .22) 3px 4px, transparent 4px 8px, rgba(180, 180, 180, .22) 8px 9px, transparent 9px);
+    background-size: 31px 100%, 100% 100%;
+  }
+</style>
