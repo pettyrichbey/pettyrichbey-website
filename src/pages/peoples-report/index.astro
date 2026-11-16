@@ -76,7 +76,8 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
       box-shadow: inset 0 0 38px #000b, 0 0 0 1px #777;
     }
     .prb-crt-noise, .prb-crt-scanlines { position: absolute; inset: 0; width: 100%; height: 100%; }
-    .prb-crt-noise { z-index: -1; }
+    .prb-crt-noise { z-index: 0; }
+    .prb-crt-tuning, .prb-crt-screen-title, .prb-crt-screen-subtitle { position: relative; z-index: 2; }
     .prb-crt-scanlines {
       pointer-events: none;
       background: repeating-linear-gradient(to bottom, #0000 0 3px, #0005 4px 5px);
@@ -84,7 +85,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
     }
     .prb-crt-screen:after {
       position: absolute; inset: 0; content: ""; pointer-events: none;
-      background: radial-gradient(ellipse at center, #fff0 45%, #0009 100%), linear-gradient(115deg, #fff2, transparent 30%);
+      z-index: 3; background: radial-gradient(ellipse at center, #fff0 45%, #0009 100%), linear-gradient(115deg, #fff2, transparent 30%);
     }
     .prb-crt-tuning {
       position: absolute; top: 7%; left: 7%; right: 7%;
