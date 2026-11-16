@@ -1,23 +1,24 @@
 ---
 import { navigation } from "../data/navigation";
 ---
-<header class="sticky top-0 z-50 w-full border-b border-[#d6b88733] bg-[#170f13]/95 backdrop-blur-xl">
+<header class="prb-topbar sticky top-0 z-50 w-full">
+  <div class="prb-topline flex items-center justify-center gap-3 py-1.5 text-[8px] uppercase tracking-[.42em]"><span>✦</span> Bey Mirror Media proudly presents <span>✦</span></div>
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8" aria-label="Main navigation">
     <a href="/" class="flex shrink-0 items-center" aria-label="Petty Rich Bey home">
       <img src="/images/logos/logo.png" alt="Petty Rich Bey" class="h-14 w-auto object-contain md:h-[68px]" />
     </a>
     <ul class="hidden items-center gap-4 xl:gap-5 md:flex">
       {navigation.map((item) => (
-        <li><a href={item.href} class="whitespace-nowrap text-sm font-semibold text-[#f5efe5cc] transition hover:text-[#d6b887]">{item.label}</a></li>
+        <li><a href={item.href} class="prb-navlink whitespace-nowrap text-[10px] font-semibold uppercase tracking-[.16em] transition">{item.label}</a></li>
       ))}
     </ul>
-    <a href="/tunnel-of-love" class="hidden shrink-0 rounded-lg border border-[#d6b887] bg-[#581b32] px-4 py-2 font-semibold text-[#f5efe5] transition hover:bg-[#702440] md:inline-flex">Tunnel of Love</a>
+    <a href="/tunnel-of-love" class="prb-ticket hidden shrink-0 px-4 py-3 text-[10px] font-bold uppercase tracking-[.18em] md:inline-flex">Now showing: Tunnel of Love</a>
     <details class="relative md:hidden">
-      <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-[#d6b88766] bg-[#24171c] text-[#f5efe5] [&::-webkit-details-marker]:hidden" aria-label="Open navigation menu"><span class="text-2xl leading-none">☰</span></summary>
-      <div class="absolute right-0 z-50 mt-3 w-64 rounded-2xl border border-[#d6b88744] bg-[#1b1116] p-3 shadow-2xl">
+      <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center border border-[#d8c39a66] bg-[#111] text-[#eee] [&::-webkit-details-marker]:hidden" aria-label="Open navigation menu"><span class="text-2xl leading-none">☰</span></summary>
+      <div class="absolute right-0 z-50 mt-3 w-64 border border-[#d8c39a55] bg-[#101010] p-3 shadow-2xl">
         <nav aria-label="Mobile navigation"><ul class="space-y-1">
-          {navigation.map((item) => (<li><a href={item.href} class="block rounded-xl px-4 py-3 font-semibold text-[#f5efe5cc] transition hover:bg-[#35101f] hover:text-[#d6b887]">{item.label}</a></li>))}
-        </ul><a href="/tunnel-of-love" class="mt-3 block rounded-xl bg-[#581b32] px-4 py-3 text-center font-semibold text-[#f5efe5]">Tunnel of Love</a></nav>
+          {navigation.map((item) => (<li><a href={item.href} class="prb-navlink block px-4 py-3 text-xs font-semibold uppercase tracking-[.15em] transition">{item.label}</a></li>))}
+        </ul><a href="/tunnel-of-love" class="mt-3 block border border-[#d8c39a] bg-[#d8c39a] px-4 py-3 text-center text-xs font-bold uppercase tracking-[.15em] text-black">Now showing · Tunnel of Love</a></nav>
       </div>
     </details>
   </nav>
