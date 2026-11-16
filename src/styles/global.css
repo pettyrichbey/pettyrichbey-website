@@ -36,3 +36,43 @@ h1,h2,h3,.logo,.prb-display { font-family:"Cormorant Garamond",Georgia,serif; fo
 .prb-metal { color:#eee;background:linear-gradient(115deg,#777 0%,#fff 22%,#999 42%,#f7f7f7 58%,#777 78%,#eee 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 8px 35px #fff2; }
 .prb-rule { height:1px;background:linear-gradient(90deg,transparent,var(--prb-champagne),transparent); }
 a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid var(--prb-champagne);outline-offset:4px; }
+
+
+/* 1950s silver-screen / film-noir treatment */
+.prb-cinema { background:#080808; }
+.prb-cinema-haze {
+  background:
+    radial-gradient(ellipse at 76% 38%,rgba(210,210,210,.18),transparent 28%),
+    radial-gradient(ellipse at 18% 75%,rgba(255,255,255,.08),transparent 32%),
+    linear-gradient(110deg,#050505 0%,#171717 48%,#070707 100%);
+}
+.prb-filmgrain {
+  opacity:.22; pointer-events:none; mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+}
+.prb-studio-mark {
+  border:1px solid rgba(216,195,154,.5); padding:.65rem 1rem;
+  color:#e8dfd0; font-size:.58rem; letter-spacing:.27em; text-transform:uppercase;
+  background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(0,0,0,.2),rgba(255,255,255,.08));
+}
+.prb-star { color:var(--prb-champagne); font-size:.9rem; }
+.prb-marquee-frame {
+  border:1px solid rgba(216,195,154,.65);
+  background:linear-gradient(145deg,rgba(35,35,35,.96),rgba(5,5,5,.98));
+  box-shadow:0 0 0 7px #101010,0 0 0 8px rgba(216,195,154,.28),0 25px 90px #000;
+}
+.prb-marquee-frame:before {
+  content:"";position:absolute;inset:8px;pointer-events:none;
+  border:1px solid rgba(216,195,154,.32);
+  background:radial-gradient(circle at 8px 8px,var(--prb-champagne) 0 1.5px,transparent 2px) 0 0/22px 22px;
+  mask:linear-gradient(#000 0 0) top/100% 2px no-repeat,linear-gradient(#000 0 0) bottom/100% 2px no-repeat,linear-gradient(#000 0 0) left/2px 100% no-repeat,linear-gradient(#000 0 0) right/2px 100% no-repeat;
+  opacity:.8;
+}
+.prb-marquee-inner { border:1px solid rgba(255,255,255,.12); pointer-events:none; }
+.prb-filmstrip {
+  height:13px; opacity:.55;
+  background:repeating-linear-gradient(90deg,transparent 0 16px,#bdb7aa 16px 24px,transparent 24px 38px);
+  border-top:1px solid #777;border-bottom:1px solid #777;
+}
+.prb-panel { border-radius:3px !important; }
+.prb-tile { border-radius:0 !important; }
