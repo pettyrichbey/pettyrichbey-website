@@ -76,3 +76,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
 }
 .prb-panel { border-radius:3px !important; }
 .prb-tile { border-radius:0 !important; }
+
+
+.prb-topbar { background:rgba(5,5,5,.97); border-bottom:1px solid var(--prb-line); box-shadow:0 8px 35px #0008; backdrop-filter:blur(16px); }
+.prb-topline { color:var(--prb-champagne); border-bottom:1px solid rgba(216,195,154,.16); background:linear-gradient(90deg,#080808,#202020,#080808); }
+.prb-navlink { color:#d4d0ca; }
+.prb-navlink:hover { color:var(--prb-champagne); text-shadow:0 0 15px #d8c39a66; }
+.prb-ticket { border:1px solid var(--prb-champagne); color:#080808; background:linear-gradient(135deg,#eee0c3,#b99b67); box-shadow:0 0 18px #d8c39a22; }
+.prb-ticket:hover { filter:brightness(1.12); }
+.prb-footer { background:radial-gradient(ellipse at 50% 0%,#202020 0%,#090909 65%); }
