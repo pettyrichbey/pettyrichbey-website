@@ -55,10 +55,10 @@ const categories = [
   description="The Petty Rich Bey Journal — music, gaming, movies, anime, books, culture, conversations, nostalgia, and personal perspectives."
 >
   <section class="relative overflow-hidden border-b border-zinc-800">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_65%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(190,190,190,.08),transparent_65%)]"></div>
 
     <div class="relative mx-auto max-w-7xl px-8 py-24 md:py-32">
-      <p class="uppercase tracking-[0.4em] text-yellow-400">The Petty Rich Bey Journal</p>
+      <p class="uppercase tracking-[0.4em] text-[#c8b58b]">The Petty Rich Bey Journal</p>
       <h1 class="logo mt-5 max-w-4xl text-6xl leading-tight md:text-8xl">
         Life beyond the music.
       </h1>
@@ -69,10 +69,54 @@ const categories = [
     </div>
   </section>
 
+  <section class="relative overflow-hidden border-b border-zinc-800 bg-[#080808] px-5 py-16 md:px-8 md:py-20">
+    <div class="mx-auto max-w-6xl">
+      <div class="prb-journal-desk relative overflow-hidden rounded-[2rem] border border-[#8e7957]/50 p-6 shadow-[0_30px_90px_#000] md:p-12">
+        <div class="relative grid items-center gap-10 lg:grid-cols-[.85fr_1.15fr]">
+          <div class="text-center lg:text-left">
+            <p class="text-[10px] uppercase tracking-[.4em] text-[#d4c19b]">Private papers · P. R. Bey</p>
+            <h2 class="mt-5 font-serif text-4xl text-[#f0e5cd] md:text-5xl">The writer's desk.</h2>
+            <p class="mt-5 max-w-md text-sm leading-7 text-[#c8bda9]">Thoughts, stories, observations, and little pieces of life—preserved on paper, one page at a time.</p>
+            <p class="mt-7 text-[9px] uppercase tracking-[.32em] text-[#b8a17a]">A journal of the curious mind</p>
+          </div>
+          <div class="relative mx-auto w-full max-w-xl">
+            <div class="prb-scroll prb-scroll-left"><span>Notes &amp; notions</span></div>
+            <div class="prb-scroll prb-scroll-right"><span>Thoughts to remember</span></div>
+            <div class="prb-leather-diary relative mx-auto mt-10 w-[82%] max-w-sm p-3 shadow-[0_25px_40px_#000c]">
+              <div class="prb-diary-page relative min-h-[300px] px-7 py-8 md:px-9">
+                <p class="text-center font-serif text-xs italic tracking-widest text-[#80694b]">The Private Journal</p>
+                <div class="mx-auto mt-4 h-px w-20 bg-[#a38b65]"></div>
+                <p class="mt-7 text-center font-serif text-2xl italic text-[#4a3927]">Life beyond the music</p>
+                <p class="mt-5 text-center font-serif text-sm leading-7 text-[#66513a]">A place for every thought,<br/>every story, every discovery.</p>
+                <div class="absolute bottom-7 left-0 right-0 text-center font-serif text-xs italic text-[#80694b]">P. R. Bey · Est. in ink</div>
+              </div>
+              <div class="pointer-events-none absolute bottom-3 left-1/2 top-3 w-px bg-[#d0b98d]/50"></div>
+            </div>
+            <div class="mx-auto mt-3 h-4 w-[92%] rounded-b-xl bg-gradient-to-b from-[#8a633c] to-[#3a2617] shadow-xl"></div>
+            <div class="mx-auto mt-3 flex w-[88%] items-center justify-between">
+              <span class="h-2 w-14 rounded-full bg-[#a78353]"></span><span class="h-2 w-10 rounded-full bg-[#a78353]"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .prb-journal-desk{background:linear-gradient(135deg,#211910,#392818 48%,#120d09);isolation:isolate}
+      .prb-journal-desk:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.35;background:repeating-linear-gradient(7deg,transparent 0 22px,#b58c5a22 23px 24px),radial-gradient(ellipse at 50% 0%,#d0b27a44,transparent 65%)}
+      .prb-leather-diary{border:2px solid #a27a49;border-radius:10px 16px 16px 10px;background:linear-gradient(90deg,#24150d,#714a2d 8%,#422817 15%,#6b4529 90%,#28180e);transform:rotate(-2deg)}
+      .prb-diary-page{border-radius:3px 9px 9px 3px;background:linear-gradient(90deg,#d2bd91,#f2e7ce 16%,#e7d7b6 100%);box-shadow:inset 0 0 22px #8d6c4244}
+      .prb-scroll{position:absolute;z-index:2;display:flex;align-items:center;justify-content:center;width:48%;height:42px;border:1px solid #b99a69;border-radius:22px;background:linear-gradient(90deg,#6d4a2b,#e0c99c 18%,#c8b084 80%,#684629);box-shadow:0 9px 12px #0008;color:#60472d;font:italic 12px Georgia,serif}
+      .prb-scroll:before,.prb-scroll:after{content:"";position:absolute;width:17px;height:48px;border:4px solid #9a774c;border-radius:50%;background:linear-gradient(90deg,#3a2515,#c6a878,#4b301b)}
+      .prb-scroll:before{left:-7px}.prb-scroll:after{right:-7px}
+      .prb-scroll-left{left:-2%;top:3%;transform:rotate(-9deg)}.prb-scroll-right{right:-1%;bottom:5%;transform:rotate(8deg)}
+      @media(max-width:640px){.prb-scroll{font-size:9px;height:34px}.prb-scroll:before,.prb-scroll:after{height:38px;width:13px}}
+    </style>
+  </section>
+
   <section class="py-24">
     <div class="mx-auto max-w-7xl px-8">
       <div class="max-w-2xl">
-        <p class="uppercase tracking-[0.35em] text-yellow-400">Explore the Journal</p>
+        <p class="uppercase tracking-[0.35em] text-[#c8b58b]">Explore the Journal</p>
         <h2 class="logo mt-4 text-5xl md:text-6xl">Something for every side of me.</h2>
         <p class="mt-6 leading-8 text-zinc-400">
           The blog is more than promotion. It's the place to see what I'm playing,
@@ -82,11 +126,11 @@ const categories = [
 
       <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {categories.map((category) => (
-          <article class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(124,58,237,.12)]">
+          <article class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-zinc-500 hover:shadow-[0_0_30px_rgba(190,190,190,.10)]">
             <div class="text-4xl">{category.icon}</div>
             <h3 class="logo mt-6 text-3xl">{category.title}</h3>
             <p class="mt-4 leading-7 text-zinc-400">{category.text}</p>
-            <p class="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">Coming to the Journal</p>
+            <p class="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-[#c8b58b]">Coming to the Journal</p>
           </article>
         ))}
       </div>

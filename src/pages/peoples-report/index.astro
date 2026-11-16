@@ -8,22 +8,125 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
   title="The People's Report | News • Facts • Community • Accountability"
   description="The People's Report from Bey Mirror Media — news, facts, community issues, accountability, and the voices of real people."
 >
-  <section class="relative overflow-hidden border-b border-zinc-800">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,.24),transparent_62%)]"></div>
-    <div class="relative mx-auto max-w-7xl px-4 py-8 md:px-6 lg:px-8">
-      <div class="overflow-hidden rounded-3xl border border-blue-500/30 bg-zinc-950 shadow-2xl">
-        <img
-          src="/images/peoples-report-hero.svg"
-          alt="The People's Report newsroom graphic"
-          class="h-auto w-full object-cover"
-        />
+  <section class="relative overflow-hidden border-b border-[var(--prb-line)] bg-[#070707]">
+    <div class="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
+      <div class="mx-auto max-w-5xl text-center">
+        <p class="prb-kicker text-xs">Bey Mirror Media presents</p>
+        <h1 class="prb-display mt-4 text-4xl md:text-6xl">The People's <span class="prb-italic text-[var(--prb-champagne)]">Report</span></h1>
+        <p class="mt-4 text-xs uppercase tracking-[.38em] text-[var(--prb-muted)]">News · Facts · Community · Accountability</p>
+      </div>
+
+      <div class="prb-crt-wrap mx-auto mt-12 max-w-4xl">
+        <div class="prb-crt-tv">
+          <div class="prb-crt-bezel">
+            <div class="prb-crt-screen" role="img" aria-label="Vintage television screen tuned to static">
+              <svg class="prb-crt-noise" viewBox="0 0 800 440" preserveAspectRatio="none" aria-hidden="true">
+                <filter id="crt-static">
+                  <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="2" stitchTiles="stitch">
+                    <animate attributeName="seed" values="1;18;37;59;83;1" dur="1.1s" repeatCount="indefinite" />
+                  </feTurbulence>
+                  <feColorMatrix type="saturate" values="0"/>
+                  <feComponentTransfer><feFuncA type="table" tableValues="0 .92"/></feComponentTransfer>
+                </filter>
+                <rect width="800" height="440" filter="url(#crt-static)" opacity=".9"/>
+              </svg>
+              <div class="prb-crt-scanlines"></div>
+              <div class="prb-crt-tuning"><span>LIVE BROADCAST</span><span>CHANNEL 01</span></div>
+              <div class="prb-crt-screen-title">THE PEOPLE'S REPORT</div>
+              <div class="prb-crt-screen-subtitle">STAY INFORMED · STAY HEARD</div>
+            </div>
+          </div>
+          <div class="prb-crt-controls" aria-hidden="true"><span></span><span></span><i></i></div>
+          <div class="prb-crt-brand">BEY MIRROR MEDIA · TELEVISION</div>
+        </div>
+        <div class="prb-crt-caption">Tuning in to the stories that matter.</div>
       </div>
     </div>
   </section>
 
+  <style>
+    .prb-crt-wrap { perspective: 1200px; }
+    .prb-crt-tv {
+      position: relative;
+      padding: clamp(15px, 2.5vw, 28px) clamp(17px, 3vw, 34px) 30px;
+      border: 1px solid #5a5144;
+      border-radius: 34px 34px 27px 27px;
+      background: linear-gradient(145deg, #393632, #171615 38%, #080808 78%, #292621);
+      box-shadow: 0 28px 65px #000c, inset 0 2px 2px #ffffff22, inset 0 -8px 18px #000;
+    }
+    .prb-crt-bezel {
+      padding: clamp(9px, 1.6vw, 18px);
+      border-radius: 25px;
+      background: linear-gradient(145deg, #080808, #252321 55%, #090909);
+      box-shadow: inset 0 3px 8px #000, 0 1px 0 #ffffff22;
+    }
+    .prb-crt-screen {
+      position: relative;
+      display: flex;
+      min-height: clamp(230px, 42vw, 440px);
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #111;
+      border-radius: 45px / 30px;
+      background: #aaa;
+      color: #fff;
+      isolation: isolate;
+      box-shadow: inset 0 0 38px #000b, 0 0 0 1px #777;
+    }
+    .prb-crt-noise, .prb-crt-scanlines { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .prb-crt-noise { z-index: 0; }
+    .prb-crt-tuning, .prb-crt-screen-title, .prb-crt-screen-subtitle { position: relative; z-index: 2; }
+    .prb-crt-scanlines {
+      pointer-events: none;
+      background: repeating-linear-gradient(to bottom, #0000 0 3px, #0005 4px 5px);
+      opacity: .45;
+    }
+    .prb-crt-screen:after {
+      position: absolute; inset: 0; content: ""; pointer-events: none;
+      z-index: 3; background: radial-gradient(ellipse at center, #fff0 45%, #0009 100%), linear-gradient(115deg, #fff2, transparent 30%);
+    }
+    .prb-crt-tuning {
+      position: absolute; top: 7%; left: 7%; right: 7%;
+      display: flex; justify-content: space-between;
+      font: 600 9px/1.2 Inter, sans-serif; letter-spacing: .24em;
+      color: #fff; text-shadow: 0 1px 4px #000; opacity: .8;
+    }
+    .prb-crt-screen-title {
+      font: 700 clamp(24px, 5vw, 54px)/1 "Cormorant Garamond", Georgia, serif;
+      letter-spacing: .11em; text-align: center; text-shadow: 0 2px 8px #000;
+    }
+    .prb-crt-screen-subtitle {
+      margin-top: 13px; font: 600 9px/1.4 Inter, sans-serif;
+      letter-spacing: .32em; text-align: center; text-shadow: 0 1px 5px #000;
+    }
+    .prb-crt-controls {
+      position: absolute; right: 3%; bottom: 9px;
+      display: flex; align-items: center; gap: 9px;
+    }
+    .prb-crt-controls span {
+      width: 17px; height: 17px; border: 2px solid #766e61; border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #aaa, #292723 65%);
+      box-shadow: 0 2px 4px #000;
+    }
+    .prb-crt-controls i { width: 7px; height: 7px; border-radius: 50%; background: #bda477; box-shadow: 0 0 8px #c8a96c; }
+    .prb-crt-brand {
+      margin-top: 10px; color: #a1a1aa; text-align: center;
+      font: 600 8px/1 Inter, sans-serif; letter-spacing: .32em;
+    }
+    .prb-crt-caption {
+      margin-top: 20px; color: var(--prb-muted); text-align: center;
+      font: italic 17px/1.4 "Cormorant Garamond", Georgia, serif;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .prb-crt-noise animate { display: none; }
+    }
+  </style>
+
   <section class="border-b border-zinc-800 py-20">
     <div class="mx-auto max-w-5xl px-6 text-center">
-      <p class="uppercase tracking-[0.35em] text-red-400">Bey Mirror Media</p>
+      <p class="uppercase tracking-[0.35em] text-zinc-400">Bey Mirror Media</p>
       <h1 class="logo mt-4 text-5xl md:text-7xl">The People’s Report</h1>
       <p class="mt-6 text-xl font-semibold text-zinc-200">News • Facts • Community • Accountability</p>
       <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
@@ -37,7 +140,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
   <section class="py-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="max-w-3xl">
-        <p class="uppercase tracking-[0.3em] text-red-400">About The Report</p>
+        <p class="uppercase tracking-[0.3em] text-zinc-400">About The Report</p>
         <h2 class="logo mt-3 text-4xl md:text-5xl">Information first. People at the center.</h2>
         <p class="mt-6 leading-8 text-zinc-400">
           The People's Report brings together reporting, documented information,
@@ -56,7 +159,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
           ["📜", "Legislation", "Bills, laws, regulatory changes, and what they mean for the public."],
           ["🎙️", "The People’s Voice", "Firsthand community experiences that can help identify issues for further reporting."]
         ].map(([icon, title, text]) => (
-          <article class="rounded-3xl border border-zinc-800 bg-zinc-900 p-7 transition hover:-translate-y-1 hover:border-red-500/60">
+          <article class="rounded-3xl border border-zinc-800 bg-zinc-900 p-7 transition hover:-translate-y-1 hover:border-zinc-500">
             <div class="text-4xl">{icon}</div>
             <h3 class="logo mt-5 text-2xl">{title}</h3>
             <p class="mt-3 leading-7 text-zinc-400">{text}</p>
@@ -70,7 +173,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <p class="uppercase tracking-[0.3em] text-red-400">Original Coverage</p>
+          <p class="uppercase tracking-[0.3em] text-zinc-400">Original Coverage</p>
           <h2 class="logo mt-3 text-4xl md:text-5xl">Latest Reports</h2>
         </div>
         <p class="max-w-xl text-zinc-400">
@@ -92,7 +195,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
   <section class="py-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="max-w-3xl">
-        <p class="uppercase tracking-[0.3em] text-red-400">Community</p>
+        <p class="uppercase tracking-[0.3em] text-zinc-400">Community</p>
         <h2 class="logo mt-3 text-4xl md:text-5xl">The People’s Voice</h2>
         <p class="mt-5 leading-8 text-zinc-400">
           Have an experience, issue, or community concern you believe deserves attention?
@@ -106,11 +209,11 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
       </div>
 
       <div class="mt-10 grid gap-5 md:grid-cols-2">
-        <a href="/contact" class="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition hover:border-red-500/60">
+        <a href="/contact" class="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition hover:border-zinc-500">
           <h3 class="logo text-2xl">Submit a Story Tip →</h3>
           <p class="mt-2 text-zinc-400">Send information about an issue or development you think should be examined.</p>
         </a>
-        <a href="/contact" class="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition hover:border-red-500/60">
+        <a href="/contact" class="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition hover:border-zinc-500">
           <h3 class="logo text-2xl">Request a Guest Invitation →</h3>
           <p class="mt-2 text-zinc-400">Interested in sharing your experience on an upcoming report?</p>
         </a>
@@ -121,7 +224,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
   <section class="border-t border-zinc-800 py-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-7 md:p-10">
-        <p class="uppercase tracking-[0.3em] text-blue-400">External News Feed</p>
+        <p class="uppercase tracking-[0.3em] text-zinc-400">External News Feed</p>
         <h2 class="logo mt-3 text-4xl">Latest News</h2>
         <p class="mt-4 max-w-3xl leading-7 text-zinc-400">
           Headlines from the wider news cycle are provided here as an informational add-on.
@@ -139,7 +242,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
               href="https://news.google.com/?hl=en-US&gl=US&ceid=US:en"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex w-fit rounded-full border border-zinc-700 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-zinc-200 transition hover:border-red-500 hover:text-white"
+              class="inline-flex w-fit rounded-full border border-zinc-700 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-zinc-200 transition hover:border-zinc-500 hover:text-white"
             >
               Open Google News ↗
             </a>
@@ -190,7 +293,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
       items.slice(0, 12).forEach((item) => {
         const article = document.createElement("article");
         article.className =
-          "rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition hover:border-red-500/50";
+          "rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition hover:border-zinc-600";
 
         const meta = document.createElement("p");
         meta.className =
@@ -202,7 +305,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         link.className =
-          "mt-2 block text-lg font-semibold leading-7 text-zinc-100 transition hover:text-red-300";
+          "mt-2 block text-lg font-semibold leading-7 text-zinc-100 transition hover:text-zinc-200";
         link.textContent = item.title;
 
         article.append(meta, link);
@@ -233,7 +336,7 @@ const rssFeed = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en";
         feedContainer.innerHTML = "";
         const message = document.createElement("div");
         message.className =
-          "rounded-xl border border-red-900/50 bg-red-950/20 p-5 text-sm leading-6 text-zinc-400";
+          "rounded-xl border border-zinc-700 bg-zinc-900/60 p-5 text-sm leading-6 text-zinc-400";
         message.textContent =
           "The external headlines could not be loaded right now. You can still view the latest stories directly on Google News.";
         feedContainer.appendChild(message);

@@ -2,284 +2,108 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="About | Petty Rich Bey">
-
-  <section class="relative overflow-hidden px-8 py-24">
-
-    <!-- Atmospheric Glow -->
-
-    <div
-      class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
-    ></div>
-
+<BaseLayout title="About | Petty Rich Bey" description="Meet Petty Rich Bey at the Bey Mirror Media drive-in: the story behind the music, books, podcasts, and creative universe.">
+  <section class="relative isolate overflow-hidden bg-[#080808] px-5 py-16 text-zinc-100 md:px-8 md:py-24">
+    <div class="pointer-events-none absolute inset-0 opacity-25" style="background-image: radial-gradient(ellipse at 50% 8%, rgba(194,157,92,.2), transparent 55%), repeating-linear-gradient(0deg, transparent 0 5px, rgba(255,255,255,.025) 6px 7px);"></div>
     <div class="relative mx-auto max-w-7xl">
+      <header class="mx-auto max-w-4xl text-center">
+        <p class="text-[10px] uppercase tracking-[.5em] text-amber-200/80">Bey Mirror Media presents</p>
+        <h1 class="logo mt-4 text-5xl text-white md:text-7xl">The Story Behind the Picture</h1>
+        <p class="mt-5 text-base leading-8 text-zinc-400">Pull in, find your spot, and enjoy the feature. Tonight's picture is the story of Petty Rich Bey.</p>
+      </header>
 
-
-      <!-- About Header -->
-
-      <div class="mx-auto max-w-4xl text-center">
-
-        <p class="uppercase tracking-[0.45em] text-yellow-400">
-          About
-        </p>
-
-        <h1 class="logo mt-5 text-6xl md:text-7xl">
-          The Man Behind the World
-        </h1>
-
-        <p class="mt-8 text-lg leading-8 text-zinc-400">
-          Music. Stories. Conversations. Visuals.
-          One creative universe built across multiple forms of expression.
-        </p>
-
-      </div>
-
-
-      <!-- Brand Introduction -->
-
-      <div class="mt-20">
-
-        <div
-          class="grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 lg:grid-cols-2"
-        >
-
-          <!-- Brand Visual -->
-
-          <div
-            class="relative flex min-h-[520px] items-center justify-center overflow-hidden bg-zinc-950"
-          >
-
-            <div
-              class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.25),transparent_65%)]"
-            ></div>
-
-            <img
-              src="/images/logos/logo.png"
-              alt="Petty Rich Bey"
-              class="relative z-10 w-[320px] object-contain"
-            />
-
+      <section class="relative mt-12 overflow-hidden border border-amber-200/40 bg-[#15120e] p-3 shadow-2xl md:p-5">
+        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-amber-200 to-transparent"></div>
+        <div class="mb-3 flex flex-wrap items-center justify-between gap-2 px-2 py-2 text-[9px] uppercase tracking-[.3em] text-zinc-400">
+          <span>Drive-in theatre · Screen 01</span><span>Now showing · The life and times of Petty Rich Bey</span>
+        </div>
+        <div class="relative overflow-hidden border-[7px] border-[#66543a] bg-black shadow-[0_0_40px_rgba(0,0,0,.8)] md:border-[12px]">
+          <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.1) 4px 5px);"></div>
+          <div class="grid min-h-[520px] md:grid-cols-[.9fr_1.1fr]">
+            <div class="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-gradient-to-br from-zinc-800 via-zinc-950 to-black p-8">
+              <div class="absolute inset-0 opacity-30" style="background: radial-gradient(ellipse at 50% 80%, #aaa, transparent 55%);"></div>
+              <div class="relative z-10 flex h-full min-h-[300px] w-full items-center justify-center">
+                <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent"></div>
+                <div class="relative flex flex-col items-center text-center">
+                  <div class="flex h-36 w-36 items-center justify-center rounded-full border border-amber-200/30 bg-black/40 shadow-2xl">
+                    <img src="/images/logos/logo.png" alt="Petty Rich Bey crowned logo" class="w-28 object-contain"/>
+                  </div>
+                  <p class="mt-5 text-[9px] uppercase tracking-[.45em] text-amber-200/80">The man behind the marquee</p>
+                  <p class="logo mt-2 text-4xl text-white">Petty Rich Bey</p>
+                  <p class="mt-1 text-xs uppercase tracking-[.2em] text-zinc-400">Artist · Author · Podcaster</p>
+                </div>
+              </div>
+              <span class="absolute bottom-3 left-4 text-[8px] uppercase tracking-[.3em] text-zinc-500">A Bey Mirror Media production</span>
+            </div>
+            <div class="relative flex flex-col justify-center overflow-hidden bg-gradient-to-br from-[#e5d6b5] via-[#c7b38e] to-[#8d7858] px-7 py-10 text-[#17130e] md:px-12">
+              <div class="absolute inset-3 border border-[#4b3926]/40"></div>
+              <div class="relative">
+                <p class="text-[9px] uppercase tracking-[.4em]">The feature presentation</p>
+                <h2 class="logo mt-3 text-5xl leading-none md:text-6xl">About the Man</h2>
+                <p class="mt-5 text-sm font-semibold uppercase tracking-[.12em]">Petty Rich Bey · P. R. Bey</p>
+                <p class="mt-5 text-sm leading-7 md:text-base">
+                  Petty Rich Bey is a creative identity built around storytelling, music, imagination, personality, and the freedom to explore different forms of expression.
+                </p>
+                <p class="mt-4 text-sm leading-7 md:text-base">
+                  From music and books to podcast conversations and visual projects, every piece is part of a larger creative universe.
+                </p>
+                <div class="mt-7 border-t border-[#4b3926]/40 pt-5">
+                  <p class="text-[9px] uppercase tracking-[.3em]">The philosophy</p>
+                  <p class="logo mt-2 text-2xl">Create Without Permission.</p>
+                  <p class="mt-2 text-xs leading-6">Music can become a story. A story can become a visual. A conversation can become a movement. The goal is to create work that feels authentic, memorable, and unmistakably its own.</p>
+                </div>
+              </div>
+            </div>
           </div>
-
-
-          <!-- Introduction -->
-
-          <div class="flex flex-col justify-center p-10 md:p-14">
-
-            <p class="uppercase tracking-[0.35em] text-yellow-400">
-              Petty Rich Bey
-            </p>
-
-            <h2 class="logo mt-5 text-5xl md:text-6xl">
-              More Than a Name
-            </h2>
-
-            <p class="mt-6 text-lg leading-8 text-zinc-400">
-              Petty Rich Bey is a creative identity built around storytelling,
-              music, imagination, personality, and the freedom to explore
-              different forms of expression.
-            </p>
-
-            <p class="mt-6 text-lg leading-8 text-zinc-400">
-              From music and books to podcast conversations and visual
-              projects, every piece is part of a larger creative universe.
-            </p>
-
-          </div>
-
         </div>
-
-      </div>
-
-
-      <!-- Creative Philosophy -->
-
-      <div class="mt-24">
-
-        <div class="mx-auto max-w-3xl text-center">
-
-          <p class="uppercase tracking-[0.35em] text-yellow-400">
-            The Philosophy
-          </p>
-
-          <h2 class="logo mt-4 text-5xl">
-            Create Without Permission
-          </h2>
-
-          <p class="mt-6 text-lg leading-8 text-zinc-400">
-            There is no single lane here.
-            Music can become a story. A story can become a visual.
-            A conversation can become a movement.
-            The goal is simple: create work that feels authentic,
-            memorable, and unmistakably its own.
-          </p>
-
+        <div class="mt-3 flex flex-wrap items-center justify-between gap-3 px-2 text-[9px] uppercase tracking-[.3em] text-zinc-500">
+          <span>Sound on · Sit back · Enjoy the show</span><span>Admission: Curiosity encouraged</span>
         </div>
+      </section>
 
-      </div>
-
-
-      <!-- Creative Universe -->
-
-      <div class="mt-24">
-
-        <div class="mb-10">
-
-          <p class="uppercase tracking-[0.35em] text-yellow-400">
-            The Universe
-          </p>
-
-          <h2 class="logo mt-4 text-5xl">
-            Four Ways to Experience It
-          </h2>
-
+      <section class="relative mt-10 overflow-hidden border border-zinc-800 bg-gradient-to-b from-zinc-900 to-black p-6 md:p-10">
+        <div class="absolute right-0 top-0 h-full w-1/3 opacity-40">
+          <svg viewBox="0 0 300 360" class="h-full w-full" aria-hidden="true">
+            <path d="M176 330 L160 280 L130 245 L142 190 L120 155 L139 120 L151 70 L170 45 L184 88 L210 105 L229 150 L215 190 L245 226 L225 260 L214 330 Z" fill="#a1a1aa" opacity=".7"/>
+            <path d="M150 93 L120 65 L124 108 L143 132 M184 92 L213 57 L206 111 L191 130 M160 160 L105 145 L136 180 M212 165 L270 138 L236 190 M160 210 L112 240 L158 240 M218 215 L260 248 L215 250" fill="none" stroke="#d4d4d8" stroke-width="10" stroke-linecap="round"/>
+            <path d="M160 280 L140 350 M214 280 L238 350" stroke="#a1a1aa" stroke-width="18"/>
+            <path d="M153 145 L177 154 L197 145" fill="none" stroke="#111" stroke-width="6"/>
+          </svg>
         </div>
+        <div class="relative max-w-2xl">
+          <p class="text-[10px] uppercase tracking-[.4em] text-amber-200/70">Meanwhile, on the other screen...</p>
+          <h2 class="logo mt-3 text-4xl text-white md:text-5xl">The Monster Feature.</h2>
+          <p class="mt-4 text-sm leading-7 text-zinc-400">Because every great drive-in double feature needs a little monster-movie madness. One screen tells my story. The other reminds us that imagination should never be small.</p>
+          <p class="mt-4 text-xs uppercase tracking-[.2em] text-zinc-500">A loving nod to the giant-monster movies that made the drive-in legendary.</p>
+        </div>
+      </section>
 
-
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-
-
-          <!-- Music -->
-
-          <a
-            href="/music"
-            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-          >
-
-            <p class="text-4xl">
-              🎧
-            </p>
-
-            <h3 class="logo mt-6 text-3xl">
-              Music
-            </h3>
-
-            <p class="mt-4 text-zinc-400">
-              Albums, songs, and soundtracks created to tell stories
-              through sound.
-            </p>
-
-            <div class="mt-8 font-semibold text-yellow-400">
-              Enter Music →
-            </div>
-
+      <section class="mt-16">
+        <div class="mb-8 text-center">
+          <p class="text-[10px] uppercase tracking-[.4em] text-amber-200/70">Choose your feature</p>
+          <h2 class="logo mt-3 text-4xl text-white md:text-5xl">Four doors into the universe.</h2>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="/music" class="group border border-zinc-800 bg-[#121212] p-7 transition hover:-translate-y-1 hover:border-zinc-500">
+            <p class="text-3xl text-amber-200">♫</p><h3 class="logo mt-4 text-2xl text-white">Music</h3><p class="mt-2 text-sm leading-6 text-zinc-400">Albums, songs, and soundtracks created to tell stories through sound.</p><p class="mt-5 text-[10px] uppercase tracking-[.2em] text-amber-200">Now playing →</p>
           </a>
-
-
-          <!-- Books -->
-
-          <a
-            href="/books"
-            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-          >
-
-            <p class="text-4xl">
-              📚
-            </p>
-
-            <h3 class="logo mt-6 text-3xl">
-              Books
-            </h3>
-
-            <p class="mt-4 text-zinc-400">
-              Characters, worlds, and stories brought to life through
-              the written word.
-            </p>
-
-            <div class="mt-8 font-semibold text-yellow-400">
-              Enter the Library →
-            </div>
-
+          <a href="/books" class="group border border-zinc-800 bg-[#121212] p-7 transition hover:-translate-y-1 hover:border-zinc-500">
+            <p class="text-3xl text-amber-200">▤</p><h3 class="logo mt-4 text-2xl text-white">Books</h3><p class="mt-2 text-sm leading-6 text-zinc-400">Characters, worlds, and stories brought to life through the written word.</p><p class="mt-5 text-[10px] uppercase tracking-[.2em] text-amber-200">Visit the library →</p>
           </a>
-
-
-          <!-- Podcast -->
-
-          <a
-            href="/podcast"
-            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-          >
-
-            <p class="text-4xl">
-              🎙️
-            </p>
-
-            <h3 class="logo mt-6 text-3xl">
-              Podcast
-            </h3>
-
-            <p class="mt-4 text-zinc-400">
-              Real conversations, opinions, stories, and personalities
-              without the filter.
-            </p>
-
-            <div class="mt-8 font-semibold text-yellow-400">
-              Join the Conversation →
-            </div>
-
+          <a href="/podcast" class="group border border-zinc-800 bg-[#121212] p-7 transition hover:-translate-y-1 hover:border-zinc-500">
+            <p class="text-3xl text-amber-200">◉</p><h3 class="logo mt-4 text-2xl text-white">Podcast</h3><p class="mt-2 text-sm leading-6 text-zinc-400">Real conversations, opinions, stories, and personalities without the filter.</p><p class="mt-5 text-[10px] uppercase tracking-[.2em] text-amber-200">Join the conversation →</p>
           </a>
-
-
-          <!-- Videos -->
-
-          <a
-            href="/videos"
-            class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
-          >
-
-            <p class="text-4xl">
-              🎬
-            </p>
-
-            <h3 class="logo mt-6 text-3xl">
-              Videos
-            </h3>
-
-            <p class="mt-4 text-zinc-400">
-              Visual stories, music videos, podcast moments,
-              and creative projects.
-            </p>
-
-            <div class="mt-8 font-semibold text-yellow-400">
-              Enter the Visual World →
-            </div>
-
+          <a href="/video" class="group border border-zinc-800 bg-[#121212] p-7 transition hover:-translate-y-1 hover:border-zinc-500">
+            <p class="text-3xl text-amber-200">▣</p><h3 class="logo mt-4 text-2xl text-white">Video</h3><p class="mt-2 text-sm leading-6 text-zinc-400">Visual stories, music videos, podcast moments, and creative projects.</p><p class="mt-5 text-[10px] uppercase tracking-[.2em] text-amber-200">Enter the visual world →</p>
           </a>
-
-
         </div>
+      </section>
 
-      </div>
-
-
-      <!-- Closing Statement -->
-
-      <div class="mt-24">
-
-        <div
-          class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 text-center md:p-16"
-        >
-
-          <p class="uppercase tracking-[0.4em] text-yellow-400">
-            Petty Rich Bey
-          </p>
-
-          <h2 class="logo mt-5 text-4xl md:text-5xl">
-            The Story Is Still Being Written.
-          </h2>
-
-          <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-            New music. New stories. New conversations.
-            New worlds waiting to be discovered.
-          </p>
-
-        </div>
-
-      </div>
-
-
+      <section class="mt-16 border border-amber-200/25 bg-gradient-to-r from-[#21190f] via-[#0d0c0a] to-[#21190f] p-8 text-center md:p-12">
+        <p class="text-[10px] uppercase tracking-[.4em] text-amber-200/70">The closing credits</p>
+        <h2 class="logo mt-3 text-4xl text-white md:text-5xl">The Story Is Still Being Written.</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400">New music. New stories. New conversations. New worlds waiting to be discovered. Thanks for pulling into the drive-in.</p>
+      </section>
     </div>
-
   </section>
-
 </BaseLayout>

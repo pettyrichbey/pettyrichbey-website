@@ -66,13 +66,13 @@ const libraryVideos = videos.filter((video) => video.file !== featuredVideo.file
 
   <section class="relative overflow-hidden px-8 py-24">
 
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(180,180,180,.09),transparent_60%)]"></div>
 
     <div class="relative mx-auto max-w-7xl">
 
       <!-- Header -->
       <div class="mx-auto max-w-4xl text-center">
-        <p class="uppercase tracking-[0.45em] text-yellow-400">
+        <p class="uppercase tracking-[0.45em] text-[#c8b58b]">
           Visuals
         </p>
 
@@ -86,11 +86,53 @@ const libraryVideos = videos.filter((video) => video.file !== featuredVideo.file
         </p>
       </div>
 
+      <!-- The broadcast archive: vintage TV, video era and global signal -->
+      <div class="relative mt-14 overflow-hidden rounded-[2rem] border border-zinc-700 bg-[#060606] px-5 py-10 shadow-[0_25px_80px_#000a] md:px-10">
+        <div class="pointer-events-none absolute inset-0 opacity-35" style="background:radial-gradient(ellipse at 50% 25%,#5c554a33,transparent 70%),repeating-linear-gradient(0deg,transparent 0 5px,#fff1 6px 7px)"></div>
+        <div class="relative grid items-center gap-9 lg:grid-cols-[1.1fr_.9fr]">
+          <div class="mx-auto w-full max-w-xl">
+            <div class="rounded-[2rem] border-[9px] border-[#46413a] bg-gradient-to-br from-[#55514b] via-[#1c1b1a] to-[#080808] p-4 shadow-[inset_0_3px_5px_#ffffff24,0_24px_40px_#000]">
+              <div class="relative flex aspect-[4/3] flex-col items-center justify-center overflow-hidden rounded-[32px] border-[8px] border-zinc-900 bg-[#777] text-center shadow-[inset_0_0_45px_#000]">
+                <svg class="absolute inset-0 h-full w-full opacity-75" viewBox="0 0 640 480" preserveAspectRatio="none" aria-hidden="true">
+                  <filter id="video-crt-noise"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"><animate attributeName="seed" values="2;19;42;65;2" dur=".6s" repeatCount="indefinite"/></feTurbulence><feColorMatrix type="saturate" values="0"/></filter>
+                  <rect width="640" height="480" filter="url(#video-crt-noise)"/>
+                </svg>
+                <div class="absolute inset-0 opacity-40" style="background:repeating-linear-gradient(to bottom,transparent 0 3px,#0008 4px 5px),radial-gradient(ellipse at center,transparent 40%,#000c 100%)"></div>
+                <p class="relative z-10 text-[9px] font-semibold uppercase tracking-[.4em] text-white drop-shadow-lg">Bey Mirror Media · Channel 01</p>
+                <p class="relative z-10 mt-4 font-serif text-4xl font-bold uppercase tracking-[.08em] text-white drop-shadow-[0_2px_8px_#000] md:text-5xl">The Visual Vault</p>
+                <p class="relative z-10 mt-3 text-[10px] uppercase tracking-[.25em] text-white drop-shadow-lg">Please stand by · Now showing</p>
+              </div>
+              <div class="mt-4 flex items-center justify-between px-3"><span class="text-[9px] uppercase tracking-[.3em] text-zinc-400">PRB · Television</span><div class="flex gap-3"><span class="h-4 w-4 rounded-full border border-zinc-500 bg-zinc-800"></span><span class="h-4 w-4 rounded-full border border-zinc-500 bg-zinc-800"></span><span class="h-2 w-2 self-center rounded-full bg-[#c8b58b]"></span></div></div>
+            </div>
+            <p class="mt-4 text-center text-[10px] uppercase tracking-[.3em] text-zinc-500">An era of music television · Reimagined</p>
+          </div>
+          <div class="flex flex-col items-center gap-6 text-center">
+            <p class="text-[10px] uppercase tracking-[.35em] text-[#c8b58b]">From the video countdown era</p>
+            <div class="grid w-full max-w-sm grid-cols-3 gap-2">
+              <div class="rounded-lg border border-zinc-600 bg-zinc-900 px-2 py-4"><p class="font-serif text-2xl text-zinc-100">The Box</p><p class="mt-2 text-[9px] uppercase tracking-[.15em] text-zinc-400">Request TV</p></div>
+              <div class="rounded-lg border border-zinc-600 bg-zinc-900 px-2 py-4"><p class="font-serif text-2xl text-zinc-100">106 &amp; Park</p><p class="mt-2 text-[9px] uppercase tracking-[.15em] text-zinc-400">Countdowns</p></div>
+              <div class="rounded-lg border border-zinc-600 bg-zinc-900 px-2 py-4"><p class="font-serif text-2xl text-zinc-100">MTV</p><p class="mt-2 text-[9px] uppercase tracking-[.15em] text-zinc-400">Music TV</p></div>
+            </div>
+            <svg viewBox="0 0 320 250" class="w-full max-w-[330px]" role="img" aria-label="Black globe with white longitude and latitude lines and broadcast signals">
+              <defs><radialGradient id="video-globe-shade" cx="35%" cy="25%"><stop stop-color="#4a4a4a"/><stop offset=".55" stop-color="#171717"/><stop offset="1" stop-color="#020202"/></radialGradient></defs>
+              <circle cx="160" cy="136" r="94" fill="url(#video-globe-shade)" stroke="#ddd" stroke-opacity=".75" stroke-width="1.5"/>
+              <ellipse cx="160" cy="136" rx="38" ry="94" fill="none" stroke="#e5e5e5" stroke-opacity=".65"/>
+              <ellipse cx="160" cy="136" rx="72" ry="94" fill="none" stroke="#e5e5e5" stroke-opacity=".35"/>
+              <path d="M66 136 H254 M80 90 Q160 112 240 90 M80 182 Q160 160 240 182 M160 42 V230" stroke="#eee" stroke-opacity=".6" fill="none"/>
+              <path d="M61 43 Q160 -35 259 43 M40 30 Q160 -64 280 30 M245 70 Q282 136 245 202" fill="none" stroke="#c8b58b" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="160" cy="42" r="5" fill="#c8b58b"/>
+              <path d="M160 42 Q210 18 245 70 M160 42 Q110 10 61 43" fill="none" stroke="#eee" stroke-width="1.5" stroke-dasharray="4 6"/>
+            </svg>
+            <p class="max-w-xs font-serif text-2xl italic text-zinc-200">From the countdown to the cosmos.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- Featured Visual -->
       <div class="mt-20">
         <div class="mb-8 flex items-end justify-between gap-6">
           <div>
-            <p class="uppercase tracking-[0.35em] text-yellow-400">
+            <p class="uppercase tracking-[0.35em] text-[#c8b58b]">
               Featured Visual
             </p>
             <h2 class="logo mt-3 text-4xl md:text-5xl">
@@ -102,7 +144,7 @@ const libraryVideos = videos.filter((video) => video.file !== featuredVideo.file
           </p>
         </div>
 
-        <div class="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 shadow-2xl shadow-purple-950/20">
+        <div class="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 shadow-2xl shadow-black/50">
           <video
             class="aspect-video w-full bg-black object-contain"
             controls
@@ -114,7 +156,7 @@ const libraryVideos = videos.filter((video) => video.file !== featuredVideo.file
           </video>
 
           <div class="border-t border-zinc-800 bg-zinc-950 p-8 md:p-10">
-            <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-yellow-400">
+            <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#c8b58b]">
               <span>{featuredVideo.category}</span>
               <span class="text-zinc-700">•</span>
               <span>{featuredVideo.project}</span>
@@ -130,7 +172,7 @@ const libraryVideos = videos.filter((video) => video.file !== featuredVideo.file
       <!-- Video Library -->
       <div class="mt-24">
         <div class="mb-10">
-          <p class="uppercase tracking-[0.35em] text-yellow-400">
+          <p class="uppercase tracking-[0.35em] text-[#c8b58b]">
             The Visual Library
           </p>
           <h2 class="logo mt-4 text-5xl">
@@ -144,7 +186,7 @@ const libraryVideos = videos.filter((video) => video.file !== featuredVideo.file
 
         <div class="grid gap-8 md:grid-cols-2">
           {libraryVideos.map((video) => (
-            <article class="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-purple-500">
+            <article class="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-zinc-500">
               <video
                 class="aspect-video w-full bg-black object-contain"
                 controls
@@ -156,7 +198,7 @@ const libraryVideos = videos.filter((video) => video.file !== featuredVideo.file
               </video>
 
               <div class="p-7 md:p-8">
-                <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.28em] text-yellow-400">
+                <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#c8b58b]">
                   <span>{video.category}</span>
                   <span class="text-zinc-700">•</span>
                   <span>{video.project}</span>
@@ -177,7 +219,7 @@ const libraryVideos = videos.filter((video) => video.file !== featuredVideo.file
 
       <!-- Coming Soon -->
       <div class="mt-24 rounded-3xl border border-zinc-800 bg-zinc-950/70 p-10 text-center md:p-14">
-        <p class="uppercase tracking-[0.35em] text-yellow-400">
+        <p class="uppercase tracking-[0.35em] text-[#c8b58b]">
           Coming Soon
         </p>
 

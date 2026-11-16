@@ -2,47 +2,118 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="PRB VIP Club | Petty Rich Bey">
-  <section class="relative overflow-hidden px-8 py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.20),transparent_60%)]"></div>
-
-    <div class="relative mx-auto max-w-7xl">
-      <div class="mx-auto max-w-4xl text-center">
-        <p class="uppercase tracking-[0.4em] text-yellow-400">PRB VIP CLUB</p>
-        <h1 class="logo mt-6 text-6xl leading-none md:text-8xl">First to hear it. First to see it. First to get it.</h1>
-        <p class="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-          Step inside the world of Petty Rich Bey and get closer to the music, visuals, stories, and experiences before they reach the public.
+<BaseLayout
+  title="VIP Club | Petty Rich Bey"
+  description="Step inside the Bey Mirror Media VIP Club: a Harlem-inspired private club for early access, exclusive content, and members-only experiences."
+>
+  <section class="relative isolate overflow-hidden bg-[#090807] px-5 py-16 text-zinc-100 md:px-8 md:py-24">
+    <div class="pointer-events-none absolute inset-0 opacity-20" style="background-image: radial-gradient(ellipse at 50% 5%, rgba(202,164,91,.22), transparent 55%), repeating-linear-gradient(90deg, transparent 0 79px, rgba(255,255,255,.025) 80px 81px);"></div>
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl">
+      <header class="relative overflow-hidden border border-amber-300/40 bg-gradient-to-b from-[#21170e] via-[#100d0a] to-black px-6 py-14 text-center shadow-2xl md:px-12 md:py-20">
+        <div class="absolute inset-3 border border-amber-200/20"></div>
+        <div class="absolute left-5 top-5 h-12 w-12 border-l border-t border-amber-300/70"></div>
+        <div class="absolute right-5 top-5 h-12 w-12 border-r border-t border-amber-300/70"></div>
+        <div class="absolute bottom-5 left-5 h-12 w-12 border-b border-l border-amber-300/70"></div>
+        <div class="absolute bottom-5 right-5 h-12 w-12 border-b border-r border-amber-300/70"></div>
+        <p class="relative text-[10px] uppercase tracking-[.55em] text-amber-200/80">Bey Mirror Media proudly presents</p>
+        <div class="relative mx-auto mt-7 flex max-w-2xl items-center justify-center gap-4">
+          <span class="h-px flex-1 bg-amber-300/50"></span><span class="text-2xl text-amber-200">♛</span><span class="h-px flex-1 bg-amber-300/50"></span>
+        </div>
+        <p class="relative mt-5 text-xs uppercase tracking-[.5em] text-zinc-400">The Harlem after-dark experience</p>
+        <h1 class="logo relative mt-3 text-6xl leading-none text-amber-100 md:text-8xl">The VIP Club</h1>
+        <p class="relative mt-4 font-serif text-xl italic text-amber-200/90 md:text-2xl">Where the who's who come to be in the know.</p>
+        <p class="relative mx-auto mt-7 max-w-2xl text-sm leading-7 text-zinc-300 md:text-base">
+          Step past the velvet rope and into the inner circle. Enjoy first access to the music, films, stories, and special experiences of Petty Rich Bey.
         </p>
+        <div class="relative mt-8 flex flex-wrap justify-center gap-3 text-[9px] uppercase tracking-[.25em] text-amber-100/80">
+          <span class="border border-amber-200/40 px-4 py-2">Private access</span><span class="border border-amber-200/40 px-4 py-2">Members only</span><span class="border border-amber-200/40 px-4 py-2">Since the beginning</span>
+        </div>
+      </header>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <div class="relative overflow-hidden border border-zinc-800 bg-[#12100e] p-6 text-center">
+          <div class="text-3xl text-amber-200">♬</div><h2 class="logo mt-3 text-2xl text-amber-100">The Music Room</h2><p class="mt-2 text-sm leading-6 text-zinc-400">Hear what's coming before the rest of the world.</p>
+        </div>
+        <div class="relative overflow-hidden border border-zinc-800 bg-[#12100e] p-6 text-center">
+          <div class="text-3xl text-amber-200">✦</div><h2 class="logo mt-3 text-2xl text-amber-100">The Guest List</h2><p class="mt-2 text-sm leading-6 text-zinc-400">A place for the supporters, insiders, and familiar faces who make this circle special.</p>
+        </div>
+        <div class="relative overflow-hidden border border-zinc-800 bg-[#12100e] p-6 text-center">
+          <div class="text-3xl text-amber-200">♛</div><h2 class="logo mt-3 text-2xl text-amber-100">The Inner Circle</h2><p class="mt-2 text-sm leading-6 text-zinc-400">Exclusive experiences and a closer look behind the curtain.</p>
+        </div>
       </div>
 
-      <div class="mt-16 grid gap-8 lg:grid-cols-2">
-        <article class="rounded-3xl border border-yellow-400/30 bg-zinc-900 p-8 shadow-2xl md:p-10">
-          <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">VIP</p>
-          <h2 class="logo mt-4 text-5xl">$5.99 / month</h2>
-          <p class="mt-5 text-zinc-400">The core PRB VIP experience for fans who want to be first.</p>
-          <ul class="mt-8 space-y-4 text-zinc-300">
-            <li>🎵 Early access to new music</li><li>🎬 Early access to videos</li><li>🖼️ Exclusive artwork and posters</li><li>🎬 Behind-the-scenes content</li><li>🎤 Behind-the-music access</li><li>🎧 Private listening parties and VIP experiences</li><li>👕 Early access to merchandise drops</li><li>🗳️ Opportunities to vote on select creative decisions</li>
-          </ul>
-          <div id="paypal-button-container-P-5BT506595M093153GNKBYUSA" class="mt-10"></div>
-        </article>
+      <section class="mt-16">
+        <div class="mb-8 text-center">
+          <p class="text-[10px] uppercase tracking-[.45em] text-amber-200/70">Choose your table · Choose your access</p>
+          <h2 class="logo mt-3 text-4xl text-white md:text-5xl">Your name belongs on the list.</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400">Two ways to step inside. Pick the membership that suits your place in the club.</p>
+        </div>
+        <div class="grid gap-7 lg:grid-cols-2">
+          <article class="overflow-hidden border border-amber-200/35 bg-[#15110d] shadow-2xl">
+            <div class="border-b border-amber-200/20 bg-gradient-to-br from-[#342516] to-[#100d09] p-8 md:p-10">
+              <p class="text-[10px] uppercase tracking-[.4em] text-amber-200/80">The Main Room</p>
+              <h3 class="logo mt-3 text-4xl text-amber-100">VIP</h3>
+              <p class="mt-3 text-4xl font-semibold text-white">$5.99 <span class="text-base font-normal text-zinc-400">/ month</span></p>
+              <p class="mt-4 text-sm leading-6 text-zinc-300">Your invitation to the club. Be among the first to experience what's next.</p>
+            </div>
+            <div class="p-8 md:p-10">
+              <ul class="space-y-4 text-sm text-zinc-300">
+                <li><span class="mr-3 text-amber-200">✦</span>Early access to new music</li>
+                <li><span class="mr-3 text-amber-200">✦</span>Early access to videos</li>
+                <li><span class="mr-3 text-amber-200">✦</span>Exclusive artwork and posters</li>
+                <li><span class="mr-3 text-amber-200">✦</span>Behind-the-scenes content</li>
+                <li><span class="mr-3 text-amber-200">✦</span>Behind-the-music access</li>
+                <li><span class="mr-3 text-amber-200">✦</span>Private listening parties and VIP experiences</li>
+                <li><span class="mr-3 text-amber-200">✦</span>Early access to merchandise drops</li>
+                <li><span class="mr-3 text-amber-200">✦</span>Opportunities to vote on select creative decisions</li>
+              </ul>
+              <div class="mt-9 border-t border-zinc-800 pt-7"><p class="mb-3 text-[9px] uppercase tracking-[.3em] text-zinc-500">Reserve your membership</p><div id="paypal-button-container-P-5BT506595M093153GNKBYUSA"></div></div>
+            </div>
+          </article>
 
-        <article class="rounded-3xl border border-purple-500/40 bg-zinc-900 p-8 shadow-2xl md:p-10">
-          <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">VIP PLATINUM PLUS</p>
-          <h2 class="logo mt-4 text-5xl">$12.99 / month</h2>
-          <p class="mt-5 text-zinc-400">Exclusive access to new music, videos, merch, behind-the-scenes content, private experiences, and VIP-only releases.</p>
-          <ul class="mt-8 space-y-4 text-zinc-300">
-            <li>✨ Everything included with VIP</li><li>🎶 Members-only music releases</li><li>🎁 VIP merchandise discounts</li><li>🛍️ Access to limited VIP items</li><li>🎥 Deeper behind-the-scenes access</li><li>🎤 Enhanced access to private experiences</li>
-          </ul>
-          <div id="paypal-button-container-P-21Y71848B5279091ANKBYTOI" class="mt-10"></div>
-        </article>
-      </div>
+          <article class="relative overflow-hidden border border-amber-200/60 bg-[#100d0b] shadow-2xl">
+            <div class="absolute right-0 top-0 bg-amber-200 px-4 py-2 text-[9px] font-bold uppercase tracking-[.25em] text-black">The inner circle</div>
+            <div class="border-b border-amber-200/20 bg-gradient-to-br from-[#4a351b] via-[#21170e] to-[#100d09] p-8 md:p-10">
+              <p class="text-[10px] uppercase tracking-[.4em] text-amber-100/80">The Velvet Room</p>
+              <h3 class="logo mt-3 text-4xl text-amber-100">VIP Platinum Plus</h3>
+              <p class="mt-3 text-4xl font-semibold text-white">$12.99 <span class="text-base font-normal text-zinc-400">/ month</span></p>
+              <p class="mt-4 text-sm leading-6 text-zinc-300">For the ones who want a little more access, a little more exclusivity, and a seat closer to the stage.</p>
+            </div>
+            <div class="p-8 md:p-10">
+              <ul class="space-y-4 text-sm text-zinc-300">
+                <li><span class="mr-3 text-amber-200">♛</span>Everything included with VIP</li>
+                <li><span class="mr-3 text-amber-200">♛</span>Members-only music releases</li>
+                <li><span class="mr-3 text-amber-200">♛</span>VIP merchandise discounts</li>
+                <li><span class="mr-3 text-amber-200">♛</span>Access to limited VIP items</li>
+                <li><span class="mr-3 text-amber-200">♛</span>Deeper behind-the-scenes access</li>
+                <li><span class="mr-3 text-amber-200">♛</span>Enhanced access to private experiences</li>
+              </ul>
+              <div class="mt-9 border-t border-zinc-800 pt-7"><p class="mb-3 text-[9px] uppercase tracking-[.3em] text-zinc-500">Request the platinum pass</p><div id="paypal-button-container-P-21Y71848B5279091ANKBYTOI"></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <div class="mx-auto mt-16 max-w-4xl rounded-3xl border border-zinc-800 bg-zinc-950/70 p-8 text-center md:p-12">
-        <p class="uppercase tracking-[0.3em] text-yellow-400">Support the Creative Universe</p>
-        <h2 class="logo mt-4 text-4xl md:text-5xl">Your support helps keep the music moving.</h2>
-        <p class="mt-5 leading-8 text-zinc-400">Prefer a one-time contribution instead of a membership? Support Petty Rich Bey directly through Cash App.</p>
-        <a href="https://cash.app/$pettyrichbey" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-black transition hover:-translate-y-1">Support via Cash App →</a>
-      </div>
+      <section class="mt-16 overflow-hidden border border-amber-200/30 bg-gradient-to-r from-[#21170e] via-[#0e0c0a] to-[#21170e] p-8 text-center md:p-12">
+        <p class="text-[10px] uppercase tracking-[.45em] text-amber-200/70">The guest book</p>
+        <h2 class="logo mt-3 text-4xl text-amber-100 md:text-5xl">The who's who of the VIP Club</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-300">Every great Harlem club has its regulars, its familiar faces, and its stories. This is where we celebrate the people who make the Bey Mirror Media circle what it is.</p>
+        <div class="mx-auto mt-8 grid max-w-3xl gap-3 sm:grid-cols-3">
+          <div class="border border-amber-200/25 bg-black/40 p-5"><p class="text-2xl text-amber-200">♛</p><p class="mt-2 text-xs uppercase tracking-[.2em] text-zinc-300">Founding supporters</p></div>
+          <div class="border border-amber-200/25 bg-black/40 p-5"><p class="text-2xl text-amber-200">✦</p><p class="mt-2 text-xs uppercase tracking-[.2em] text-zinc-300">VIP members</p></div>
+          <div class="border border-amber-200/25 bg-black/40 p-5"><p class="text-2xl text-amber-200">♬</p><p class="mt-2 text-xs uppercase tracking-[.2em] text-zinc-300">Platinum circle</p></div>
+        </div>
+        <p class="mt-6 text-xs text-zinc-500">Member names and spotlights can be added here as the guest list grows.</p>
+      </section>
+
+      <section class="mx-auto mt-14 max-w-4xl border-t border-zinc-800 pt-10 text-center">
+        <p class="text-[10px] uppercase tracking-[.4em] text-amber-200/70">Keep the lights on · Keep the music playing</p>
+        <h2 class="logo mt-3 text-3xl text-white md:text-4xl">Support the creative universe.</h2>
+        <p class="mt-4 text-sm leading-7 text-zinc-400">Prefer a one-time contribution instead of a membership? Support Petty Rich Bey directly through Cash App.</p>
+        <a href="https://cash.app/$pettyrichbey" target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex border border-amber-200/60 bg-amber-200 px-8 py-4 text-xs font-bold uppercase tracking-[.2em] text-black transition hover:bg-amber-100">Support via Cash App →</a>
+      </section>
+      <div class="mt-10 text-center text-[9px] uppercase tracking-[.4em] text-zinc-600">Bey Mirror Media · You're on the list</div>
     </div>
   </section>
 

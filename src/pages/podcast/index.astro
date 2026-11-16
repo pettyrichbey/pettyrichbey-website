@@ -23,40 +23,59 @@ const cast = [
 
 <BaseLayout title={`${podcast.shortTitle} | Petty Rich Bey`}>
 
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(190,190,190,.09),transparent_58%)]"></div>
+
+  <div class="relative mx-auto mb-16 mt-2 max-w-6xl overflow-hidden rounded-[2rem] border border-zinc-700 bg-[#030407] shadow-[0_30px_90px_rgba(0,0,0,.8)]">
+    <div class="absolute inset-0 opacity-70" style="background:radial-gradient(ellipse at 50% 100%,#111827 0%,#05070c 54%,#020204 100%)"></div>
+    <div class="absolute inset-0 opacity-50" style="background-image:radial-gradient(1px 1px at 12% 18%,#fff 98%,transparent),radial-gradient(1px 1px at 29% 40%,#c8b58b 98%,transparent),radial-gradient(1px 1px at 73% 15%,#fff 98%,transparent),radial-gradient(1px 1px at 84% 58%,#fff 98%,transparent),radial-gradient(1px 1px at 61% 72%,#c8b58b 98%,transparent);background-size:240px 180px"></div>
+    <div class="relative grid min-h-[360px] items-center gap-5 px-6 py-10 md:grid-cols-[1fr_1.2fr_1fr] md:px-12">
+      <div class="order-2 text-center md:order-1 md:text-left"><p class="text-[10px] uppercase tracking-[.38em] text-[#c8b58b]">Broadcasting beyond the ordinary</p><p class="mt-4 font-serif text-3xl text-zinc-100 md:text-4xl">The signal<br/><span class="italic text-[#c8b58b]">is everywhere.</span></p><p class="mt-4 text-sm leading-6 text-zinc-400">One conversation can travel around the world.</p></div>
+      <div class="order-1 flex items-center justify-center md:order-2">
+        <svg viewBox="0 0 360 330" class="w-full max-w-[340px]" role="img" aria-label="Broadcast signal tower rising above a dark planet with radio waves">
+          <defs><radialGradient id="pod-planet" cx="50%" cy="35%"><stop offset="0%" stop-color="#424650"/><stop offset="65%" stop-color="#151922"/><stop offset="100%" stop-color="#030407"/></radialGradient><linearGradient id="pod-metal" x1="0" x2="1"><stop stop-color="#5d626a"/><stop offset=".5" stop-color="#e1d3b4"/><stop offset="1" stop-color="#555b64"/></linearGradient></defs>
+          <circle cx="180" cy="198" r="126" fill="url(#pod-planet)" stroke="#7b7f86" stroke-opacity=".5"/>
+          <path d="M58 204 Q180 165 302 204 M85 224 Q180 194 275 224 M108 247 Q180 228 252 247" fill="none" stroke="#c8b58b" stroke-opacity=".3"/>
+          <path d="M180 20 L124 224 M180 20 L236 224 M145 147 H215 M135 183 H225 M155 108 H205 M124 224 H236 M145 147 L215 183 M215 147 L145 183 M155 108 L205 147 M205 108 L155 147" fill="none" stroke="url(#pod-metal)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M180 20 V8 M154 30 Q180 5 206 30 M139 20 Q180 -20 221 20 M124 10 Q180 -42 236 10" fill="none" stroke="#d2c3a2" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="180" cy="9" r="6" fill="#e7d4a8"/><circle cx="180" cy="20" r="3" fill="#fff2d2"/>
+        </svg>
+      </div>
+      <div class="order-3 flex flex-col items-center justify-center text-center md:items-end md:text-right"><div class="text-6xl font-black tracking-[-.08em] text-zinc-100 md:text-7xl">8<span class="text-[#c8b58b]">G</span></div><p class="mt-1 text-[9px] uppercase tracking-[.35em] text-zinc-400">Next-level connection</p><svg viewBox="0 0 120 70" class="mt-6 w-28 text-[#c8b58b]" role="img" aria-label="Radio signal waves"><path d="M12 35 Q60 -15 108 35 M25 45 Q60 10 95 45 M40 55 Q60 35 80 55" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="61" r="4" fill="currentColor"/></svg><p class="mt-2 text-[9px] uppercase tracking-[.3em] text-zinc-500">Sound · Signal · Stories</p></div>
+    </div>
+  </div>
 
   <div class="relative mx-auto max-w-7xl">
 
     <div class="mx-auto max-w-4xl text-center">
-      <p class="uppercase tracking-[0.45em] text-yellow-400">The Conversation</p>
+      <p class="uppercase tracking-[0.45em] text-[#c8b58b]">The Conversation</p>
 
       <h1 class="logo mt-5 text-6xl md:text-7xl">{podcast.title}</h1>
 
       <p class="mt-8 text-lg leading-8 text-zinc-400">{podcast.description}</p>
 
       <div class="mt-10 flex flex-wrap justify-center gap-4">
-        <a href={podcast.spotify} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600 hover:shadow-[0_0_25px_rgba(124,58,237,.4)]">
+        <a href={podcast.spotify} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-zinc-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-zinc-600 hover:shadow-[0_0_25px_rgba(190,190,190,.12)]">
           🎧 Listen on Spotify →
         </a>
 
-        <a href={podcast.youtube} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black">
+        <a href={podcast.youtube} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-[#c8b58b] px-8 py-4 font-semibold text-[#c8b58b] transition duration-300 hover:bg-[#c8b58b] hover:text-black">
           ▶ Watch on YouTube →
         </a>
 
-        <a href={apple} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition duration-300 hover:border-yellow-400 hover:text-yellow-400">
+        <a href={apple} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition duration-300 hover:border-[#c8b58b] hover:text-[#c8b58b]">
            Apple Podcasts →
         </a>
 
-        <a href={rephonic} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition duration-300 hover:border-purple-500 hover:text-purple-300">
+        <a href={rephonic} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition duration-300 hover:border-zinc-500 hover:text-[#d8c9a7]">
           🌐 Find Us Everywhere →
         </a>
       </div>
     </div>
 
     <div class="mt-20">
-      <p class="mb-8 uppercase tracking-[0.35em] text-yellow-400">Latest Episode</p>
+      <p class="mb-8 uppercase tracking-[0.35em] text-[#c8b58b]">Latest Episode</p>
 
-      <div class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-8 md:p-10">
+      <div class="rounded-3xl border border-[#c8b58b]/25 bg-zinc-950 p-8 md:p-10">
         <p class="text-sm uppercase tracking-[0.3em] text-zinc-500">Now Playing</p>
         <h2 class="logo mt-4 text-4xl md:text-5xl">{latestEpisode.title}</h2>
         <p class="mt-5 max-w-3xl leading-7 text-zinc-400">
@@ -64,10 +83,10 @@ const cast = [
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href={latestEpisode.spotify} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-purple-700 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-purple-600">
+          <a href={latestEpisode.spotify} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-zinc-700 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-zinc-600">
             🎧 Listen on Spotify
           </a>
-          <a href={latestEpisode.youtube} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-yellow-400 px-6 py-3 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black">
+          <a href={latestEpisode.youtube} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-[#c8b58b] px-6 py-3 font-semibold text-[#c8b58b] transition duration-300 hover:bg-[#c8b58b] hover:text-black">
             ▶ Watch on YouTube
           </a>
         </div>
@@ -75,7 +94,7 @@ const cast = [
     </div>
 
     <div class="mt-20">
-      <p class="mb-8 uppercase tracking-[0.35em] text-yellow-400">Featured Show</p>
+      <p class="mb-8 uppercase tracking-[0.35em] text-[#c8b58b]">Featured Show</p>
 
       <div class="group grid overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 lg:grid-cols-2">
         <div class="relative overflow-hidden bg-zinc-950">
@@ -84,7 +103,7 @@ const cast = [
         </div>
 
         <div class="flex flex-col justify-center p-10 md:p-14">
-          <p class="uppercase tracking-[0.35em] text-yellow-400">{podcast.shortTitle}</p>
+          <p class="uppercase tracking-[0.35em] text-[#c8b58b]">{podcast.shortTitle}</p>
           <h2 class="logo mt-5 text-5xl md:text-6xl">{podcast.tagline}</h2>
           <p class="mt-6 text-lg leading-8 text-zinc-400">{podcast.description}</p>
 
@@ -93,10 +112,10 @@ const cast = [
           </div>
 
           <div class="mt-10 flex flex-wrap gap-4">
-            <a href={podcast.spotify} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-purple-700 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-purple-600">Listen on Spotify</a>
-            <a href={podcast.youtube} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold text-zinc-300 transition duration-300 hover:border-yellow-400 hover:text-yellow-400">Watch on YouTube</a>
-            <a href={apple} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold text-zinc-300 transition duration-300 hover:border-yellow-400 hover:text-yellow-400">Apple Podcasts</a>
-            <a href={rephonic} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold text-zinc-300 transition duration-300 hover:border-purple-500 hover:text-purple-300">Find Us Everywhere</a>
+            <a href={podcast.spotify} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-zinc-700 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-zinc-600">Listen on Spotify</a>
+            <a href={podcast.youtube} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold text-zinc-300 transition duration-300 hover:border-[#c8b58b] hover:text-[#c8b58b]">Watch on YouTube</a>
+            <a href={apple} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold text-zinc-300 transition duration-300 hover:border-[#c8b58b] hover:text-[#c8b58b]">Apple Podcasts</a>
+            <a href={rephonic} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold text-zinc-300 transition duration-300 hover:border-zinc-500 hover:text-[#d8c9a7]">Find Us Everywhere</a>
           </div>
         </div>
       </div>
@@ -104,7 +123,7 @@ const cast = [
 
     <div class="mt-24">
       <div class="mb-10 text-center">
-        <p class="uppercase tracking-[0.35em] text-yellow-400">The People Behind ANE</p>
+        <p class="uppercase tracking-[0.35em] text-[#c8b58b]">The People Behind ANE</p>
         <h2 class="logo mt-4 text-5xl md:text-6xl">Meet the Cast</h2>
         <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
           The personalities behind the microphones, the conversations, and the ANE experience.
@@ -113,7 +132,7 @@ const cast = [
 
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {cast.map((member) => (
-          <article class="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 transition duration-500 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_20px_50px_rgba(124,58,237,.18)]">
+          <article class="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 transition duration-500 hover:-translate-y-2 hover:border-zinc-500 hover:shadow-[0_20px_50px_rgba(190,190,190,.10)]">
             <div class="relative overflow-hidden bg-zinc-900">
               <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,.18),transparent_65%)]"></div>
               <img
@@ -124,7 +143,7 @@ const cast = [
               />
             </div>
             <div class="p-7">
-              <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">{member.role}</p>
+              <p class="text-sm uppercase tracking-[0.3em] text-[#c8b58b]">{member.role}</p>
               <h3 class="logo mt-3 text-3xl">{member.name}</h3>
               <div class="mt-5 h-px w-16 bg-purple-600 transition-all duration-300 group-hover:w-24"></div>
             </div>
@@ -135,7 +154,7 @@ const cast = [
 
     <div id="episodes" class="mt-24">
       <div class="mb-10">
-        <p class="uppercase tracking-[0.35em] text-yellow-400">The ANE Universe</p>
+        <p class="uppercase tracking-[0.35em] text-[#c8b58b]">The ANE Universe</p>
         <h2 class="logo mt-4 text-5xl">More Than a Podcast</h2>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
           ANE Podcast has grown into a collection of conversations, recurring segments, and shows built around the personalities behind the microphone.
@@ -144,37 +163,37 @@ const cast = [
 
       <div class="grid gap-8 md:grid-cols-2">
         {segments.map((segment) => (
-          <a href={podcast.youtube} target="_blank" rel="noopener noreferrer" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500">
+          <a href={podcast.youtube} target="_blank" rel="noopener noreferrer" class="group rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-zinc-500">
             <p class="text-4xl">{segment.icon}</p>
-            <p class="mt-6 text-sm uppercase tracking-[0.3em] text-yellow-400">{segment.type}</p>
+            <p class="mt-6 text-sm uppercase tracking-[0.3em] text-[#c8b58b]">{segment.type}</p>
             <h3 class="logo mt-3 text-3xl">{segment.title}</h3>
             <p class="mt-4 text-zinc-400">{segment.description}</p>
-            <div class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2">Watch on YouTube →</div>
+            <div class="mt-8 font-semibold text-[#c8b58b] transition-transform duration-300 group-hover:translate-x-2">Watch on YouTube →</div>
           </a>
         ))}
       </div>
     </div>
 
     <div class="mt-24">
-      <div class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 text-center md:p-16">
-        <p class="uppercase tracking-[0.4em] text-yellow-400">Choose Your Experience</p>
+      <div class="rounded-3xl border border-[#c8b58b]/25 bg-zinc-950 p-10 text-center md:p-16">
+        <p class="uppercase tracking-[0.4em] text-[#c8b58b]">Choose Your Experience</p>
         <h2 class="logo mt-5 text-4xl md:text-5xl">Listen. Watch. Join the Conversation.</h2>
         <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
           Catch ANE Podcast wherever you prefer. Listen to the show on Spotify or Apple Podcasts, watch the conversations on YouTube, or find ANE across listening platforms through Rephonic.
         </p>
 
         <div class="mt-10 flex flex-wrap justify-center gap-4">
-          <a href={podcast.spotify} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-purple-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-purple-600">🎧 Spotify →</a>
-          <a href={podcast.youtube} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black">▶ YouTube →</a>
-          <a href={apple} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition duration-300 hover:border-yellow-400 hover:text-yellow-400"> Apple Podcasts →</a>
-          <a href={rephonic} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition duration-300 hover:border-purple-500 hover:text-purple-300">🌐 Rephonic →</a>
+          <a href={podcast.spotify} target="_blank" rel="noopener noreferrer" class="rounded-xl bg-zinc-700 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-zinc-600">🎧 Spotify →</a>
+          <a href={podcast.youtube} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-[#c8b58b] px-8 py-4 font-semibold text-[#c8b58b] transition duration-300 hover:bg-[#c8b58b] hover:text-black">▶ YouTube →</a>
+          <a href={apple} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition duration-300 hover:border-[#c8b58b] hover:text-[#c8b58b]"> Apple Podcasts →</a>
+          <a href={rephonic} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-zinc-700 px-8 py-4 font-semibold text-zinc-300 transition duration-300 hover:border-zinc-500 hover:text-[#d8c9a7]">🌐 Rephonic →</a>
         </div>
       </div>
     </div>
 
     <div class="mt-24">
       <div class="rounded-3xl border border-zinc-800 bg-zinc-900 p-10 text-center md:p-14">
-        <p class="uppercase tracking-[0.35em] text-yellow-400">Behind the Mic</p>
+        <p class="uppercase tracking-[0.35em] text-[#c8b58b]">Behind the Mic</p>
         <h2 class="logo mt-4 text-4xl md:text-5xl">The People Behind the Conversations</h2>
         <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
           Meet the cast that helps bring the ANE universe to life.

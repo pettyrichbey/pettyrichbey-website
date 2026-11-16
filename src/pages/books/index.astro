@@ -10,30 +10,63 @@ const libraryBooks = books.filter((book) => !book.featured);
 
   <!-- Atmospheric Glow -->
 
-  <div
-    class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,.18),transparent_60%)]"
-  ></div>
-
+  <section class="relative overflow-hidden bg-[#080808] px-5 py-16 md:px-8 md:py-24">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(190,190,190,.09),transparent_58%)]"></div>
   <div class="relative mx-auto max-w-7xl">
 
-    <!-- Books Header -->
-
-    <div class="mx-auto max-w-3xl text-center">
-
-      <p class="uppercase tracking-[0.45em] text-yellow-400">
-        Books
-      </p>
-
-      <h1 class="logo mt-5 text-6xl md:text-7xl">
-        Stories Beyond the Sound
-      </h1>
-
-      <p class="mt-8 text-lg leading-8 text-zinc-400">
-        Worlds, characters, and stories created by P. R. Bey.
-        Enter the pages and discover another side of the universe.
-      </p>
-
+    <!-- Grand reading room -->
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="text-xs uppercase tracking-[.45em] text-[#c8b58b]">Bey Mirror Media · The literary collection</p>
+      <h1 class="logo mt-5 text-5xl text-zinc-100 md:text-7xl">The Grand Library</h1>
+      <p class="mx-auto mt-7 max-w-3xl text-lg leading-8 text-zinc-400">A world of stories, characters, and imagined places created by P. R. Bey. Take a seat, turn a page, and stay awhile.</p>
     </div>
+
+    <div class="prb-library-scene relative mt-14 overflow-hidden rounded-[2rem] border border-[#8f7b58]/50 shadow-[0_30px_90px_rgba(0,0,0,.75)]">
+      <div class="prb-library-arches" aria-hidden="true">
+        <div class="prb-library-shelf shelf-one"></div><div class="prb-library-shelf shelf-two"></div>
+        <div class="prb-library-window"></div>
+      </div>
+      <div class="relative z-10 grid min-h-[570px] items-end gap-8 px-5 pb-8 pt-16 md:grid-cols-[.8fr_1.2fr] md:px-12 md:pb-12">
+        <div class="self-center text-center md:text-left">
+          <p class="text-[10px] uppercase tracking-[.4em] text-[#d5c29d]">The Library of P. R. Bey</p>
+          <h2 class="logo mt-4 text-4xl text-[#f0e7d5] md:text-5xl">A collection of worlds.</h2>
+          <p class="mt-5 max-w-md leading-7 text-[#c5b9a4]">From dark mysteries to unforgettable characters, every volume opens a new door.</p>
+          <div class="mt-7 inline-flex border border-[#bda77c]/60 px-5 py-3 text-[10px] uppercase tracking-[.25em] text-[#e1cfaa]">Est. in imagination · P. R. Bey</div>
+        </div>
+        <div class="prb-antique-desk relative mx-auto w-full max-w-2xl">
+          <div class="prb-open-book">
+            <div class="prb-book-page left-page">
+              <p class="prb-page-kicker">Selected works</p>
+              {books.slice(0, Math.ceil(books.length / 2)).map((book) => <p class="prb-page-title">{book.title}</p>)}
+            </div>
+            <div class="prb-book-page right-page">
+              <p class="prb-page-kicker">By P. R. Bey</p>
+              {books.slice(Math.ceil(books.length / 2)).map((book) => <p class="prb-page-title">{book.title}</p>)}
+            </div>
+          </div>
+          <div class="prb-book-spine"></div>
+          <p class="mt-4 text-center text-[9px] uppercase tracking-[.3em] text-[#d6c5a4]">The pages are waiting</p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .prb-library-scene { background:linear-gradient(180deg,#171411 0%,#21180f 55%,#0b0908 100%); isolation:isolate; }
+      .prb-library-scene:before { content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 5%,#d0b27a33,transparent 58%),linear-gradient(90deg,#08070699,#0000 50%,#08070699); }
+      .prb-library-arches { position:absolute;inset:0;opacity:.65;background:repeating-linear-gradient(90deg,transparent 0 9%,#705638 9.2% 9.5%,transparent 9.8% 19%); }
+      .prb-library-shelf { position:absolute;left:0;right:0;height:30%;border-top:8px solid #4d3825;border-bottom:7px solid #4d3825;background:repeating-linear-gradient(90deg,#3c2416 0 12px,#9a7548 13px 16px,#24180f 18px 25px);box-shadow:0 8px 16px #0009; }
+      .shelf-one { top:8%; }.shelf-two { top:42%; }
+      .prb-library-window { position:absolute;top:2%;left:39%;width:22%;height:48%;border:12px ridge #765b37;border-radius:50% 50% 0 0;background:linear-gradient(180deg,#d2b88922,#15100b);box-shadow:inset 0 0 30px #000; }
+      .prb-antique-desk { padding:20px 18px 16px;background:linear-gradient(180deg,#5b3820,#24150d 70%,#100b08);border:2px solid #9b7645;border-radius:12px 12px 5px 5px;box-shadow:0 24px 30px #000b,inset 0 2px 3px #e3c18a55; }
+      .prb-open-book { display:grid;grid-template-columns:1fr 1fr;min-height:230px;position:relative;filter:drop-shadow(0 10px 8px #0009); }
+      .prb-book-page { padding:20px 16px;background:linear-gradient(100deg,#cdbb91,#f0e4c6 48%,#d6c39d);color:#3b281a;box-shadow:inset 0 0 20px #80633b44; }
+      .left-page { border-radius:8px 3px 3px 8px;transform:perspective(600px) rotateY(4deg);transform-origin:right; }
+      .right-page { border-radius:3px 8px 8px 3px;transform:perspective(600px) rotateY(-4deg);transform-origin:left; }
+      .prb-page-kicker { margin-bottom:14px;text-align:center;font:700 8px/1.2 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7b5735; }
+      .prb-page-title { margin:9px 0;border-bottom:1px solid #9b805c66;padding-bottom:6px;font:italic 14px/1.25 "Cormorant Garamond",Georgia,serif;text-align:center;color:#382518; }
+      .prb-book-spine { position:absolute;top:20px;bottom:16px;left:50%;width:12px;transform:translateX(-50%);background:linear-gradient(90deg,#80603b,#e4d2a8,#80603b);border-radius:50%; }
+      @media(max-width:767px){.prb-library-shelf{height:18%}.prb-library-window{left:33%;width:34%;height:30%}.prb-open-book{min-height:200px}.prb-book-page{padding:14px 10px}.prb-page-title{font-size:12px}}
+    </style>
 
 
     <!-- Featured Book -->
@@ -41,7 +74,7 @@ const libraryBooks = books.filter((book) => !book.featured);
     {featuredBook && (
       <div class="mt-20">
 
-        <p class="mb-8 uppercase tracking-[0.35em] text-yellow-400">
+        <p class="mb-8 uppercase tracking-[0.35em] text-[#c8b58b]">
           Featured Book
         </p>
 
@@ -69,7 +102,7 @@ const libraryBooks = books.filter((book) => !book.featured);
 
           <div class="flex flex-col justify-center p-10 md:p-14">
 
-            <p class="uppercase tracking-[0.35em] text-yellow-400">
+            <p class="uppercase tracking-[0.35em] text-[#c8b58b]">
               P. R. Bey
             </p>
 
@@ -88,7 +121,7 @@ const libraryBooks = books.filter((book) => !book.featured);
             </div>
 
             <div
-              class="mt-10 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"
+              class="mt-10 font-semibold text-[#c8b58b] transition-transform duration-300 group-hover:translate-x-2"
             >
               Explore Book →
             </div>
@@ -106,12 +139,12 @@ const libraryBooks = books.filter((book) => !book.featured);
     <div class="mt-20">
 
       <div
-        class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 md:flex md:items-center md:justify-between md:gap-10 md:p-12"
+        class="rounded-3xl border border-[#c8b58b]/20 bg-zinc-950 p-10 md:flex md:items-center md:justify-between md:gap-10 md:p-12"
       >
 
         <div>
 
-          <p class="uppercase tracking-[0.35em] text-yellow-400">
+          <p class="uppercase tracking-[0.35em] text-[#c8b58b]">
             The Author
           </p>
 
@@ -130,7 +163,7 @@ const libraryBooks = books.filter((book) => !book.featured);
           href="https://www.amazon.com/author/prbey"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-8 inline-block w-fit shrink-0 rounded-xl border border-yellow-400 px-8 py-4 font-semibold text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black md:mt-0"
+          class="mt-8 inline-block w-fit shrink-0 rounded-xl border border-[#c8b58b] px-8 py-4 font-semibold text-[#c8b58b] transition duration-300 hover:bg-[#c8b58b] hover:text-black md:mt-0"
         >
           View Author Page →
         </a>
@@ -146,7 +179,7 @@ const libraryBooks = books.filter((book) => !book.featured);
 
       <div class="mb-10">
 
-        <p class="uppercase tracking-[0.35em] text-yellow-400">
+        <p class="uppercase tracking-[0.35em] text-[#c8b58b]">
           The Library
         </p>
 
@@ -167,7 +200,7 @@ const libraryBooks = books.filter((book) => !book.featured);
             href={book.link}
             target="_blank"
             rel="noopener noreferrer"
-            class="group block overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-2 hover:border-purple-500"
+            class="group block overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-2 hover:border-[#c8b58b]"
           >
 
             <!-- Book Cover -->
@@ -187,7 +220,7 @@ const libraryBooks = books.filter((book) => !book.featured);
 
             <div class="p-8">
 
-              <p class="text-sm uppercase tracking-[0.3em] text-yellow-400">
+              <p class="text-sm uppercase tracking-[0.3em] text-[#c8b58b]">
                 {book.type}
               </p>
 
@@ -208,7 +241,7 @@ const libraryBooks = books.filter((book) => !book.featured);
               </div>
 
               <div
-                class="mt-8 font-semibold text-yellow-400 transition-transform duration-300 group-hover:translate-x-2"
+                class="mt-8 font-semibold text-[#c8b58b] transition-transform duration-300 group-hover:translate-x-2"
               >
                 Explore Book →
               </div>
@@ -229,10 +262,10 @@ const libraryBooks = books.filter((book) => !book.featured);
     <div class="mt-24">
 
       <div
-        class="rounded-3xl border border-yellow-400/20 bg-zinc-950 p-10 text-center md:p-16"
+        class="rounded-3xl border border-[#c8b58b]/20 bg-zinc-950 p-10 text-center md:p-16"
       >
 
-        <p class="uppercase tracking-[0.4em] text-yellow-400">
+        <p class="uppercase tracking-[0.4em] text-[#c8b58b]">
           P. R. Bey
         </p>
 
@@ -250,5 +283,6 @@ const libraryBooks = books.filter((book) => !book.featured);
 
 
   </div>
+  </section>
 
 </BaseLayout>
